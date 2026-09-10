@@ -511,6 +511,11 @@ function getrandomdata($tablename, $fieldname='', $cond='1')
 	function Pagination($total_pages,$limit,$target_page,$page,$start,$page_name)
    	 {
         $adjacents = 1;
+        $total_pages = (int) $total_pages;
+        $limit = (int) $limit;
+        $page = (int) $page;
+        $start = (int) $start;
+
         if ($page == 0) $page = 1;
             $prev = $page - 1;
             $next = $page + 1;
