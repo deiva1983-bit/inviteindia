@@ -19,11 +19,9 @@ mycontrol/
 vendor_mgt/
 vendors_bk/
 wed_admin/
-static/
 libs/
 *.htaccess
 templates/albums/
-templates/covers/
 templates/default/birth_template/
 templates/default/mrg_template1/
 templates/default/mrg_template/home_images/

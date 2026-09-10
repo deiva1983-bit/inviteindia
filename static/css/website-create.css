@@ -1,0 +1,22 @@
+.dom-static-text{
+border-right: 0px !important; 
+width: 35% !important; 
+float: left !important;
+}
+.dom-dynamic-text{
+border-left: 0px !important; 
+box-sizing: border-box; 
+width: 64% !important;
+}
+@media (max-width: 480px){
+.dom-static-text{
+border-right: 0px !important; 
+width: 35% !important; 
+float: left !important;
+display: none !important;
+}
+.dom-dynamic-text{
+border-left: -1px !important; 
+width: 100% !important;
+}
+}

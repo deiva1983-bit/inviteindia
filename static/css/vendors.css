@@ -1,0 +1,204 @@
+.up-margin {
+    margin: 1em 0 1em;
+}
+.vendors-search .up-margin {
+    margin: 0;
+}
+.vendors-search .nav_txt {
+    padding-right: 10px;
+}
+
+.odd-div {
+    margin: 1em 0 1em;
+    background-color: papayawhip;
+	border-radius: 10px;
+}
+.even-div{
+    margin: 1em 0 1em;
+	border-radius: 10px;
+}
+.categories{
+	border:1px solid #EEE;
+}
+.categories h3{
+	font-size:1.2em;
+	color:#FFF;
+	padding:10px;
+	background:#cf2d50;
+	text-transform:uppercase;
+}
+.categories li{
+	background: url(../images/strip-bg.gif) repeat-x #F6F6F6;
+}
+.categories li a{
+	display:block;
+	font-size:0.85em;
+	padding:9px 15px;
+    color: #9C9C9C;
+    margin:0 20px;
+    background:url(../images/drop_arrow.png) no-repeat 0;
+    border-bottom: 1px solid #E6A57D;
+    text-transform:uppercase;
+}
+.categories li a:hover{
+	color:#cf2d50;
+}
+.header_bottom_right{
+	float:left;
+	width:74%;
+	padding-left:1%;
+}
+.ven-img-width {
+width: 350px;
+}
+
+#vendors .img-thumbnail {
+border: 1px solid #ff5063 !important;
+}
+.w3ls_banner_info .sub-head {
+letter-spacing: 2px;
+}
+.w3ls_banner_info .font-small {
+font-size: 1em;
+}
+.w3layouts_header h5, h2, h3, h1 {font-size: 1.5em !important;}
+.comment-metadata {
+    color: #555 !important;
+    font-size: 10px;
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: 0.1818em;
+    text-transform: uppercase;
+}
+.vendor_bg {
+width: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+border-color: #cf2d50;
+border-style: solid;
+}
+
+.vendor_bg .title{
+	color: #FFF !important;
+	padding: 10px;
+	background: #cf2d50;
+	font-family: 'Poiret One', cursive;
+	letter-spacing: 3px;
+	font-weight: 600;
+}
+
+#vendors .img-thumbnail{
+border: 1px solid #F1F1F1 !important;
+}
+
+.vendor_bg2 {
+width: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.vendor_bg_left{
+width:50%; float: left; padding: 10px;
+}
+.vendor_bg_right{
+width:50%; float: left; padding: 10px;
+}
+.sub_tit{
+font-size: 1em !important;
+letter-spacing: 2px !important;
+}
+.w3ls_banner_bottom_grids {margin: 1em 0 0;}
+
+.padd-top {padding-top: 20px;}
+
+#vendors_home .write_para{padding-top: 1px;}
+
+
+.breadcrumbs {
+  position: relative;
+  z-index: 999;
+}
+
+.breadcrumbs li {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  margin: 5px 15px;
+  padding: 5px 10px;
+  border-top: 2px solid #cf2d50;
+  border-bottom: 2px solid #cf2d50;
+}
+
+.breadcrumbs .first-crumb {
+  border-left: 2px solid #cf2d50;
+  margin-right: 7px;
+}
+
+.breadcrumbs li:not(.first-crumb):not(.last-crumb)::before {
+  position: absolute;
+  border: 2px solid #cf2d50;
+  background-color: #fff;
+	content: "";
+	left: -10%;
+	top: -2px;
+	height: 112%;
+	width: 90%;
+  -webkit-transform: skewX(-27deg);
+	   -moz-transform: skewX(-27deg);
+	    -ms-transform: skewX(-27deg);
+	        transform: skewX(-27deg);
+  z-index: -2;
+}
+
+.breadcrumbs li:not(.last-crumb)::after {
+  position: absolute;
+  border: 2px solid #cf2d50;
+  background-color: #fff;
+	content: "";
+	right: -15%;
+	top: -2px;
+	height: 112%;
+	width: 90%;
+  -webkit-transform: skewX(-27deg);
+	   -moz-transform: skewX(-27deg);
+	    -ms-transform: skewX(-27deg);
+	        transform: skewX(-27deg);
+  z-index: -2;
+}
+
+.breadcrumbs .last-crumb {
+  background-color: #cf2d50;
+  color: #fff;
+}
+.breadcrumbs .last-crumb a{
+  color: #fff;
+}
+
+.breadcrumbs .last-crumb::before {
+  position: absolute;
+  border: 2px solid #cf2d50;
+  background-color: #cf2d50;
+	content: "";
+	left: -12%;
+	top: -2px;
+	height: 112%;
+	width: 90%;
+  -webkit-transform: skewX(-27deg);
+	   -moz-transform: skewX(-27deg);
+	    -ms-transform: skewX(-27deg);
+	        transform: skewX(-27deg);
+  z-index: -1;
+}
+
+section {
+  margin: 0px 60px;
+  outline: 2px solid #cf2d50;
+  outline-offset: 35px;
+}
+.sub_head{
+	margin:1em 0 1em;
+}
+.agileits_social_list li #gnav_login{
+	width: 100px;
+    height: 25px;
+    font-weight: bold;
+}

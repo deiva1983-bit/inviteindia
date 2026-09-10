@@ -1,0 +1,187 @@
+
+h4 {
+	margin: 2em 0 1em;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+h3, h1 {
+	margin: 1em 0 1em;
+    text-transform: capitalize;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+.button {
+    font-size: 1em;
+    color: #FFFFFF;
+    padding: 0.8em 1em 0.8em 1em;
+    border: none;
+    margin: 1em auto 0em;
+    outline: none;
+    background: #cf2d50;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	font-family: 'Play', sans-serif;
+}
+.button-selected {
+    font-size: 1em;
+    color: #cf2d50;
+    padding: 0.8em 1em 0.8em 1em;
+    border:1px solid #cf2d50;
+    margin: 1em auto 0em;
+    outline: none;
+    background: #fff;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	font-family: 'Play', sans-serif;
+	text-decoration:none;
+}
+
+
+.ui-state-error,.ui-widget-content .ui-state-error,.ui-widget-header .ui-state-error{border:1px solid #CD0A0A !important; 50% 50% repeat-x #FEF1EC !important; color:#CD0A0A !important; padding: 5px;}
+.ui-state-error {    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;}
+
+
+.sub_head {
+    margin: 2em 0 1em;
+    text-transform: none;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+.sub_head_home {
+    margin: 2em 0 1em;
+    text-transform: capitalize;
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+
+.button:hover {text-decoration:none; color:#cf2d50; background:#fff; border:1px solid #cf2d50;}
+.w3ls_banner_info {
+    margin: 7em 0 0;
+	text-align: center;
+	color: #ffffff;
+}
+.banner-layer h4 {color: #fff; font-weight: 200; margin: 0;}
+.banner-layer a, .quicklinks-agile-info h4, .hm-recent-launch li {color: #fff;}
+.badge {background-color: #cf2d50;}
+.banner-layer .badge {padding: 7px 7px;}
+.banner-layer .sub_head {font-weight: 200;}
+
+.w3ls_banner_info h2{
+    font-size: 15px;
+    color: #fff;
+    line-height: 28px;
+    margin: 20px auto 0;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0px;
+    width: 66%;
+}
+.banner-bg-3 {
+	 background:url(../images/site/pass.jpg) no-repeat 0px 0px; 
+}
+.w3ls_banner_info .home-head{
+	font-size: 48px;
+    text-transform: none;
+    line-height: 1.5em;
+	letter-spacing: 3px;
+	font-weight: 600 !important;
+	font-family: 'Emilys Candy', cursive !important;
+	color: #ffffff;
+}
+.w3ls_banner_info .tit{
+	font-size: 85px;
+    text-transform: capitalize;
+    line-height: 1.5em;
+	letter-spacing: 3px;
+	font-weight: 600 !important;
+	font-family: 'Nanum Brush Script', cursive !important;
+	margin: 10px;
+}
+.w3ls_banner_info .sub-tit{
+	font-size: 60px;
+    text-transform: capitalize;
+	letter-spacing: 3px;
+	font-weight: 600 !important;
+	font-family: 'Nanum Brush Script', cursive !important;
+}
+.banner-layer {
+    background-color: rgba(50, 50, 50, 0.7);
+    width: 100%;
+    height: 100%;
+	min-height: 750px;
+}
+.w3ls_banner_info h3, .w3ls_banner_info h1{
+	font-size: 50px;
+    color: #ffffff;
+    text-transform: none;
+    line-height: 1.5em;
+	letter-spacing: 4px;
+}
+.w3ls_banner_info .home-head{
+	font-size: 48px;
+    text-transform: none;
+    line-height: 1.5em;
+	letter-spacing: 3px;
+	font-weight: 600 !important;
+	font-family: 'Cabin Sketch', cursive;
+}
+.w3ls_banner_info .sub-head{
+	margin: 0 0 0.5em  !important;
+	font-size: 1.5em;
+    text-transform: capitalize;
+    line-height: 1.5em;
+	letter-spacing: 7px;
+	font-weight: 200 !important;
+	font-family: 'Montserrat', sans-serif;
+}
+.w3ls_banner_info p {
+    font-size: 15px;
+    color: #fff;
+    line-height: 28px;
+    margin: 20px auto 0;
+    width: 66%;
+    text-align: center;
+}
+.sub_head_max {
+    margin: 2em 0 1em;
+    text-transform: capitalize;
+	font-size: 25px !important;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+	color: #ffffff;
+}
+ input[type="password"], input[type="select"]{
+    display: inline-block;
+    border: 1px solid #ffffff; color: darkblue;
+    outline: none;
+    font-size: 0.95em;
+    font-weight: 400;
+    border-radius: 2px;
+    padding: 10px 15px;
+	margin:1em 0em;
+	font-family: 'Play', sans-serif;
+}
+
+
+@media only screen and (max-width: 600px) {
+.w3ls_banner_info .home-head { 
+font-size: 26px; margin: 0px;
+}
+.w3ls_banner_info .sub-tit {
+font-size: 180%; line-height: 1em; margin: 0px; width: 100%;
+}
+.w3ls_banner_info .tit{ line-height: 1em; font-size: 60px;}
+.sub_head_max {font-size: 17px !important;}
+}

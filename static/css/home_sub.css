@@ -1,0 +1,29 @@
+.banner-bg-3 {
+	 background:url(../images/site/wedding-banner-3.jpg) no-repeat 0px 0px; 
+	 background-size: contain;
+	 background-position: center;
+}
+.banner-layer {
+min-height: 420px !important;
+}
+.sub_head_links {font-size: 2em; text-align: center;}
+.sub_head_links .sub_links {padding: 5px;}
+.sub_pages h1{margin: 0px;}
+.sub_master h4 {margin: 0px; font-size: 1em; font-weight: 400;}
+@media only screen and (min-resolution: 117dpi) and (max-resolution: 119dpi), only screen and (min-resolution: 131dpi) and (max-resolution: 133dpi), only screen and (min-resolution: 145dpi) and (max-resolution: 154dpi), only screen and (min-resolution: 162dpi) and (max-resolution: 164dpi), only screen and (min-resolution: 169dpi) {
+	.banner-layer {
+	min-height: 375px !important;
+	}
+.bg_theme .flexslider .flex-direction-nav {display: none;}
+.cus_rev_con { width: 100%;}
+.rev_con { margin: 10px; }
+.sub_pages .header { padding: 1em; }
+}
+.bg_theme .flexslider { border: 4px solid #f2dede; }
+.cus_rev .flexslider .flex-direction-nav {display: none;}
+.cus_rev .flexslider{text-align: center;}
+.cus_rev .flexslider h4{padding: 10px;}
+.sub_master .img-styles {width: 100px !important; height: 100px; display:inline !important;}
+.write_paras{line-height: 2em;}
+.sub_pages .w3ls_banner_info{margin: 0;}
+.sub_pages .header{padding: 4.5em 6em 0;}

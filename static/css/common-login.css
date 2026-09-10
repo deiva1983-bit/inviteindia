@@ -1,0 +1,38 @@
+input[type="file"]{
+    width: 100%;
+    padding: .9em 0.5em;
+    background: transparent;
+    border: 1px solid #b5b5b5;
+    color: #212121;
+    -webkit-transition: border-color 0.25s;
+    transition: border-color 0.25s;
+
+}
+/*
+label {
+    font-size: 13.5px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 5px;
+    display: inline-block;
+} */
+.disabled {
+    -moz-border-radius: 4px 4px 4px 4px;
+    border: 1px solid #D3D3D3;
+    padding: 0.4em 1em;
+}
+.current {-moz-border-radius:4px 4px 4px 4px;border:1px solid #CF2D50;padding:0.4em 1em; }
+.pagination{ }
+.pagination a {
+    border: 1px solid #D3D3D3;
+    border-radius: 4px 4px 4px 4px;
+    padding: 0.4em 1em;
+}
+.ownpage_img {
+width: 150px; 
+border: 1px double #cf2d50;
+}
+.w3ls_banner_info {margin: 10em 0 0;}
+.banner .slider .agileinfo_banner_bottom_grid_l_grid, .banner .slider .w3_agileits_counter_grid {width: 75px; height: 75px;}
+.banner .slider .agileinfo_banner_bottom_grid_l_grid i, .banner .slider .w3_agileits_counter_grid i {line-height: 2.4em;}

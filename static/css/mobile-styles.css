@@ -1,0 +1,19 @@
+@media only screen and (orientation: landscape) {
+.demo-links {width: 48% !important;}
+}
+#m_nav_container {
+    width: 100%;
+    height: auto;
+    background-color:#cf2d50;
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0;
+    text-align: center;
+}
+
+.home-blogs .flex-control-nav {
+display: none;
+}
+
+.home-blogs .flex-direction-nav a { bottom: -70px; }

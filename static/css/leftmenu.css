@@ -1,0 +1,34 @@
+.categories{
+	border:1px solid #EEE;
+}
+.categories h3{
+	font-size:1.2em;
+	color:#FFF;
+	padding:10px;
+	background:#cf2d50;
+	text-transform:uppercase;
+}
+.categories li{
+	background: url(../images/strip-bg.gif) repeat-x #F6F6F6;
+}
+.categories li a{
+	display:block;
+	font-size:0.85em;
+	padding:9px 15px;
+    color: #9C9C9C;
+    margin:0 20px;
+    background:url(../images/drop_arrow.png) no-repeat 0;
+    border-bottom: 1px solid #F1F1F1;
+    text-transform:uppercase;
+	font-weight: bold;
+}
+.categories li:last-child a{
+	border:none;
+}
+.categories li a:hover{
+	color:#cf2d50;
+}
+.selected, .categories-active {
+	color:#cf2d50 !important;
+	font-size: 1em !important;
+}
