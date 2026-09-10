@@ -63,13 +63,16 @@ class database {
 	function connect() {
 		//echo "Host:$this->dbhost User:$this->dbuser Pass: $this->dbpass DB: $this->dbname";
 		
-		$this->socket = mysqli_connect( $this->dbhost, $this->dbuser, $this->dbpass, $this->dbname ) or die (mysqli_connect_error());
-		mysqli_query('SET character_set_results=utf8');
-		mysqli_query('SET names=utf8');
-		mysqli_query('SET character_set_client=utf8');
-		mysqli_query('SET character_set_connection=utf8');
-		mysqli_query('SET character_set_results=utf8');
-		mysqli_query('SET collation_connection=utf8_general_ci');
+		$this->socket = mysqli_connect( $this->dbhost, $this->dbuser, $this->dbpass, $this->dbname );
+		if (!$this->socket) {
+			$this->error("Error connecting to database server: " . mysqli_connect_error(), true);
+		}
+
+		mysqli_query($this->socket, 'SET character_set_results=utf8');
+		mysqli_query($this->socket, 'SET NAMES utf8');
+		mysqli_query($this->socket, 'SET character_set_client=utf8');
+		mysqli_query($this->socket, 'SET character_set_connection=utf8');
+		mysqli_query($this->socket, 'SET collation_connection=utf8_general_ci');
 		$this->socket->set_charset("utf8");
 		//mysqli_select_db($this->dbname);
 		if( !$this->socket )
