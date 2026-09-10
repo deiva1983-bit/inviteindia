@@ -20,19 +20,21 @@ $smarty->assign('topnav_select', 'contact');
 
 /*----- Variables Declaration Start-----*/
 $smarty->assign('currentpage_js', 'contactus');
-$smarty->assign('pagetitle', 'Invitation site');
 /*----- Variables Declaration End-----*/
 $smarty->assign('glb_site_url', $glb_site_url);
 $user_log_id= trim($_SESSION['sess_user_id']);
 $smarty->assign('glb_site_url', $glb_site_url);
-$canurl = $ssl_path.'www.inviteindia.com/online-wedding-website-contactus';
+$canurl = 'https://www.inviteindia.com/contact-us.php';
 $smarty->assign('can_url', $canurl);
 $content_template = 'default/contact_us.tpl';
-$smarty->assign('pagetitle', 'unlimited support for wedding website creation - contact us any time.');
-$home_page_meta_desc='Inviteindia is always ready to help our customers for creating wedding websites. You can reach us via email, WhatsApp or Phone.';
-$home_page_meta_key='Wedding website, Contact us, Tips for wedding website';
-$smarty->assign('metadesc', $home_page_meta_desc);
-$smarty->assign('metakeywords', $home_page_meta_key);
+
+$contact_page_title = 'Contact InviteIndia | Wedding Website Support';
+$contact_page_meta_desc = 'Need help with your wedding website or invitation? Contact InviteIndia for support, custom design help, and wedding website guidance.';
+$contact_page_keywords = 'contact wedding website support, inviteindia support, wedding website help, digital invitation support';
+
+$smarty->assign('pagetitle', $contact_page_title);
+$smarty->assign('metadesc', $contact_page_meta_desc);
+$smarty->assign('metakeywords', $contact_page_keywords);
 
 /*----- Include Files Details Start-----*/
 $smarty->assign('header', $smarty->fetch('default/header.tpl') );

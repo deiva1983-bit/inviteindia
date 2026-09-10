@@ -33,43 +33,16 @@ $smarty->assign('glb_ranvalue', $ranvalue);
 //$smarty->assign('pagetitle', $home_page_title);
 //$smarty->assign('metadesc', $home_page_meta_desc);
 //$smarty->assign('metakeywords', $home_page_meta_key);
-$canurl = $ssl_path.'www.inviteindia.com';
+$canurl = 'https://www.inviteindia.com/';
 $smarty->assign('can_url', $canurl);
-$home_page_title = 'Free Indian wedding website | Customizable wedding platform'.$common_page_title_end;
-$home_page_title = "Inviteindia - India's most trusted wedding website platform";
-$home_page_title = "Free indian wedding planning website" .$common_page_title_end;
-$home_page_title = "Free Indian wedding website templates" .$common_page_title_end;
-$home_page_title = "Indian wedding website, Wedding vendors" .$common_page_title_end;
-$home_page_title = "Free wedding website, Wedding Vendors" .$common_page_title_end;
-$home_page_title = "InviteIndia - Free Indian Wedding Websites, Vendors & Blogs";
-$home_page_title = "InviteIndia - Indian wedding planning website & vendors";
-$home_page_title = "An Indian Wedding Website with more attractive features.";
-$home_page_title = "Indian Wedding Website with more attractive features"; // much better
-$home_page_title = "Free Wedding Website with Online Wedding Invitations"; // much better
-$home_page_title = "One-Stop Shop for Wedding website, E-Cards, Invitations";
-$home_page_title = "Create Custom Indian Wedding Websites and E-Cards";
-// The Ultimate Wedding Hub: Invitations, Planning & Inspiration
-$home_page_meta_desc = 'Create your perfect wedding website in Indian style. This will brings all your wedding details in one place and easily reach your guests.';
 
-$home_page_meta_desc = 'InviteIndia offers a traditional wedding website in Indian style. This will bring all your wedding details in one place and easily reach your guests.';
+$home_page_title = 'Create Custom Indian Wedding Websites and E-Cards | InviteIndia';
+$home_page_meta_desc = 'Create custom Indian wedding websites and e-cards with InviteIndia. Personalize elegant invitations, manage RSVPs, and share effortlessly with your guests.';
+$home_page_keywords = 'wedding website, Indian wedding website, wedding invitation website, wedding card website, e-invitation, wedding website templates, wedding planning website';
 
-$home_page_meta_desc = 'Get started on your own Indian wedding website today! Our step by step guide shows you how to create an amazing wedding website from choosing a template to creating content.';
-
-$home_page_meta_desc = 'Get started on your own Indian wedding website today! Our step-by-step guide shows how to create a wedding website from choosing a template to creating content';
-
-$home_page_meta_desc = 'InviteIndia is an Indian wedding planning website and blog, offering the best wedding vendors with prices and reviews, a wedding website, and tips.';
-
-$home_page_meta_desc = "Get started on your own Indian wedding website today! Our step-by-step guide shows how to create a wedding website with a wedding album, events, music, etc.";
-
-$home_page_meta_desc = "Get started on your Indian wedding website today! Our step-by-step guide shows how to create a wedding website with a wedding album, events, RSVP, etc."; // much better
-
-$home_page_meta_desc = "Start Your Indian Wedding Website Today with Wedding Invitation | Step-by-Step Guide with Wedding Album, Events, RSVP, and More!";
-
-$home_page_meta_desc = "InviteIndia offers custom Indian Wedding Website and e-cards. Design your perfect invitation today and impress your guests with elegance and style.";
-
-$home_page_meta_desc = "Create custom Indian wedding websites and e-cards with InviteIndia. Design your perfect invitation today and impress your guests with elegance and style.";
-
-$home_page_meta_desc = "Design custom Indian wedding websites and e-cards with InviteIndia. Personalize elegant invitations, manage RSVPs, and share effortlessly. Create unforgettable digital wedding invites today!";
+$smarty->assign('pagetitle', $home_page_title);
+$smarty->assign('metadesc', $home_page_meta_desc);
+$smarty->assign('metakeywords', $home_page_keywords);
 
 $selectblogs = 'select * from home_page_blogs where blog_status = 1 ORDER BY `blog_date` desc limit 0, 9';
 $selectblogs_lists = $userslog_obj->selectVal($selectblogs);

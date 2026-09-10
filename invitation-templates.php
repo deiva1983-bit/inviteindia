@@ -15,9 +15,12 @@ $bind_url="&do=$current_action";
 $smarty->assign('topnav_select', 'wedd');
 // http://localhost/social/select_theme.php?wed_id=44&do=sel0myli For Edit
 // http://localhost/social/select_theme.php?do=cre0myli For Create
-$home_page_title = "Wedding website | Birthday website - inviteindia";
-$home_page_meta_desc = "Create your website for your wedding, birthday celebrations - inviteindia";
-$home_page_meta_key = "Wedding website themes, Birthday website themes, Wedding invitation templates, Birthday invitation templates, Online wedding invitation";
+$home_page_title = 'Wedding Invitation Templates & Themes | InviteIndia';
+$home_page_meta_desc = 'Browse elegant wedding invitation templates and themes for Indian weddings. Choose modern, traditional, and customizable designs for every celebration.';
+$home_page_meta_key = 'wedding invitation templates, Indian wedding invitation templates, wedding invitation themes, custom wedding invite designs, wedding card templates';
+$smarty->assign('pagetitle', $home_page_title);
+$smarty->assign('metadesc', $home_page_meta_desc);
+$smarty->assign('metakeywords', $home_page_meta_key);
 $user_log_id= trim($_SESSION['sess_user_id']);
 $wed_count = $common_obj->checkWedCount($user_log_id);
 	$show_select_link = 0;

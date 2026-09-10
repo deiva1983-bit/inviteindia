@@ -20,20 +20,20 @@ $smarty->assign('topnav_select', 'aboutus');
 
 /*----- Variables Declaration Start-----*/
 $smarty->assign('currentpage_js', 'my_page');
-$smarty->assign('pagetitle', 'Invitation site');
 /*----- Variables Declaration End-----*/
 $smarty->assign('glb_site_url', $glb_site_url);
 $user_log_id= trim($_SESSION['sess_user_id']);
 
 $smarty->assign('currentpage_js', 'interviewhome');
 $content_template = 'default/about_us.tpl';
-$smarty->assign('pagetitle', 'Wedding website services - inviteindia.com');
-$home_page_meta_desc='Create your free online wedding invitation, Wedding websites with Indian theme designs. - inviteindia';
-$home_page_meta_desc='Our unique services for your wedding website, wedding website examples';
 
-$home_page_meta_key='Free wedding website, Wedding websites, indian marriage websites, e-invitation, marriage invitation, Wedding Card, E-Wedding Card, Online Invitations, free wedding ecards';
-$smarty->assign('metadesc', $home_page_meta_desc);
-$smarty->assign('metakeywords', $home_page_meta_key);
+$about_page_title = 'About InviteIndia | Wedding Website & Digital Invitation Platform';
+$about_page_meta_desc = 'Learn about InviteIndia, a trusted platform for Indian wedding websites, digital invitations, and online wedding planning tools.';
+$about_page_keywords = 'about InviteIndia, wedding website platform, digital wedding invitations, Indian wedding website company';
+
+$smarty->assign('pagetitle', $about_page_title);
+$smarty->assign('metadesc', $about_page_meta_desc);
+$smarty->assign('metakeywords', $about_page_keywords);
 $smarty->assign('maxcard_per_acc', $max_card_per_acc);
 $smarty->assign('free_indays', $free_indays);
 

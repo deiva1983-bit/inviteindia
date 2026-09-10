@@ -12,16 +12,10 @@ $content_template = 'default/mrg_account/packages.tpl';
 $smarty->assign('currentpage_js', 'pack'); 
 $smarty->assign('glb_user_log_id', $user_log_id );
 $_SESSION['lastupdate_id']='';
-$home_page_title = "Online wedding invitation - inviteindia.com";
-$home_page_meta_desc = "Our customized online wedding invitation design portfolio has over more design templates to choose from. Select your  wedding invitation and easily create.";
-$home_page_meta_key = "wedding ecards, online marriage invitation, create wedding ecards, online marriage invitation template, free wedding ecards, Wedding templates";
-$package_page_title = 'Wedding website package and features - inviteindia.com';
-$package_page_title = 'Wedding website package for your budget'.$common_page_title_end;
-$package_page_title = 'Cheap wedding invites - Affordable package & features';
+$package_page_title = 'Wedding Website Packages & Pricing | InviteIndia';
+$package_page_desc = 'Explore affordable wedding website packages and pricing at InviteIndia. Create custom Indian wedding websites, digital invitations, and RSVP experiences for your big day.';
+$package_page_keywords = 'wedding website packages, wedding website pricing, Indian wedding website plans, custom wedding invitations, wedding invitation packages';
 $smarty->assign('pagetitle', $package_page_title);
-$package_page_desc = "InviteIndia offers an attractive package and features for your wedding website. You can create a wedding website and select the package according to your needs.";
-$package_page_desc = "Whether you're planning a small or large wedding, we've got you covered. Check out our top picks for wedding website packages!";
-$package_page_desc = "Start building your dream wedding invitation within your budget. Find tips, tools, and budget-friendly packages and features.";
 $smarty->assign('metadesc', $package_page_desc);
 $smarty->assign('metakeywords', $package_page_keywords);
 //echo $user_log_id;
@@ -64,7 +58,7 @@ $req_image= trim($_REQUEST['save_image']);
 				}
 			}
 		}
-$canurl = $ssl_path.'www.inviteindia.com/packages.php';
+$canurl = 'https://www.inviteindia.com/packages.php';
 $smarty->assign('can_url', $canurl);
 $smarty->assign('glb_valid_1', $valid_1);
 $smarty->assign('glb_valid_2', $valid_2);

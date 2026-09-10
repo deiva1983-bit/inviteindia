@@ -25,23 +25,18 @@ $smarty->assign('pagetitle', 'Invitation site');
 /*----- Variables Declaration End-----*/
 $smarty->assign('glb_site_url', $glb_site_url);
 $user_log_id= trim($_SESSION['sess_user_id']);
-$canurl = $ssl_path.'www.inviteindia.com/terms.php';
+$canurl = 'https://www.inviteindia.com/blogs.php';
 $smarty->assign('can_url', $canurl);
  	$smarty->assign('currentpage_js', 'interviewhome');
 $content_template = 'default/blogs.tpl';
-$smarty->assign('pagetitle', 'Terms of service for wedding website - inviteindia');
-$home_page_meta_desc='inviteindia have created Terms & Conditions statement for creating wedding site based on your website security. This page discloses about payment return policy, content format etc.';
-$home_page_meta_key='Free wedding website, Terms & Conditions, Terms of service, Wedding website security';
 
-/*----- Include Files Details Start-----*/
+$blog_page_title = 'Wedding Blogs, Ideas & Planning Tips | InviteIndia';
+$blog_page_meta_desc = 'Explore wedding blogs, planning ideas, and inspiration for Indian weddings. Get tips on invitations, decor, bridal prep, and wedding website ideas.';
+$blog_page_meta_key = 'wedding blogs, wedding planning tips, Indian wedding ideas, wedding inspiration, wedding website ideas';
 
-$smarty->assign('pagetitle', 'Wedding blogs and tips to plan your big day -InviteIndia.com');
-$smarty->assign('pagetitle', 'The Ultimate Guide to Planning Your Wedding: Tips and Tricks');
-
-$home_page_meta_desc='Planning a wedding can be overwhelming, but with this ultimate guide and blogs, you\'ll have all the tips and tricks you need to make your big day unforgettable.';
-$home_page_meta_key = 'Wedding blogs, wedding tips, wedding guide';
-$smarty->assign('metadesc', $home_page_meta_desc);
-$smarty->assign('metakeywords', $home_page_meta_key);
+$smarty->assign('pagetitle', $blog_page_title);
+$smarty->assign('metadesc', $blog_page_meta_desc);
+$smarty->assign('metakeywords', $blog_page_meta_key);
 
 /* Fetch records from DB - Start */
 $fetchqry_page = "select * from home_page_blogs where blog_status = 1 ORDER BY `blog_date` DESC";
