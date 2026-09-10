@@ -501,7 +501,7 @@ function getrandomdata($tablename, $fieldname='', $cond='1')
                         $r = $chars[rand(0, $chars_length)];
                 
                         // Make sure the same two characters don't appear next to each other
-                        if ($r != $string[$i - 1]) $string .=  $r;
+                        if ($r != substr($string, -1)) $string .=  $r;
                 }
                 // Return the string
 		return $string;
