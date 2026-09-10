@@ -291,18 +291,21 @@ class database {
 		if( !$this->connected ) 
 			$this->connect();
 		
-
-  
-		$qry_res = mysqli_query($this->socket, $query);
- 		if ($qry_res) {
-			$result = $qry_res;
-			$this->recordsSelected = mysqli_num_rows($result);
-			$this->databaseResults = $this->getData($result);
-			
+		try {
+			$qry_res = mysqli_query($this->socket, $query);
+			if ($qry_res) {
+				$result = $qry_res;
+				$this->recordsSelected = mysqli_num_rows($result);
+				$this->databaseResults = $this->getData($result);
+				return $this->databaseResults;
+			}
+			$this->databaseResults = array();
+			return $this->databaseResults;
+		} catch (Throwable $e) {
+			error_log("DB querySelect error: " . $e->getMessage() . " | SQL: " . $query);
+			$this->databaseResults = array();
+			return array();
 		}
-		 
-		
-		return $this->databaseResults;
 	}
 
   // ---------------------------------------------------------------------------------------------------------------
@@ -321,13 +324,15 @@ class database {
 		if( !$this->connected ) 
 			$this->connect();
 		
-		if(mysqli_query($this->socket, $query) === true) {
-			//$this->recordsUpdated = $this->socket->affected_rows;
-			return mysqli_insert_id($this->socket);
-		}
-		else
-		{
-		return false;
+		try {
+			if(mysqli_query($this->socket, $query) === true) {
+				//$this->recordsUpdated = $this->socket->affected_rows;
+				return mysqli_insert_id($this->socket);
+			}
+			return false;
+		} catch (Throwable $e) {
+			error_log("DB queryExecute error: " . $e->getMessage() . " | SQL: " . $query);
+			return false;
 		}
 	}
 
@@ -339,13 +344,15 @@ class database {
 		if( !$this->connected ) 
 			$this->connect();
 		
-		if(mysqli_query($this->socket, $query) === true) {
-			//$this->recordsUpdated = $this->socket->affected_rows;
-			return true;			
-		}
-		else
-		{
-		return false;
+		try {
+			if(mysqli_query($this->socket, $query) === true) {
+				//$this->recordsUpdated = $this->socket->affected_rows;
+				return true;			
+			}
+			return false;
+		} catch (Throwable $e) {
+			error_log("DB queryExecuteUpdate error: " . $e->getMessage() . " | SQL: " . $query);
+			return false;
 		}
 	}
  
@@ -369,13 +376,34 @@ class database {
  
 		if( !$this->connected ) 
 			$this->connect();
- 		if ($result = mysqli_query($this->socket, $query) ) {
-			$this->recordsSelected = mysqli_num_rows($result);
-		
+		try {
+			if ($result = mysqli_query($this->socket, $query) ) {
+				$this->recordsSelected = mysqli_num_rows($result);
+			}
+			return $this->recordsSelected;
+		} catch (Throwable $e) {
+			error_log("DB querySelectAffectedrows error: " . $e->getMessage() . " | SQL: " . $query);
+			return 0;
 		}
-		 
-		
-		return $this->recordsSelected;
+	}
+
+	function tableExists($tableName) {
+		if (!$this->connected) {
+			$this->connect();
+		}
+
+		$tableName = preg_replace('/[^a-zA-Z0-9_]/', '', $tableName);
+		if ($tableName === '') {
+			return false;
+		}
+
+		try {
+			$result = mysqli_query($this->socket, "SHOW TABLES LIKE '" . mysqli_real_escape_string($this->socket, $tableName) . "'");
+			return $result && mysqli_num_rows($result) > 0;
+		} catch (Throwable $e) {
+			error_log("DB tableExists error: " . $e->getMessage() . " | TABLE: " . $tableName);
+			return false;
+		}
 	}
 	
 	
