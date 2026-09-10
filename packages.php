@@ -28,35 +28,40 @@ $smarty->assign('metakeywords', $package_page_keywords);
 setcookie("last_req_url", "", time()-3600);
 $last_url = base64_encode($_SERVER['REQUEST_URI']);
 setcookie("last_req_url", $last_url, $expire);
-$fetchimages= "SELECT stores_autoid, name, value FROM mystores WHERE userid ='$user_log_id' ";
-				$fetchimages= $userslog_obj->selectVal($fetchimages);
-				$giftdetails="";
-				foreach($fetchimages as $key=>$field)
-                     {
-					 $name =	$field['name'];
-					 $value =	$field['value'];
-					 }
+$fetchimages = array();
+if ($userslog_obj->db_connect->tableExists('mystores')) {
+	$fetchimages = "SELECT stores_autoid, name, value FROM mystores WHERE userid ='$user_log_id' ";
+	$fetchimages = $userslog_obj->selectVal($fetchimages);
+}
+$giftdetails="";
+foreach($fetchimages as $key=>$field)
+{
+	$name =	$field['name'];
+	$value =	$field['value'];
+}
 $req_image= trim($_REQUEST['save_image']);
 	if($req_image == "Save Image")
 		{
-			$img_des= addslashes(trim($_REQUEST['img_name']));
-			$dirName = "templates/stores/$user_log_id";
-			if (is_dir($dirName)){}else{mkdir($dirName, 0755);}
-			$dirName=$dirName.'/';
-			if(trim($_FILES['my_img']['name']) != "")
-			{
-				$ext = strtolower(strrchr($_FILES['my_img']['name'],'.'));
-				if($ext == '.jpg' or $ext == '.jpeg' or $ext == '.gif' or $ext == '.png')
-				{			
-				$image_name=time().'.jpg';
-				$target_path=$dirName. $image_name;		
-				move_uploaded_file($_FILES['my_img']['tmp_name'], $target_path); 
-				//$image = new SimpleImage();
-				//$image->load($target_path);
-				//$image->save("templates/stores/$user_log_id/".$image_name);
+			if ($userslog_obj->db_connect->tableExists('mystores')) {
+				$img_des= addslashes(trim($_REQUEST['img_name']));
+				$dirName = "templates/stores/$user_log_id";
+				if (is_dir($dirName)){}else{mkdir($dirName, 0755);}
+				$dirName=$dirName.'/';
+				if(trim($_FILES['my_img']['name']) != "")
+				{
+					$ext = strtolower(strrchr($_FILES['my_img']['name'],'.'));
+					if($ext == '.jpg' or $ext == '.jpeg' or $ext == '.gif' or $ext == '.png')
+					{			
+					$image_name=time().'.jpg';
+					$target_path=$dirName. $image_name;		
+					move_uploaded_file($_FILES['my_img']['tmp_name'], $target_path); 
+					//$image = new SimpleImage();
+					//$image->load($target_path);
+					//$image->save("templates/stores/$user_log_id/".$image_name);
+					}
+					$inqry= "INSERT INTO mystores (stores_autoid, stores_type, userid, name, value) VALUES (NULL, '1', '".$user_log_id."', '".$img_des."', '".$image_name."')";
+					$userslog_obj->insertVal($inqry);
 				}
-				$inqry= "INSERT INTO mystores (stores_autoid, stores_type, userid, name, value) VALUES (NULL, '1', '".$user_log_id."', '".$img_des."', '".$image_name."')";
-				$userslog_obj->insertVal($inqry);
 			}
 		}
 $canurl = $ssl_path.'www.inviteindia.com/packages.php';
