@@ -2,14 +2,20 @@
 // functions.php
 function check_txnid($tnxid){
 	global $link;
-	return true;
-	$valid_txnid = true;
-    //get result set
-    $sql = mysql_query("SELECT * FROM `payments` WHERE txnid = '$tnxid'", $link);		
-	if($row = mysql_fetch_array($sql)) {
-        $valid_txnid = false;
+	if (!is_scalar($tnxid)) {
+		return true;
 	}
-    return $valid_txnid;
+
+	if (is_object($link) && method_exists($link, 'query')) {
+		$tnxid = $link->real_escape_string((string)$tnxid);
+		$result = $link->query("SELECT * FROM `payments` WHERE txnid = '$tnxid'");
+		if ($result && $result->num_rows > 0) {
+			return false;
+		}
+		return true;
+	}
+
+	return true;
 }
 
 function check_price($price, $id){
@@ -33,15 +39,26 @@ function check_price($price, $id){
 
 function updatePayments($data){	
     global $link;
-	if(is_array($data)){				
-        $sql = mysql_query("INSERT INTO `payments` (txnid, payment_amount, payment_status, itemid, createdtime) VALUES (
-                '".$data['txn_id']."' ,
-                '".$data['payment_amount']."' ,
-                '".$data['payment_status']."' ,
-                '".$data['item_number']."' ,
-                '".date("Y-m-d H:i:s")."' 
-                )", $link);
-    return mysql_insert_id($link);
-    }
+	if(is_array($data)){
+		if (is_object($link) && method_exists($link, 'query')) {
+			$txnId = isset($data['txn_id']) ? $data['txn_id'] : '';
+			$paymentAmount = isset($data['payment_amount']) ? $data['payment_amount'] : '';
+			$paymentStatus = isset($data['payment_status']) ? $data['payment_status'] : '';
+			$itemNumber = isset($data['item_number']) ? $data['item_number'] : '';
+			$createdAt = date("Y-m-d H:i:s");
+
+			$qry = "INSERT INTO `payments` (txnid, payment_amount, payment_status, itemid, createdtime) VALUES (
+				'" . $link->real_escape_string((string)$txnId) . "',
+				'" . $link->real_escape_string((string)$paymentAmount) . "',
+				'" . $link->real_escape_string((string)$paymentStatus) . "',
+				'" . $link->real_escape_string((string)$itemNumber) . "',
+				'" . $link->real_escape_string((string)$createdAt) . "'
+			)";
+			if ($link->query($qry) === true) {
+				return $link->insert_id;
+			}
+		}
+	}
+	return 0;
 }
 ?>

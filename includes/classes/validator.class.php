@@ -17,7 +17,7 @@ class Validator
 
 	function ValidEmail($email){
 	//echo $email;
-		 list($username,$domain) = split('@',$email);
+		 list($username,$domain) = explode('@', $email);
 		if($email=="")
 		{
 		$errmsg="Enter the e-mail address.";
@@ -172,7 +172,7 @@ function ChkInput($name,$fld)
 		{
 		 $errmsg = "Enter the $fieldname.";	
 		}
-		elseif(!ereg("^([a-zA-Z\ -_]+[0-9]*)*$",$name)){
+		elseif(!preg_match("/^([a-zA-Z\ -_]+[0-9]*)*$/", $name)){
 			$errmsg = "Enter the valid $fieldname.";	
 		}
 		else if(strlen($name)>60)
@@ -228,11 +228,11 @@ function ChkInput($name,$fld)
 	{	
 		if($website!="")
 		{
-			if(ereg("^http://[a-zA-Z0-9\.]+([a-zA-Z0-9\.\-_]+\.)+[a-zA-Z0-9]{2,4}$",$website))
+			if(preg_match("/^http:\/\/[a-zA-Z0-9\.]+([a-zA-Z0-9\.\-_]+\.)+[a-zA-Z0-9]{2,4}$/", $website))
 			{
 				$errmsg="";
 			}
-			else if(!ereg("^[a-zA-Z0-9\.]+([a-zA-Z0-9\.\-_]+\.)+[a-zA-Z0-9]{2,4}$",$website))
+			else if(!preg_match("/^[a-zA-Z0-9\.]+([a-zA-Z0-9\.\-_]+\.)+[a-zA-Z0-9]{2,4}$/", $website))
 			{
 				$errmsg="Enter a valid website URL.";
 			}
@@ -496,11 +496,11 @@ function ChkInput($name,$fld)
 		if($website!="")
 		{
 	
-		if(ereg("^http://[a-zA-Z0-9\.]+([a-zA-Z0-9\.\-_]+\.)+[a-zA-Z0-9]{2,4}$",$website))
+		if(preg_match("/^http:\/\/[a-zA-Z0-9\.]+([a-zA-Z0-9\.\-_]+\.)+[a-zA-Z0-9]{2,4}$/", $website))
 			{
 				$errmsg="";
 			}
-			else if(!ereg("^[a-zA-Z0-9\.]+([a-zA-Z0-9\.\-_]+\.)+[a-zA-Z0-9]{2,4}$",$website))
+			else if(!preg_match("/^[a-zA-Z0-9\.]+([a-zA-Z0-9\.\-_]+\.)+[a-zA-Z0-9]{2,4}$/", $website))
 			{
 				$errmsg = "Enter the valid ".ucfirst($webname)."";
 			}
