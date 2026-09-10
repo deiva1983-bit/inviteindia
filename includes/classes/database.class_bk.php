@@ -63,8 +63,11 @@ class database {
 	function connect() {
 		//echo "Host:$this->dbhost User:$this->dbuser Pass: $this->dbpass DB: $this->dbname";
 		
-		$this->socket = mysql_connect( $this->dbhost, $this->dbuser, $this->dbpass ) or die (mysql_error());
-		mysql_select_db($this->dbname);
+		$this->socket = mysqli_connect( $this->dbhost, $this->dbuser, $this->dbpass, $this->dbname );
+		if (!$this->socket) {
+			$this->error( "Error connecting to database server: " . mysqli_connect_error(), true );
+		}
+		mysqli_set_charset($this->socket, 'utf8');
 		if( !$this->socket )
 			$this->error( "Error connecting to database server", true );
 		
@@ -84,7 +87,8 @@ class database {
 	function closedb(){
 		if($this->socket)
 			
-			mysql_close($this->socket);
+			mysqli_close($this->socket);
+			$this->socket = null;
 			$this->connected = false;
 	}
 
@@ -281,8 +285,8 @@ class database {
  
 		if( !$this->connected ) 
 			$this->connect();
- 		if ($result = mysql_query($query) ) {
-			$this->recordsSelected = mysql_num_rows($result);
+ 		if ($result = mysqli_query($this->socket, $query) ) {
+			$this->recordsSelected = mysqli_num_rows($result);
 			$this->databaseResults = $this->getData($result);
 			
 		}
@@ -307,9 +311,9 @@ class database {
 		if( !$this->connected ) 
 			$this->connect();
 		
-		if(mysql_query($query) === true) {
+		if(mysqli_query($this->socket, $query) === true) {
 			//$this->recordsUpdated = $this->socket->affected_rows;
-			return mysql_insert_id();			
+			return mysqli_insert_id($this->socket);			
 		}
 		else
 		{
@@ -325,7 +329,7 @@ class database {
 		if( !$this->connected ) 
 			$this->connect();
 		
-		if(mysql_query($query) === true) {
+		if(mysqli_query($this->socket, $query) === true) {
 			//$this->recordsUpdated = $this->socket->affected_rows;
 			return true;			
 		}
@@ -355,8 +359,8 @@ class database {
  
 		if( !$this->connected ) 
 			$this->connect();
- 		if ($result = mysql_query($query) ) {
-			$this->recordsSelected = mysql_num_rows($result);
+ 		if ($result = mysqli_query($this->socket, $query) ) {
+			$this->recordsSelected = mysqli_num_rows($result);
 		
 		}
 		 
@@ -376,7 +380,7 @@ class database {
 	function getData($result) {
 		$data = array();
 		$i = 0;
-		while ($row = mysql_fetch_assoc($result)) {
+		while ($row = mysqli_fetch_assoc($result)) {
 			foreach ($row as $key => $value) {
 				$data[$i][$key] = stripslashes($value);		
 			}
