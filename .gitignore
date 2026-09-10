@@ -2,7 +2,6 @@ includes/configs/
 .htaccess
 templates/default/birth_template/
 rknew/
-blog/wp-includes/
 templates_c/
 *.zip
 *.tar.gz
@@ -26,6 +25,5 @@ templates/default/birth_template/
 templates/default/mrg_template1/
 templates/default/mrg_template/home_images/
 templates/default/mrg_template/screen_images/
-blog/
 editor/
 assets/
