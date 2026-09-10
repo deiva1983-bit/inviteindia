@@ -1,0 +1,26 @@
+body {background:url(../sub_6/images/header_bg.jpg) top right no-repeat #fff;border:0;font:13px Arial,Helvetica,sans-serif;color:#383838;line-height:20px; font-weight: bold;}
+.pag_con  {background:url(../sub_6/images/flower-border-design.jpg) bottom right no-repeat ; min-height: 840px;}
+.left_img  {background:url(../sub_6/images/flower-border-design-left.jpg) bottom left no-repeat; min-height: 840px;}
+.main {
+margin: 0 auto;
+width: 928px;
+}
+header {    height: 350px;    overflow: hidden;    width: 100%;}
+#content {
+overflow: hidden;
+padding-bottom: 60px;
+width: 100%;
+padding-left: 30px;
+}
+.wedding-names {
+color:#3ca201;
+}
+h2 span {color:#3ca201}
+.first_letter{color:#3ca201;}
+.block {padding-left: 20px;    padding-left: 0px;    text-align: left; }
+.blessing_div{ background-color:#E0F0D8;}
+.alb_img  {margin:10px; border:5px double #3ca201;}
+.home_img {text-align: center; margin:10px; border:5px double #3ca201; }
+.button{border: 1px solid #ad1912;}
+.alb_slideshow {padding-left: 177px !important;}
+#headmsg {color: #3ca201; padding-left: 60px; padding-top: 260px; text-shadow: 0 0 0.2em #3ca201, 0 0 0.2em #3ca201, 0 0 0.2em #3ca201 !important;} 

@@ -1,0 +1,1 @@
+$(function(){$.vegas("slideshow",{backgrounds:[{src:"/templates/default/mrg_template/theme_11/img/bg/user/1.jpg",fade:1e3},{src:"/templates/default/mrg_template/theme_11/img/bg/user/2.jpg",fade:1e3}]})});

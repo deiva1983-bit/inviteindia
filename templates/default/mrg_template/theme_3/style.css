@@ -1,0 +1,147 @@
+.fleft {float:left}
+.fright {float:right}
+.fclear {clear:both}
+.fcenter {float:none;text-align:center}
+body {background:#ece7eb;margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#000}
+#wrapper {width:960px;margin:0 auto}
+#banner {background:#682159;top center no-repeat;width:929px;height:50px;padding-top:15px;padding-left:32px;margin-left:15px;}
+#logo {margin-top:-15px;margin-left:25px}
+#main-img {float:left;clear:none;max-width:350px;max-height:542px;height:auto;width:auto;padding-left:28px;padding-top:28px;padding-bottom:28px;padding-right:26px;margin-top:1px}
+#content-bg {background:#dbbbd2;width:960px;margin:0 auto;margin-left:15px}
+#menu {background:url(images/menu.png) top center no-repeat;width:961px;height:75px}
+#menu ul {padding:0;width:580px;height:65px;margin-top:0;margin-left:200px}
+#menu ul li {float:left;list-style:none}
+.menu-btn {width:112px;height:65px;padding-top:15px}
+ul li a {color:#521044}
+#menu ul li a {display:block;text-decoration:none;font-size:14px;font-weight:bold;coursor:pointer;width:112px;height:16px;text-align:center;margin-top:3px}
+#menu ul li a:hover, #selected {}
+#left-content {float:left;clear:none;margin-left:15px}
+#welcome {margin-top:-35px}
+#welcome-top {background:url(images/welcome-top.png) top left no-repeat;width:320px;height:37px;padding-top:80px;padding-left:100px}
+#welcome-wish-top {background:url(images/welcome-wish-top.png) top left no-repeat;width:451px;height:37px;padding-top:80px;padding-left:100px; margin-left:141px;}
+#welcome-middle {background:url(images/welcome-bg.png) top left repeat-y; width:380px;min-height:200px;height:aut;padding-top:5px;padding-left:39px}
+.welcome-middle-wish {background:url(images/welcome-bg-wish.png) top left repeat-y !important; width:510px !important; margin-left:153px !important;}
+#welcome-bottom {background:url(images/welcome-bottom.png) top left no-repeat;width:420px;height:31px}
+#more-btn1 {text-align:right;margin-top:15px}
+#our-wedding {margin-left:50px;margin-top:20px;width:335px}
+#wedding-title {margin-bottom:5px}
+.more-btn2 {margin-top:15px;margin-bottom:15px}
+.inner_copy {border:0;color:#f00;float:left;width:50% !important;margin:-100% 0 0 0;overflow:hidden;line-height:0;padding:0;font-size:11px}
+#right-content {float:left;clear:none;margin-left:50px}
+#family {width:400px}
+.photos {border:5px solid #f6f0f4;float:left;clear:none}
+.family-txt {float:left;clear:none;margin-left:20px}
+.sub-title {color:#602152;font-weight:bold}
+#h-divider {background:url(images/h-divider.png) top left repeat-x;height:4px;margin-top:10px;margin-bottom:20px}
+#login {width:300px;background:url(images/hearts-img.png) top left no-repeat;height:70px;padding-left:100px;padding-top:20px}
+#login input {color:#682159;background:#fae8f5;width:110px;height:15px;border:0}
+#login-btn {margin-top:10px}
+.input-box {background:url(images/input-box.png) top left no-repeat;width:125px;height:25px;padding-left:5px;padding-top:5px;float:left;clear:none}
+.login-links {color:#682159;float:left;clear:none;margin-top:10px}
+.login-links a {color:#682159}
+#footer {background:url(images/footer.png) top center no-repeat;width:922px;height:80px;margin-left:20px;text-align:center;padding-top:35px;font-size:12px;color:#fff}
+#footer #foot_heart {background:url(images/hearts-img.png) top center no-repeat;width:922px;height:40px;text-align:right;padding-top:35px;font-size:12px;color:#fff}
+a {color:#682159}
+#center-content {width:922px;margin-left:20px;text-align:center;padding-top:15px;padding-bottom:15px;}
+a {color:#682159}
+.wedding-names {
+color:#682159;
+font-weight:bold;
+font:1.5em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.wedding-btn {
+font-weight:bold;
+font:1.0em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.home_content{
+    margin-top:15px;
+text-align: center;
+width:350px;
+}
+.first_letter{color:#682159; font-weight:bold; font:1.8em Monotype Corsiva, Verdana;}
+.error-ind { border:1px solid #cd0a0a !important; }
+#wish-form { clear:right; width:100%; overflow:hidden; padding: 10px 10px 5px; }
+#wish-form fieldset { border:none; float:left; }
+#wish-form .field { clear:both; padding-bottom:7px; width:100%; overflow:hidden; }
+#wish-form label { float:left; width:79px; font-size: 16px;}
+#wish-form textarea { width:790px; height:192px; padding:2px 0 2px 3px; margin-bottom:15px; overflow:auto; border:1px solid #d9d9d9;}
+#wish-form #comm_name { border:1px solid #d9d9d9; width: 150px;}
+#wish-form  input, #wish-form textarea { width: 98%; font-size: 18px; background: cornsilk; margin: 0 0px 18px 0; padding: 12px 10px; outline: none; border: 1px solid #e8e8e8; }
+.fourthsubmit {
+	margin: 0;
+	padding: 8px;
+	border: 1px solid #c5c5c5;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px; 
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #f6f6f6 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */	color: #222222;
+	font-weight: bold;
+	font-size: 12px;
+	text-shadow: 1px 0 #fafafa;
+	cursor: pointer;
+}
+.fourthsubmit:hover {
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top, #ffffff 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+#label-names { float:left; width:79px; color:#2cb6e9; font-weight:bold;}
+.wisher-comments {margin-left:10px; margin-top:-12px; color:#0F010B; font-weight:bold; font:1.1em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";}
+.wished-date {color:#EFE2EB;   font:1 em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";}
+.content .descr {
+	color: #664;
+	font-size: 0.9em;
+	margin-bottom: 6px;
+}
+
+#border_line{ border-bottom: .5px solid #d9d9d9; padding: 1px 24px;}
+.listwishes{ height:auto; margin-left:76px; margin-right:76px;}
+#wishtabs{padding-bottom: 2px; padding-top: 16px;}
+#photo_comments{padding-bottom: 2px; padding-top: 6px;padding-left: 12px;}
+#mrgwish{padding-bottom: 2px; color:#682159; font-weight:bold; font:1em  "Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";}
+#mrginfo{padding-left: 10px; padding-bottom: 2px; padding-top: 16px;  font:1 em     "Verdana","sans-serif";}
+.pagination{padding-bottom: 2px; padding-top: 6px; }
+#admin_alert_info {
+	color: #2F6BB3;
+	font-size: 20px;
+	margin-bottom: 6px;padding-bottom: 2px;padding-top: 16px;
+}
+.wisher-name {background: url(images/icon-quote.gif) no-repeat; padding-left: 20px;}
+#map_canvas {
+    border: 1px solid grey;
+    height: 435px !important; 
+    position: absolute;
+    width: 480px;
+}
+#listing {
+    position: inherit;
+}
+.blessing_div{border-radius:10px; margin-top:8px; width:140%; min-height:200px;  background-color:#fde9f2;}
+.add_bless_msg{text-align: right;  padding-bottom: 5px; padding-top: 2px;}
+.numbers_box{width:333px;}
+/* #head_save {    padding-left: 141px !important;}
+#head_next {    padding-left: 157px !important;}
+#desc_next {padding-left: 157px !important;}
+#desc_save { padding-left: 141px !important; } */
+.alb_img  {background:url(images/alb_bg.JPG) repeat; padding-right: 10px; padding-left: 10px; padding-top: 10px; max-width: 399px;padding-bottom: 10px;}
+.home_img {    text-align: center; margin:10px; border:5px double #FDFDFD; vertical-align: top;}
+#headmsg { font-family: "Trebuchet MS";
+    font-size: 30px;color: #FFFFFF;
+    padding-left: 130px; padding-top: 9px;vertical-align: super;
+    text-shadow: 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF, 0 0 0.2em #FFFFFF; text-align: center;}
+.even_div{padding-bottom: 10px; border-bottom: dotted;}
+.odd_div{padding-bottom: 10px; border-bottom: dotted;} /* inset */
+#td_msg {width: 80% !important; padding: 12px !important;}

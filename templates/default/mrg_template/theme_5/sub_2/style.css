@@ -1,0 +1,12 @@
+body {background:url(../sub_2/images/header_bg.JPG) top center no-repeat #fff;border:0;font:13px Arial,Helvetica,sans-serif;color:#383838;line-height:20px}
+.left_img  {background:url(../sub_2/images/leftimg.jpg) bottom left no-repeat; margin-bottom: 45px; min-height: 600px;}
+.right_img  {background:url(../sub_2/images/rightimg.jpg) bottom right no-repeat; margin-bottom: 45px; min-height: 600px;}
+.alb_img  {margin:10px; border:5px double #ad1912;}
+.home_img {text-align: center; margin:10px; border:5px double #ad1912; }
+#headmsg {font-family: none; font-size: 45px;color: #FFFFFF; padding-top: 4px; text-shadow: 0 0 0.2em #ad1912, 0 0 0.2em #ad1912, 0 0 0.2em #ad1912; text-align: center;}
+.about {
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.40);
+    padding: 10px !important;
+}
+#menu li {background: none;}
+#menu li a {color: #fff;}

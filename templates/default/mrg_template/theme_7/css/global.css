@@ -1,0 +1,83 @@
+img{border:0;}body,form,h1,h2,h3,h4,h5,h6,ul,li{margin:0;padding:0;}
+table,th,tr,td{font-family:verdana,arial,sans-serif,helvetica;font-size:1em;}a{text-decoration:none;}a:link,a:active,a:visited{color:#039;}a:hover{color:#C00;text-decoration:underline;}:focus{outline:0;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}h1{font-size:200%;}h2{font-size:175%;}h3{font-size:150%;}h4{font-size:125%;}h5{font-size:100%;}h6{font-size:80%;}.clear{clear:both;}.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}.clearfix{display:block;}.clearfix{.display:inline-block;}* html .clearfix{height:1%;}body{background-color:#E5E5E5;color:#000;font-family:verdana,arial,helvetica,sans-serif;font-size:11px;line-height:1.2em;text-align:center;}#wrap,div.wrap{margin:0 auto;padding:0;background-color:#fff;text-align:left;width:960px;}div.heading{background-color:#6698CB;color:#FFF;margin:0;}.url(/profile2/global/bkg_menubar.png) repeat-x 0 0;}#header div#topnav{line-height:normal;}#topnav a{color:#FFF;text-decoration:none;}#topnav ul{border-right:1px solid #1B4591;}#headerWrap #topnav ul,#headerWrap #topnav ul li{border:none;}#topnav ul#leftNav{float:left;}#topnav ul#rightNav{float:right;}#topnav ul li{float:left;border-left:1px solid #1B4591;position:relative;z-index:10003;}#topnav ul li a{padding:0 10px;line-height:27px;display:block;}#topnav ul li a small{font-size:8px;}#topnav ul a:hover{color:#EEE;background-color:#1548AE;}#topnav ul li.dropDown:hover a,#topnav ul li.hover a,#topnav ul li.hover a:hover{background-color:#D9EAFB;color:#039;}#topnav ul li a:hover small,#topnav ul li a.hover small{color:#039;}span.profileliteoff,span.profileliteon{padding:0 10px;height:22px;line-height:22px;text-decoration:none;display:block;float:left;cursor:pointer;}#topnav ul li.dropDown{z-index:1000001;}#topnav li.dropDown ul.subMenu a{background-color:#fff;}#topnav ul.subMenu{border:1px #cfcfcf solid;border-top:none;position:absolute;left:-10000em;z-index:10002;opacity:0;-webkit-transition:opacity .25s linear;}#topnav ul.subMenu li{float:none;border:none;display:block;min-width:140px;}* html #topnav ul.subMenu li{width:140px;}#topnav ul.subMenu li.divider{border-bottom:1px solid #cfcfcf;}#topnav ul.subMenu li.last{border-bottom:none;}#topnav ul.subMenu a{color:#039;white-space:nowrap;vertical-align:bottom;line-height:22px;height:22px;}#topnav li.dropDown:hover ul.subMenu a:hover,#topnav li.hover ul.subMenu a:hover{background:none #d9eafb;color:#039;}#topnav li.dropDown:hover ul.subMenu,#topnav li.hover ul.subMenu{left:0;opacity:1;}#topnav iframe{border:none;left:-10000em;position:absolute;z-index:10001;opacity:0;filter:alpha(opacity=0);}#topnav>iframe{width:400px;height:400px;}#topnav li.dropDown:hover iframe,#topnav li.hover iframe{left:0;top:27px;}#topnav li.dropDown:hover iframe:hover{left:-10000em;}#topnav ul li a.open .mailCountNav{color:#039;}#topnav ul li a.open .mailCountNav:hover{background:none #d9eafb;color:#036;}#topnav ul.subMenu li .mailCountNav{color:#036!important;font-weight:normal;}
+
+
+.wedding-names {
+color:#ad1912;
+font-weight:bold;
+font:1.5em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.wedding-btn {
+font-weight:bold;
+font:1.0em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.home_content{
+    margin-top:15px;
+text-align: center;
+
+}
+.first_letter{color:#ad1912; font-weight:bold; font:1.8em Monotype Corsiva, Verdana;}
+.thirukural{
+text-align: center;
+}
+.home_mem_img{
+padding-top: 15px;
+padding-bottom: 15px;
+text-align: center;
+}
+.error-ind { border:1px solid #cd0a0a !important; }
+.wisher-name {padding-top: 10px; color:#ad1912; font-weight:bold; }
+.wisher-comments p {	padding-bottom: 2px;}
+#mrgwish {
+    color: #ad1912;
+    font-weight: bold;
+    padding: 5px 5px 2px 2px;
+}
+#wishtabs {
+    border-bottom: 1px dashed #CEBF91;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 0 7px;
+    text-align: justify;
+}
+#wishtabs_comm {
+    border-bottom: 1px dashed #CEBF91;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 0 7px;
+    text-align: justify;
+}
+.blessing_div{border-radius:10px; margin-top:8px; width:117%; min-height:200px; border: 1px solid #F39BA1;}
+.add_bless_msg{text-align: right;  padding-bottom: 5px; padding-top: 2px; padding-left: 123px;}
+.listwishes{ width:728px; height:auto; margin-left:30px;}
+.sms_tab_text li {width: 330px; }
+.fourthsubmit {
+	margin: 0;
+	padding: 8px;
+	border: 1px solid #b20909;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px; 
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #f6f6f6 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */	color: #222222;
+	font-weight: bold;
+	font-size: 12px;
+	text-shadow: 1px 0 #fafafa;
+	cursor: pointer;
+}
+.fourthsubmit:hover {
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top, #ffffff 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}

@@ -1,0 +1,17 @@
+#pageheddings {font-family: 'England Hand Db'; font-size: 60px; font-weight: normal; -webkit-font-smoothing: antialiased; color: #eb0e0e;}
+#subhead {font-family: 'District Light'; font-size: 40px; font-weight: normal; -webkit-font-smoothing: antialiased; color: #eb0e0e;}
+.container { font-family: "Josefin Sans"; font-size: 100%; font-weight: bold;}
+#about_message {font-weight: normal; }
+body {
+	font-family: "Source Sans Pro";
+    font-size: 15px; font-weight: bold;
+}
+
+header {height: 260px;}
+.about {
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.40);
+    padding: 10px !important;
+}
+#menu li {background: none;}
+#menu li a {color: #fff;}
+#choice-4 #content {width: 548px !important;}

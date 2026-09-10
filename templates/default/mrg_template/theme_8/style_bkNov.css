@@ -1,0 +1,192 @@
+html {min-height: 100%;}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {color: #963;}
+a:hover {color: #C60;}
+
+
+
+p,code,ul {padding-bottom: 1.2em;}
+
+li {list-style: none;}
+
+h1 {
+	font: normal 1.8em Tahoma,sans-serif;
+	margin-bottom: 4px;
+}
+
+code {
+	background: #FFF;
+	border: 1px solid #EEE;
+	border-left: 6px solid #C1CAD3;
+	color: #666;
+	display: block;
+	font: normal 1em Tahoma,sans-serif;
+	line-height: 1.6em;
+	margin-bottom: 12px;
+	padding: 8px 10px;
+	white-space: pre;
+}
+
+blockquote {
+	background: url(img/quote.gif) no-repeat;
+	display: block;
+	font-weight: bold;
+	padding-left: 28px;
+}
+
+h1,h2,h3 {padding-top: 6px;}
+
+/* misc */
+.clearer {clear: both;}
+
+.heading {float: left;}
+
+.right {float: right;}
+
+/* structure */
+.container {
+	background: #FFF;
+	font-size: 1.2em;
+	margin: 0 auto;
+	padding: 0 10px 10px;
+	width: 780px;
+}
+
+/* header */
+.top {
+	background: url(img/clouds.gif) repeat-x;
+	padding: 50px 10px 0;
+}
+
+
+
+/* main */
+.main {
+	border-top: 4px solid #FFF;
+	background: url(img/bgmain.gif) repeat-y;
+}
+.home_img {text-align: center; }
+/* sub navigation */
+
+/* content */
+.content {
+	float: left;
+	margin: 10px 0;
+	padding: 0 16px;
+	width: 715px;
+}
+.centr {
+    padding-left: 50px;
+}
+.content .descr {
+	color: #664;
+	font-size: 0.9em;
+	margin-bottom: 6px;
+}
+.content li {
+		margin-left: 18px;
+}
+.content p {font-family: "Lucida Sans Unicode",sans-serif;}
+
+/* footer */
+ 
+.footer a,.footer a:hover {color: #FFF;}
+.thirukkural{text-align: center;}
+
+.home_content{
+/*font-weight:bold;
+font:1.8em Monotype Corsiva, Verdana; */
+text-align: center;
+}
+.wedding-names {
+font-weight:bold;
+font:1.5em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.wedding-btn {
+font-weight:bold;
+font:1.0em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.field
+{
+padding: 10px 10px 5px;    
+}
+#mrgwish {padding: 6px 0px 20px;}
+#mrginfo {padding: 6px 10px 20px;}
+#wish-form { clear:right; width:100%; overflow:hidden; padding: 10px 10px 5px; }
+#wish-form fieldset { border:none; float:left; }
+#wish-form .field { clear:both; padding-bottom:7px; width:100%; overflow:hidden; }
+#wish-form label { float:left; width:180px; }
+#wish-form textarea { width:790px; height:120px; border:1px solid #d9d9d9;  padding:2px 0 2px 3px; margin-bottom:15px; overflow:auto;}
+#wish-form  input { border:1px solid #d9d9d9; }
+#wish-form #comm_name { border:1px solid #d9d9d9; }
+
+.error-ind { border:1px solid #cd0a0a !important; }
+.fifthsubmit {
+	margin: 0;
+	padding: 6px 20px;
+	border: 1px solid #c5c5c5;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px; 
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #f6f6f6 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */	color: #222222;
+	font-weight: normal;
+	font-size: 12px;
+	text-shadow: 1px 1px #fafafa;
+	cursor: pointer;
+}
+.fifthsubmit:hover {
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top, #ffffff 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+.listcomment{height:280px; overflow:auto; text-align:left; width: 367px;}
+
+#border_line{ border-bottom: 1px solid #d9d9d9; padding: 5px 24px;}
+.address_with_land{	padding-top: 2px; color: #5A5A43; font-size: 1em;	line-height: 30px;	margin: 0;	padding-left: 2px;	width:202px; height:200px;	}
+.wisher-name {padding-top: 10px;}
+.wisher-comments {background: url(img/quote.gif) no-repeat;
+	padding-left: 20px;  padding-bottom: 2px;padding-top: 12px; font-size: 15px; color: #664;}
+.descr {color: #664;font-size: 12px;padding-bottom: 2px;}
+
+.blessing_div{border-radius:10px; margin-top:8px; width:90%; min-height:200px; }
+/*.alb_img  {padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; text-align: center;}
+.home_img {text-align: center;	background:url(img/alb_bg.jpg) repeat; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; vertical-align: top;}
+*/
+.header .heading { font-family: "Trebuchet MS";
+    font-size: 30px;
+    padding-left: 1px;    
+    text-shadow: 0 0 0.2em #da5794, 0 0 0.2em #da5794, 0 0 0.2em #da5794; text-align: center;}
+	.footer a, .footer a:hover {color: #996633;}
+	
+	#footernav1 #footernav1 ul#footernav-links1 {margin: -8px 16px 0 15px;}
+	#footernav1 ul#footernav-links1 li {margin-top: 0px;}
+	.disabled {background: none;}
+
+	.col1_1, .col2_2, .col3_3, .cols {float:left}
+.col1_1 {width:542px}
+.col2_2 {width:288px;padding-top:195px;}
+.col3_3 {width:246px}
+.center_footer {
+    background: url("../../../../../images/dividers/divide2.png") no-repeat scroll center bottom transparent;
+    margin-bottom: 5px;
+    padding-bottom: 33px;
+}
+.alb_slideshow {padding-left: 177px !important;}

@@ -1,0 +1,149 @@
+.fleft {float:left}
+.fright {float:right}
+.fclear {clear:both}
+.fcenter {float:none;text-align:center}
+body {background:url(images/background.png) top left repeat;margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#000}
+.wrapper {width:960px;margin:0 auto}
+#logo {float:left;clear:none;margin-top:10px}
+#menu-background {background:url(images/menu-background.png) top left repeat-x;height:55px;margin-top:20px;border:1px solid #ed7bae}
+#menu-wrapper {width:960px;margin:0 auto;background:url(images/ribbon.png) top right no-repeat;height:155px;margin-top:-50px;padding-top:36PX}
+#menu {width:750px;height:60px}
+#menu ul {padding:0}
+#menu ul li {float:left;list-style:none}
+.inner_copy {border:0;color:#f00;float:left;width:50% !important;margin:-100% 0 0 0;overflow:hidden;line-height:0;padding:0;font-size:11px}
+.menu-btn {width:100px;height:50px;padding-top:15px;background:url(images/menu-shadow.png) bottom center no-repeat}
+ul li a {color:#cc3281}
+#menu ul li a {display:block;text-decoration:none;font-size:14px;cursor:pointer;width:100px;height:16px;text-align:center}
+#menu ul li a:hover {font-weight:bold}
+#main-img {float:left;clear:none;}
+#content {float:left;clear:none;margin-left:25px;margin-top:20px;width:520px; height:100%;}
+.h-divider {background:url(images/divider.png) top  no-repeat; height:38px;margin-bottom:10px;margin-top:10px}
+.more-btn {margin-top:20px;text-align:right}
+.photos {float:left;clear:none;background:url(images/photo-frame.png) top left no-repeat;width:108px;height:129px;padding-left:13px;padding-top:13px}
+.story-txt {float:left;clear:none;margin-left:10px;width:120px}
+.title {color:#cc3281;font-weight:bold}
+
+#rings {background:url(images/rings-img.png) top center no-repeat;height:88px;margin-top:5px;padding:30px 0 0 0}
+#footer {background:#cc3281;height:130px;margin-top:10px}
+.listcomment { width: 323px !important;}
+
+
+.wedding-names {
+color:#cc3281;
+font-weight:bold;
+font:1.5em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.wedding-btn {    
+font-weight:bold;
+font:1.0em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.home_content{
+margin-top:15px;
+text-align: center;
+}
+.first_letter{color:#cc3281; font-weight:bold; font:1.8em Monotype Corsiva, Verdana;}
+
+#wish-form { clear:right; overflow:hidden; padding: 10px 10px 5px; }
+#wish-form fieldset { border:none; float:left; }
+#wish-form .field { clear:both; padding-bottom:7px; width:100%; overflow:hidden; }
+#wish-form label { float:left; width:79px; color:#cc3281; font-weight:bold;}
+#wish-form textarea { width:100%; height:192px; border:1px solid #626262;  padding:2px 0 2px 3px; margin-bottom:15px; overflow:auto; background: transparent none repeat scroll 0% 0%;}
+#wish-form input {
+    padding: 2px 0px 2px 3px;
+    border: 1px solid #626262;
+    background: transparent none repeat scroll 0% 0%;
+	width: 100%;
+}
+.fourthsubmit {
+	margin: 0;
+	padding: 8px;
+	border: 1px solid #c5c5c5;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px; 
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #f6f6f6 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top, #f6f6f6 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */	color: #222222;
+	font-weight: bold;
+	font-size: 12px;
+	text-shadow: 1px 0 #fafafa;
+	cursor: pointer;
+}
+.fourthsubmit:hover {
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top, #ffffff 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+.error-ind { border:1px solid #cd0a0a !important; }
+blockquote {
+	background: url(images/quote.gif) no-repeat;
+	padding-left: 20px;  padding-bottom: 2px; font-size: 15px; color: #664;
+}
+.content .descr {
+	color: #664;
+	font-size: 0.9em;
+	margin-bottom: 6px;
+}
+ 
+.listwishes{ align: center;}
+#wishtabs{padding-bottom: 2px; padding-top: 16px;}
+#border_line{ border-bottom: .5px solid #d9d9d9; padding: 1px 24px;}
+.wisher-comments {background: url(images/quote.gif) no-repeat;
+	padding-left: 20px;  padding-bottom: 2px; font-size: 15px; color: #664;}
+.descr {
+	color: #664;
+	font-size: 12px;
+	margin-bottom: 6px;padding-bottom: 2px;padding-top: 16px;
+}
+.slides{
+color: #cc3281;	
+padding-top: 17px;
+}
+#admin_alert_info {
+	color: #2F6BB3;
+	font-size: 20px;
+	margin-bottom: 6px;padding-bottom: 2px;padding-top: 16px;
+}
+#mrgwish{padding-bottom: 2px; padding-top: 16px; color:#CC3281; font-weight:bold; font:1.1em "Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";}
+#mrginfo{padding-left: 10px; padding-bottom: 2px; padding-top: 16px;  font:1 em     "Verdana","sans-serif";}
+#map_canvas {
+    border: 1px solid grey;
+    height: 435px !important; 
+    position: absolute;
+    width: 480px;
+}
+#listing {
+    position: inherit;
+}
+.blessing_div{border-radius:10px; margin-top:8px; min-height:200px;  background-color:#fde9f2;}
+.add_bless_msg{text-align: right;  padding-bottom: 5px; padding-top: 2px;}
+/*
+#head_save {    padding-left: 141px !important;}
+#head_next {    padding-left: 157px !important;}
+#desc_next {padding-left: 157px !important;}
+#desc_save { padding-left: 141px !important; }
+*/
+#headmsg { font-family: "Trebuchet MS";
+    font-size: 30px;
+    padding-left: 1px;    
+    text-shadow: 0 0 0.2em #da5794, 0 0 0.2em #da5794, 0 0 0.2em #da5794; text-align: center;}  
+	
+	.alb_img  {background:url(images/alb_bg.JPG) repeat; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;}
+.home_img {text-align: center; margin:10px; border:5px double #cc3281; vertical-align: top;}
+.col1_1, .col2_2, .col3_3, .cols {float:left}
+.col1_1 {width:542px}
+.col2_2 {width:288px;padding-top:195px;}
+.col3_3 {width:246px}
+.even_div{padding-bottom: 10px; border-bottom: dotted;}
+.odd_div{padding-bottom: 10px; border-bottom: dotted;} /* inset */
+#td_msg {width: 80% !important; padding: 12px !important;}

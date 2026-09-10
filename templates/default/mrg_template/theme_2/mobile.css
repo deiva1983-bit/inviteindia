@@ -1,0 +1,35 @@
+#menu-wrapper,.wrapper { width: 100%; }
+#logo { width: 100%; text-align: center; padding-top: 40px; }
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {background-color:#cc3281; }
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+    font-weight: bold;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #fff;
+}
+#content { height: 100%; padding: 10px; margin: unset; }
+#pageheddings {margin-top: 40px;}
+.even_div{background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.05);  padding-bottom: 10px; border-bottom: dotted;}
+.odd_div{background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.10); padding-bottom: 10px; border-bottom: dotted; }
+.listwishes{width: 100%; margin-left: 0px;}
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: #cc3281;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #cc3281;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #cc3281;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #cc3281;
+}
+#contact-form #map_canvas, #contact-form input[type="text"], #contact-form textarea, #contact-form #listing {border: 1px solid #CA2A7F;}
+#contact-form input[type=submit] {background: #CA2A7F;}
+#contact-form input[type="text"] {color: unset;}
+#toTop {background: url("../../../arrow_black.png") no-repeat 0px 0px;}

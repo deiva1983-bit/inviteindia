@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title> 
+      Google Maps JavaScript API v3 Example: Asynchronous Map Simple
+    </title> 
+
+    <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css"
+        rel="stylesheet" type="text/css"> 
+    <script type="text/javascript"> 
+	var map;
+	var infoWindow;
+
+      function initialize() {
+        var myOptions = {
+          zoom: 15,
+          center: new google.maps.LatLng(12.841072, 79.706834),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+		var WINDOW_HTML = '<div style="width: 210px; padding-right: 10px"><a href="http://www.hostrocket.com">HostRocket</a> servers are ocated at 21 Corporate Drive, Clifton Park, NY 12065. Phone: 1-866-519-7079</div>';	
+		
+        var map = new google.maps.Map(document.getElementById('map_canvas'),
+            myOptions);
+	var contentString = '<div id="content">Udhaya Mazal Thirumana Mandabam. <br />Kanchipuram.</div>';
+
+var infowindow = new google.maps.InfoWindow({
+    content: contentString
+});
+
+		var myLatlng = new google.maps.LatLng(12.841072, 79.706834);
+	
+
+
+	  var marker = new google.maps.Marker({
+		  position: myLatlng,
+		  map: map,
+		  title:"Udhaya Mazal"
+	  });
+	 google.maps.event.addListener(marker, 'click', function() {
+  infowindow.open(map,marker);
+});
+	  
+				
+      }
+	
+
+      function loadScript() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'http://maps.googleapis.com/maps/api/js?sensor=false&' +
+            'callback=initialize';
+        document.body.appendChild(script);
+      }
+
+      window.onload = loadScript;
+    </script> 
+  </head> 
+  <body> 
+    <div id="map_canvas"></div> 
+  </body> 
+</html>

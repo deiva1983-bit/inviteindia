@@ -1,0 +1,108 @@
+#homepageheddings {color: #000000;}
+
+body {
+    font-size: 15px !important; font-weight: bold;
+}
+
+
+a {color: #963;}
+a:hover {color: #C60;}
+p,code,ul {padding-bottom: 1.2em;}
+
+li {list-style: none;}
+
+h1 {
+	font: normal 1.8em Tahoma,sans-serif;
+	margin-bottom: 4px;
+}
+h1,h2,h3 {padding-top: 6px;}
+.home_img {text-align: center; }
+/* sub navigation  Jenna Sue*/
+
+/* content */
+.content {
+	float: left;
+	margin: 10px 0;
+	padding: 0 16px;
+	width: 715px;
+}
+.centr {
+    padding-left: 50px;
+}
+.content .descr {
+	color: #664;
+	font-size: 0.9em;
+	margin-bottom: 6px;
+}
+.content li {
+		margin-left: 18px;
+}
+.content p {font-family: "Lucida Sans Unicode",sans-serif;}
+
+/* footer */
+ 
+.footer a,.footer a:hover {color: #FFF;}
+.thirukkural{text-align: center;}
+
+.home_content{
+/*font-weight:bold;
+font:1.8em Monotype Corsiva, Verdana; */
+text-align: center;
+}
+.wedding-names {
+font-weight:bold;
+font:1.5em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.wedding-btn {
+font-weight:bold;
+font:1.0em "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.field
+{
+padding: 10px 10px 5px;    
+}
+#mrgwish {padding: 6px 0px 20px;}
+#mrginfo {padding: 6px 10px 20px;}
+
+.error-ind { border:1px solid #cd0a0a !important; }
+
+
+.listcomment{height:280px; overflow:auto; text-align:left; width: 367px;}
+
+#border_line{ border-bottom: 1px solid #d9d9d9; padding: 5px 24px;}
+.address_with_land{	padding-top: 2px; color: #5A5A43; font-size: 1em;	line-height: 30px;	margin: 0;	padding-left: 2px;	width:202px; height:200px;	}
+.wisher-name {padding-top: 10px;}
+.wisher-comments {background: url(img/quote.gif) no-repeat;
+	padding-left: 20px;  padding-bottom: 2px;padding-top: 12px; font-size: 15px; color: #664;}
+.descr {color: #664;font-size: 12px;padding-bottom: 2px;}
+
+.blessing_div{border-radius:10px; margin-top:8px; width:90%; min-height:200px;}
+/*.alb_img  {padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; text-align: center;}
+.home_img {text-align: center;	background:url(img/alb_bg.jpg) repeat; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; vertical-align: top;}
+*/
+
+	.about {background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.20); padding: 10px !important; border: }
+.first_letter{font-weight:bold; font:1.8em Monotype Corsiva, Verdana;} 
+.footer a, .footer a:hover { color: #895459; }
+
+.gmap a, .gmap a:hover {color: #895459;}
+.gm-style-iw {color: #895459;}
+#about_name {color: #f5ef84; font-family: Jenna Sue, cursive; font-size: 40px; }
+#about_message { font-family: Jenna Sue; letter-spacing: 1px; font-size: 25px;}
+#about_date {font-family: Gabriola, Amatic; color: #FFFFFF;  }
+#navigation_links {font-family: Algerian;}
+.alb_img  {margin:10px; border:5px double #F5C847; padding: 0px !important;}
+.home_img {text-align: center; margin:10px; border:5px double #F5C847; }
+
+.col1_1, .col2_2, .col3_3, .cols {float:left}
+.col1_1 {width:542px}
+.col2_2 {width:288px;padding-top:195px;}
+.col3_3 {width:246px}
+
+.inputval{    width: 200px;
+    padding: 2px 0px 2px 3px;
+    border: 1px solid #626262;
+    background: transparent none repeat scroll 0% 0%;}
+#wish-form {padding: 2px 0px 15px 3px;}
+.home_content {font-size: 20px;}
+.weddinghome {color: #B52662; }

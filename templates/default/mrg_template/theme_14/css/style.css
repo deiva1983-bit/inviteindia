@@ -1,0 +1,2241 @@
+/*Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+#gmap_sec #mode{color: #000;}
+.adp, .adp table{color: #fff !important;} .adp-step, .adp-text {color:#BF2529;}
+.warnbox-content{background: none !important;}
+ul li a {color:#BF2529;}
+#listing {height: 341px;}
+#results {color: #000;}
+#footernav1 #copyright {color:#BF2529;}
+#footernav1 a {color:#BF2529;}
+.blessing_div{border-radius:10px; margin-top:8px; min-height:200px;  background-color:#fde9f2;}
+.add_bless_msg{text-align: right;  padding-bottom: 5px; padding-top: 2px;}
+.alb_slideshow1 {
+    padding-left: 177px !important;
+}
+a:link, a:visited {color: #fff;}
+.latest_sermons .bride .img img,.latest_sermons .groom .img img{border:10px solid #ccc}
+.center-image img{width:100%}.latest_sermons .bride .img img,.latest_sermons .groom .img img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;width:60%;}
+.blessing_div{background: none;}
+.wedding-names{
+    margin: 22px 0 10px 0;
+    color: #ffffff;
+    font-family: 'Lobster Two', cursive;
+    font-size: 30px;
+}
+.wedding-btn {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: #fff;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #fff;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #fff;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+}
+body{
+	font-family: 'Rokkitt', serif;
+	margin:0;
+	font-size: 16px !important;
+	}
+.banner{
+	background:url("../images/m.jpg") repeat;
+	min-height:400px;
+	}
+.desc_content{
+    margin: 15px auto 0 auto;
+    font-size: 18px;
+    color: #ffffff;
+    width: 70%;
+    text-align: center;
+}
+.wrap{
+width:80%;
+margin:0 auto;
+}
+.article-left{
+	
+	float:left;
+	width:64%;
+	}
+.article-right{
+float:right;
+width:36%;
+}
+.article-right img{
+width:100%;
+}
+.article {
+padding-top: 66px;
+}
+.logo {
+	background:url("../images/blue.png") no-repeat 0px 0px;
+	background-size:cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+	min-height: 200px;
+}
+.logo-img a {
+display: block;
+}
+.logo-wrap{
+width:88%;
+margin:0 auto;
+}
+.logo-img{
+width:11%;
+margin:0 auto;
+padding: 48px 0 0 0;
+}
+.navigation{
+	background:url("../images/nav.png") no-repeat 0px 0px;
+	background-size:99%;
+}
+.navigation ul{
+	padding: 12px 0 0 0;
+	margin:0;
+	text-align:center;
+	}
+.navigation ul li{
+display:inline-block;
+}
+.navigation ul li a {
+color: #490002;
+margin: 20px 12px;
+font-size: 18px;
+text-decoration: none;
+display: block;
+}
+
+.navigation ul li a:hover,.navigation ul li a.activate {
+	color: #ffffff;
+	transition:.5s all;
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	-o-transition:.5s all;
+	-ms-transition:.5s all;
+}
+/*-- menu --*/
+.navigation span{
+	display:none;
+	}
+/*-- //menu --*/
+.slider{
+	background:url("../images/blue1.jpg") no-repeat 0px 0px;
+	background-size:cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+	min-height: 486px;
+}
+.slider-image img{
+width:100%;
+}
+.slider-image {
+width: 92%;
+margin: 0 auto;
+padding:28px 0;
+}
+.banner-bottom{
+	background:url("../images/back1.jpg") repeat;
+	/* min-height: 870px; */
+}
+/*-- bottom-left --*/
+.bottom-left{
+	background:url("../images/red.png") no-repeat 0px 0px;
+	background-size:cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+	/*min-height:661px;*/
+	float:left;
+	width:61%;
+	padding-bottom: 50px;
+}
+.bottom-wrap{
+width:66.4%;
+margin:0 auto;
+}
+.bottom-right{
+width:35%;
+float:right;
+}
+.bottom-header{
+	background:url("../images/red.png") no-repeat 0px 0px;
+	background-size:cover
+padding: 35px 0 60px 0;
+position:relative;
+color: #fff;
+}
+.bottom-header h1{
+margin:0;
+font-size:36px;
+color:#ffffff;
+font-family: 'Lobster Two', cursive;
+text-align:center;
+}
+.bottom-header p:nth-child(2){
+margin: 15px auto 0 auto;
+font-size: 18px;
+color: #ffffff;
+width: 100%;
+text-align: center;
+}
+.button{
+background:url("../images/5.png") no-repeat 0px 0px;
+min-height: 41px;
+position:absolute;
+width: 25%;
+text-align: center;
+left: 36%;
+top: 90%;
+}
+
+.hbutton{
+background:url("../images/5.png") no-repeat 0px 0px;
+min-height: 41px;
+position:absolute;
+width: 25%;
+text-align: center;
+left: 36%;
+margin:0;
+color: #BF2A2E;
+padding-top: 3px;
+font-family: 'Lobster Two', cursive;
+}
+
+.button p {
+font-size:22px;
+margin:0;
+color: #BF2A2E;
+padding-top: 3px;
+font-family: 'Lobster Two', cursive;
+}
+.adam-silvi {
+margin-top: 53px;
+border-bottom:1px solid #9D1518;
+padding-bottom:10px;
+}
+.adam h2,.silvi h2{
+margin: 22px 0 10px 0;
+color: #ffffff;
+font-family: 'Lobster Two', cursive;
+font-size: 25px;
+}
+.adam p,.silvi p{
+margin: 0 auto;
+color: #ffffff;
+font-size: 18px;
+width: 74%;
+}
+.col-md-6.adam {
+text-align: center;
+}
+.col-md-6.silvi {
+text-align: center;
+}
+.social-icons{
+margin-top:30px;
+}
+.social-icons ul{
+	margin:0;
+	padding:0;
+	text-align:center;
+	}
+.social-icons ul li{
+	display:inline-block;
+	padding-left:3px;
+	}
+.social-icons ul li a.fb{
+	background:url("../images/20.png") no-repeat 0px -9px;
+	width:38px;
+	height:38px;
+	display:block;
+	}
+.social-icons ul li a.twit{
+	background:url("../images/20.png") no-repeat 1px -64px;
+	width:38px;
+	height:38px;
+	display:block;
+	}
+.social-icons ul li a.linkin{
+	background:url("../images/20.png") no-repeat 0px -118px;
+	width:38px;
+	height:38px;
+	display:block;
+	}
+.social-icons ul li a.fb:hover{
+	background:url("../images/20.png") no-repeat -58px -9px;
+	transition:.7s all;
+	-webkit-transition:.7s all;
+	-moz-transition:.7s all;
+	-o-transition:.7s all;
+	-ms-transition:.7s all;
+	}
+.social-icons ul li a.twit:hover{
+	background:url("../images/20.png") no-repeat  -58px -64px;
+	transition:.7s all;
+	-webkit-transition:.7s all;
+	-moz-transition:.7s all;
+	-o-transition:.7s all;
+	-ms-transition:.7s all;
+	
+	}
+.social-icons ul li a.linkin:hover{
+	background:url("../images/20.png") no-repeat -60px -118px;
+	transition:.7s all;
+	-webkit-transition:.7s all;
+	-moz-transition:.7s all;
+	-o-transition:.7s all;
+	-ms-transition:.7s all;
+	
+	}
+/*-- //bottom-left --*/
+/*-- bottom-right --*/
+.bottom-right h2{
+margin: 35px 0 25px 0;
+font-family: 'Lobster Two', cursive;
+font-size: 36px;
+color: #074395;
+}
+.wishes-left{
+float: left;
+width: 62%;
+}
+.wishes-right{
+float:right;
+width:25%;
+}
+.wishes-left p{
+margin:0;
+color:#7c7061;
+font-size:18px;
+
+}
+.wishes-left p a{
+color: #BF2A2E;
+text-decoration:none;
+}
+.wishes-left p a:hover{
+	color:#ffffff;
+	transition:.5s all;
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	-o-transition:.5s all;
+	-ms-transition:.5s all;
+}
+.wishes-left p:nth-child(2) {
+margin-top: 12px;
+}
+.wishes-grid {
+border-top: 1px solid #a8a8a8;
+padding: 22px 0;
+}
+.wishes-right img{
+width:100%;
+}
+/*-- //bottom-right --*/
+/*-- copy-right --*/
+.copy-right p{
+font-size:18px;
+margin:0;
+font-weight:bold;
+color: #BF2A2E;
+margin: 0 0 0 160px;
+}
+.copy-right p a{
+text-decoration:none;
+color: #BF2A2E;
+}
+.copy-right p a:hover{
+	color:#ffffff;
+	transition:.5s all;
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	-o-transition:.5s all;
+	-ms-transition:.5s all;
+}
+.copy-right {
+padding: 28px 0;
+}
+/*-- //copy-right --*/
+/*------------------ Slider Part starts Here----------*/
+#slider4,
+#slider3 {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  margin: 0 auto;
+}
+.rslides_tabs {
+  list-style: none;
+  padding: 0;
+  background: rgba(0,0,0,.25);
+  box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  -moz-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);
+  font-size: 18px;
+  list-style: none;
+  margin: 0 auto 50px;
+  max-width: 540px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+.rslides_tabs li {
+  display: inline;
+  float: none;
+  margin-right: 1px;
+}
+.rslides_tabs a {
+  width: auto;
+  line-height: 20px;
+  padding: 9px 20px;
+  height: auto;
+  background: transparent;
+  display: inline;
+}
+.rslides_tabs li:first-child {
+  margin-left: 0;
+}
+.rslides_tabs .rslides_here a {
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  font-weight: bold;
+}
+.events {
+  list-style: none;
+}
+.callbacks_container {
+  position: relative;
+  /* float: left; */
+  width: 100%;
+}
+.callbacks {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.callbacks li {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.callbacks img {
+  position: relative;
+  z-index: 1;
+  height: auto;
+  border: 0;
+}
+.callbacks .caption {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-size: 20px;
+	text-shadow: none;
+	color: #fff;
+	left: 0;
+	right: 0;
+	padding: 10px 20px;
+	margin: 0;
+	max-width: none;
+	top: 10%;
+	text-align: center;
+}
+.callbacks_nav {
+  	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	top: 80%;
+	left: 370px;
+	opacity: 0.7;
+	z-index: 3;
+	text-indent: -9999px;
+	overflow: hidden;
+	text-decoration: none;
+	height: 61px;
+	width: 53px;
+	background: transparent url("../images/themes.png") no-repeat left top;
+	margin-top: -65px;
+}
+.callbacks_nav:active {
+  opacity: 1.0;
+}
+.callbacks_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 370px;
+}
+#slider3-pager a ,#slider4-pager a {
+  display: inline-block;
+}
+#slider3-pager span,#slider4-pager span{
+  float: left;
+}
+#slider3-pager span, #slider4-pager span{
+	width:100px;
+	height:15px;
+	background:#fff;
+	display:inline-block;
+	border-radius:30em;
+	opacity:0.6;
+}
+#slider3-pager .rslides_here a , #slider4-pager .rslides_here a {
+  background: #FFF;
+  border-radius:30em;
+  opacity:1;
+}
+#slider3-pager a ,#slider4-pager a {
+  padding: 0;
+}
+#slider3-pager li, #slider4-pager li{
+	display:inline-block;
+}
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.rslides li{
+  position: relative;
+  display: block;
+  float: left;
+}
+.rslides img {
+  height: auto;
+  border: 0;
+  width:100%;
+}
+.callbacks_tabs{
+	list-style: none;
+	position: absolute;
+	top: 91%;
+	z-index: 999;
+	left: 45%;
+	padding: 0;
+	margin: 0;
+}
+.slider-top{
+	text-align: center;
+	padding:10em 0;
+}
+.slider-top h1{
+	font-weight:700;
+	font-size:48px;
+	color:#010101;
+}
+.slider-top p{
+	font-weight:400;
+	font-size:20px;
+	padding:1em 7em;
+	color:#010101;
+}
+.slider-top ul.social-slide{
+	display:inline-flex;
+	margin: 0px;
+	padding: 0px;
+}
+ul.social-slide li i{
+	width:70px;
+	height:74px;
+	background:url(../images/img-resources.png)no-repeat;
+	display: inline-block;
+	margin:0px 15px;
+}
+ul.social-slide li i.win{
+	background-position:-6px 0px;
+}
+ul.social-slide li i.android{
+	background-position:-110px 0px;
+}
+ul.social-slide li i.mac{
+	background-position:-215px 0px;
+}
+.callbacks_tabs li{
+	display: inline-block;
+}
+@media screen and (max-width: 600px) {
+  .callbacks_nav {
+    top: 47%;
+    }
+}
+/*----*/
+.callbacks_tabs a{
+ visibility: hidden;
+}
+.callbacks_tabs a:after {
+  content: "\f111";
+  font-size:0;
+  font-family: FontAwesome;
+  visibility: visible;
+  display: block;
+  height:14px;
+  width:14px;
+  display:inline-block;
+	background: #023373;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  -ms-border-radius: 30px;
+}
+.callbacks_here a:after{
+	background: #F54D4D;	
+}
+/*-- Slider part Ends Here --*/
+/*-- to-top --*/
+#toTop {
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 12px;
+	right: 1%;
+	overflow: hidden;
+	z-index: 999; 
+	width: 32px;
+	height: 32px;
+	border: none;
+	text-indent: 100%;
+	background: url("../images/arr.png") no-repeat 0px 0px;
+}
+#toTopHover {
+	width: 32px;
+	height: 32px;
+	display: block;
+	overflow: hidden;
+	float: right;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+/*-- //to-top --*/
+.slid-img img{
+width:100%;
+}
+.slid-img {
+width: 92%;
+margin: 0 auto;
+padding: 28px 0;
+}
+/*-- contact-page --*/
+.contact-map h2,.contact-form h2,.contact-info h2{
+font-family: 'Lobster Two', cursive;
+font-size: 36px;
+color:#074395;
+margin: 65px 0 30px 0;
+}
+.map-image {
+height: 330px;
+}
+.map-image iframe{
+	width:100%;
+	height:330px;
+}
+
+.contact-info{
+float:right;
+width:48%;
+}
+.contact-info h3{
+margin:0;
+font-size:24px;
+color:#490002;
+}
+.contact-info p{
+color:#7c7061;
+font-size:18px;
+margin:15px 0;
+}
+.contact p{
+margin-left:0;
+text-align:center;
+}
+.contact-form input[type="text"]{
+	width: 98%;
+	font-size:18px;
+	color: #fff;
+	background: none;
+	margin: 0 0px 18px 0;
+	padding: 12px 10px;
+	outline: none;
+	border: 1px solid #e8e8e8;
+	}
+.contact-form textarea{
+	width: 98%;
+	color: #fff;
+	font-size:18px;
+	background: none;
+	resize: none;
+	margin-bottom:18px;
+	height: 160px;
+	padding: 12px;
+	outline: none;
+	border: 1px solid #e8e8e8;
+	}
+.contact-info ul{
+	padding:0;
+	margin: 10px 0 0 0;
+	}
+.contact-info ul li{
+	list-style-type:none;
+	display:block;
+	color:#7c7061;
+	font-size:18px;
+	}
+.contact-info p {
+color: #7c7061;
+font-size: 18px;
+}
+.contact-info p a{
+color: #7c7061;
+font-size: 18px;
+}
+.contact-info p a:hover{
+color:#BF2A2E;
+}
+.contact-info p:nth-child(7) {
+margin: 0px 0;
+}
+.contact-info p:nth-child(6) {
+margin: 0px 0;
+}
+.contact-form input[type=submit] {
+	color: #ffffff;
+	padding: 13px 43px;
+	font-size:18px;
+	outline: none;
+	cursor: pointer;
+	background:#BB181C;
+	font-weight: 700;
+	border: 1px solid #e8e8e8;
+	}
+.contact-form input[type=submit]:hover {
+	background:#074395;
+	color: #ffffff;
+	transition: .5s all;
+	-webkit-transition: .5s all;
+	-o-transition: .5s all;
+	-ms-transition: .5s all;
+	-moz-transition: .5s all;	
+	}
+/*-- //contact-page --*/
+/*-- about-page --*/
+.love-story h2{
+font-family: 'Lobster Two', cursive;
+font-size: 36px;
+color:#074395;
+margin:0px 0 30px 0;
+}
+.love-story{
+float:left;
+width:90%;
+}
+.love-story img{
+width:100%;
+}
+.about-info{
+float:right;
+width:50%;
+}
+.about {
+padding: 65px 0;
+}
+.love-story h3{
+margin: 25px 0 3px 0;
+font-size: 24px;
+color: #490002;
+}
+.love-story p{
+margin: 0 0;
+font-size: 18px;
+color:#7c7061;
+}
+.about-left {
+width: 46%;
+float: left;
+}
+.about-right {
+width: 52%;
+float: right;
+}
+.about-adam h2,.about-silvi h2  {
+color: #074395;
+margin: 0 0 30px 0;
+font-size: 36px;
+font-family: 'Lobster Two', cursive;
+}
+.about-right h3{
+margin: 0;
+font-size: 24px;
+color: #490002;
+}
+.about-right p{
+margin: 18px 0 0 0;
+font-size: 18px;
+color: #7c7061;
+}
+.about-adam {
+border-bottom: 1px solid #B0A6A6;
+padding-bottom: 45px;
+}
+.about-silvi {
+padding-top: 35px;
+}
+.abt-cnt{
+min-height: 767px;
+}
+/*-- //about-page --*/
+/*-- wedding-page --*/
+.wedding-gridsa{
+border-bottom: 1px solid #B0A6A6;
+margin:0;
+padding: 40px 0 60px 0;
+}
+.wedding h2, .our-wedding h2  {
+color: #074395;
+margin:0;
+font-size: 36px;
+font-family: 'Lobster Two', cursive;
+}
+.wedding{
+margin: 65px 0 0 0;
+}
+.our-wedding{
+margin: 45px 0 70px 0;
+}
+.wedding-grids, .our-grids {
+margin-top: 40px;
+}
+.our-grid h3{
+margin: 15px 0;
+font-size: 24px;
+color: #490002;
+}
+.our-grid p{
+margin: 0;
+font-size: 18px;
+color: #7c7061;
+}
+.our-grid img{
+width:100%;
+}
+.wed-left {
+float: left;
+width: 14%;
+}
+.wed-left p{
+margin: 0;
+font-size: 18px;
+color: #ffffff;
+background: #BF2A2E;
+border-radius: 33px;
+padding: 12px;
+text-align: center;
+}
+.wed-right {
+float: right;
+width: 82%;
+}
+.wed-right h3{
+margin:0;
+font-size:24px;
+color:#490002;
+}
+.wed-right p{
+margin:10px 0 0 0;
+font-size:18px;
+color:#7c7061;
+}
+/*-- //wedding-page --*/
+/*-- wishes-page --*/
+.error {
+text-align: center;
+margin-top: 42px;
+  min-height: 600px;
+}
+.error h1{
+color: #074395;
+font-size: 16em;
+margin:0;
+}
+.error-head h1 span{
+color: #BF2A2E;
+}
+.error-head h2{
+margin: 0;
+font-size: 24px;
+color: #490002;
+}
+.error-head a:hover{
+background: #BF2A2E;
+}
+.error-head a{
+color: #fff;
+background:#074395;
+font-size: 18px;
+font-weight: 600;
+display:inline-block;
+text-transform: uppercase;
+padding: 10px 15px;
+margin-top: 171px;
+}
+.banner-bottom.wish {
+min-height: 487px;
+}
+/*-- //wishes-page --*/
+.about-copy p{
+font-size:18px;
+margin:0;
+font-weight:bold;
+color: #BF2A2E;
+text-align:center;
+}
+.about-copy p a{
+text-decoration:none;
+color: #BF2A2E;
+}
+.about-copy p a:hover{
+	color:#ffffff;
+	transition:.5s all;
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	-o-transition:.5s all;
+	-ms-transition:.5s all;
+}
+.about-copy {
+padding: 28px 0;
+}
+@media(max-width:1440px){
+	.bottom-wrap {
+	width: 74.9%;
+	}
+	.banner-bottom {
+/*	min-height: 850px; */
+	}
+	.logo-img {
+	width: 11%;
+	}
+	.bottom-left {
+	/*min-height: 665px;*/
+	padding-bottom: 50px;
+	}
+	.error {
+	min-height: 590px;
+	}
+	.error-head a {
+	  margin-top: 153px;
+	  }
+}
+@media(max-width:1366px){
+	.bottom-wrap {
+	width: 78%;
+	}
+	.logo-img {
+	width: 11%;
+	}
+	.slider-image {
+	padding: 35px 0;
+	}
+	.slid-img {
+	padding: 35px 0;
+	}
+	.bottom-left {
+	/* min-height: 662px; */
+	padding-bottom: 50px;
+	}
+	.banner-bottom {
+	/* min-height: 830px; */
+	}
+	.logo-wrap {
+	width: 87.9%;
+	}
+	.error {
+	min-height: 580px;
+	}
+}
+@media(max-width:1280px){
+	.logo-img {
+	width: 11%;
+	padding: 89px 0 0 0;
+	}
+	.logo-img img{
+	width:100%;
+	}
+	.logo-wrap {
+	width: 82%;
+	}
+	.navigation {
+	background: url("../images/nav.png") no-repeat 24px 0px;
+	background-size: 92.4%;
+	}
+	.navigation ul {
+	padding: 11px 0 0 0;
+	}
+	.article {
+	padding-top: 85px;
+	}
+	.logo {
+	min-height: 220px;
+	background: url("../images/blue.png") no-repeat 0px 28px;
+	}
+	.slider {
+	min-height: 360px;
+	}
+	.bottom-wrap {
+	width: 80.9%;
+	}
+	.bottom-left {
+	width: 59.3%;
+	background: url("../images/red.png") no-repeat -2px 0px;
+	}
+	.bottom-header {
+	padding: 25px 0 32px 0;
+	}
+	.banner-bottom {
+	/* min-height: 802px; */
+	}
+	.bottom-left {
+	min-height: 643px;
+	}
+	.button {
+	top: 87%;
+	}
+	.bottom-right h2 {
+	margin: 25px 0 25px 0;
+	}
+	.about {
+	padding: 25px 0;
+	}
+	.wedding {
+	margin: 25px 0 0 0;
+	}
+	.our-wedding {
+	margin: 25px 0 70px 0;
+	}
+	.wedding-grids, .our-grids {
+	margin-top: 25px;
+	}
+	.error {
+	margin-top: 25px;
+	}
+	.banner-bottom.wish {
+	min-height: 469px;
+	}
+	.contact-map h2, .contact-form h2, .contact-info h2 {
+	margin: 25px 0;
+	}
+	.banner-bottom.abt-cnt {
+	min-height: 745px;
+	}
+	.error {
+	min-height: 570px;
+	}
+	.error-head a {
+	margin-top: 145px;
+	}
+}
+
+@media(max-width:1024px){
+		.article-right {
+		width: 35.8%;
+		}
+		.article {
+		padding-top: 50px;
+		}
+		.logo {
+		min-height: 175px;
+		background: url("../images/blue.png") no-repeat 0px 0px;
+		background-size: 100%;
+		}
+		.navigation ul li a {
+		margin: 13px 12px;
+		font-size: 16px;
+		}
+		.contact-info ul li {
+		font-size: 16px;
+		}
+		.slider {
+		min-height: 303px;
+		background-size: 100% !important;
+		}
+		.navigation {
+		background: url("../images/nav.png") no-repeat 20px 0px;
+		background-size: 92.4%;
+		}
+		.logo-img {
+		width: 11%;
+		padding: 57px 0 0 0;
+		}
+		.slider-image {
+		padding: 32px 0;
+		}
+		.slid-img {
+		padding: 32px 0;
+		}
+		.callbacks_tabs {
+		left: 43%;
+		}
+		.bottom-wrap {
+		width: 82.7%;
+		}
+		.bottom-header h1 {
+		font-size: 25px;
+		}
+		.about-adam h2, .about-silvi h2 {
+		font-size: 25px;
+		margin: 0 0 18px 0;
+		}
+		.love-story h2 {
+		font-size: 25px;
+		}
+		.about {
+		padding: 25px 0;
+		}
+		.love-story h2 {
+		margin: 0px 0 18px 0;
+		}
+		.about-adam {
+		padding-bottom: 35px;
+		}
+		.about-silvi {
+		padding-top: 28px;
+		}
+		.love-story {
+		width: 45%;
+		}
+		.love-story p {
+		font-size: 16px;
+		}
+		.about-right p {
+		font-size: 16px;
+		margin: 12px 0 0 0;
+		}
+		.love-story h3 {
+		font-size: 22px;
+		}
+		.about-left img{
+		width:100%;
+		}
+		.about-right {
+		width: 50%;
+		}
+		.button {
+		background: url("../images/5.png") no-repeat 0px 0px;
+		min-height: 35px;
+		position: absolute;
+		width: 30%;
+		background-size: 100%;
+		}
+		.bottom-header p:nth-child(2) {
+		font-size: 16px;
+		}
+		.bottom-left {
+		width: 59.3%;
+		background: url("../images/red.png") no-repeat 0px 0px;
+		background-size: 100%;
+		}
+		.button p {
+		font-size: 19px;
+		}
+		.col-md-6.adam img {
+		width: 100%;
+		}
+		.col-md-6.silvi img {
+		width: 100%;
+		}
+		.adam-silvi {
+		margin-top: 36px;
+		padding-bottom: 6px;
+		}
+		.adam h2, .silvi h2 {
+		margin: 9px 0 2px 0;
+		}
+		.adam p, .silvi p {
+		font-size: 16px;
+		width: 90%;
+		}
+		.bottom-right h2 {
+		margin: 25px 0 18px 0;
+		font-size: 25px;
+		}
+		.wishes-left p {
+		font-size: 16px;
+		}
+		.wishes-left {
+		width: 65%;
+		}
+		.wishes-left p:nth-child(2) {
+		margin-top: 4px;
+		}
+		.bottom-left {
+		min-height: 588px;
+		}
+		.social-icons {
+		margin-top: 20px;
+		}
+		.banner-bottom {
+		/* min-height: 660px; */
+		}
+		.bottom-left {
+		min-height: 525px;
+		}
+		.copy-right p {
+		font-size: 16px;
+		margin: 0 0 0 85px;
+		}
+		.love-story h3 {
+		margin: 18px 0 3px 0;
+		}
+		.banner-bottom.abt-cnt {
+		min-height: 617px;
+		}
+		.love-story img {
+		height: 240px;
+		}
+		.wedding h2, .our-wedding h2 {
+		font-size: 25px;
+		}
+		.about-right h3 {
+		font-size: 22px;
+		}
+		.wedding {
+		margin: 25px 0 0 0;
+		}
+		.wedding-grids, .our-grids {
+		margin-top: 25px;
+		}
+		.wed-right h3 {
+		font-size: 22px;
+		}
+		.wed-right p {
+		font-size: 16px;
+		overflow: hidden;
+		height: 86px;
+		}
+		.wed-left p {
+		font-size: 16px;
+		padding: 7px;
+		}
+		.wed-left {
+		width: 13%;
+		}
+		.wedding-gridsa {
+		padding: 25px 0 40px 0;
+		}
+		.our-wedding {
+		margin: 25px 0 35px 0;
+		}
+		.our-grid h3 {
+		margin: 15px 0;
+		font-size: 22px;
+		}
+		.our-grid p {
+		font-size: 16px;
+		}
+		.error-head h2 {
+		font-size: 22px;
+		}
+		.error {
+		margin-top: 25px;
+		}
+		.error h1 {
+		font-size: 14em;
+		}
+		.error-head a {
+		font-size: 16px;
+		margin-top: 123px;
+		}
+		.banner-bottom.wish {
+		min-height: 411px;
+		}
+		.contact-map h2, .contact-form h2, .contact-info h2 {
+		font-size: 25px;
+		margin: 25px 0;
+		}
+		.contact-info h3 {
+		font-size: 22px;
+		}
+		.contact-info p {
+		font-size: 16px;
+		}
+		.contact-form textarea {
+		font-size: 16px;
+		}
+		.contact-form input[type=submit] {
+		padding: 11px 35px;
+		font-size: 16px;
+		}
+		.contact-form input[type="text"] {
+		font-size: 16px;
+		}
+		.map-image {
+		height: 320px;
+		}
+		.map-image iframe {
+		height: 320px;
+		}
+		.about-copy p{
+		font-size:16px;
+		}
+		.contact-info p a {
+		font-size: 16px;
+		}
+		.error {
+		  min-height: 496px;
+		}
+}
+@media(max-width:768px){
+		.article-left {
+		width: 67%;
+		}
+		.love-story h3 {
+		font-size: 19px;
+		}
+		.article-right {
+		width: 33%;
+		}
+		.callbacks_tabs a:after {
+		height: 12px;
+		width: 12px;
+		}
+		.article-right img {
+		width: 101.5%;
+		}
+		.rslides img {
+		width: 100%;
+		}
+		.slider {
+		min-height: 225px;
+		background-size: 100% !important;
+		}
+		.slid-img {
+		padding: 15px 0;
+		}
+		.navigation ul li a {
+		margin: 7px 12px;
+		}
+		.slider-image {
+		padding: 15px 0;
+		}
+		.logo-wrap {
+		width: 82%;
+		}
+		.navigation ul {
+		padding: 12px 0 0 0;
+		}
+		.logo-img {
+		width: 11%;
+		padding: 24px 0 0 0;
+		}
+		.navigation {
+		background: url("../images/nav.png") no-repeat 16px 0px;
+		background-size: 92.4%;
+		}
+		.logo {
+		min-height: 113px !important;
+		background: url("../images/blue.png") no-repeat 0px -3px;
+		background-size: 100%;
+		}
+		.bottom-wrap {
+		width: 84.2%;
+		}
+		.bottom-left {
+		width: 62.4%;
+		}
+		.bottom-header {
+		padding: 16px 0 29px 0;
+		}
+		.bottom-header p:nth-child(2) {
+		margin: 8px auto 0 auto;
+		overflow: hidden;
+		height: 44px;
+		}
+		.button {
+		min-height: 32px;
+		width: 33%;
+		}
+		.button p{
+		padding-top: 1px;
+		}
+		.col-md-6.adam {
+		float: left;
+		width: 50%;
+		}
+		.col-md-6.silvi {
+		float: right;
+		width: 50%;
+		}
+		.adam-silvi {
+		padding-bottom: 11px;
+		}
+		.adam p, .silvi p {
+		overflow: hidden;
+		height: 24px;
+		}
+		.social-icons {
+		margin-top: 9px;
+		}
+		.bottom-right h2 {
+		margin: 16px 0 10px 0;
+		}
+		.wishes-grid {
+		padding: 14px 0;
+		}
+		.wishes-left p:nth-child(1){
+		overflow: hidden;
+		height: 45px;
+		}
+		.bottom-left {
+		min-height: 412px;
+		}
+		.copy-right p {
+		margin: 0;
+		text-align:center;
+		}
+		.banner-bottom {
+		/* min-height: 500px; */
+		}
+		.about {
+		padding: 16px 0;
+		}
+		.about-left {
+		width: 44%;
+		float: left;
+		}
+		.love-story {
+		width: 47%;
+		}
+		.love-story img {
+		height: 225px;
+		}
+		.about-right {
+		width: 53%;
+		}
+		.about-right h3 {
+		font-size: 19px;
+		}
+		.about-right p {
+		margin: 5px 0 0 0;
+		overflow: hidden;
+		height: 63px;
+		}
+		.banner-bottom.abt-cnt {
+		min-height: 583px;
+		}
+		.wedding {
+		margin: 16px 0 0 0;
+		}
+		.wedding-grids, .our-grids {
+		margin-top: 20px;
+		}
+		.col-md-4.wedding-grid {
+		float: left;
+		width: 33.3%;
+		}
+		.wed-right h3 {
+		font-size: 19px;
+		}
+		.wed-right {
+		float: right;
+		width: 80%;
+		}
+		.wed-left {
+		width: 15%;
+		}
+		.wed-left p {
+		padding: 4px;
+		}
+		.wed-right p {
+		overflow: hidden;
+		height: 60px;
+		}
+		.our-wedding {
+		margin: 16px 0 22px 0;
+		}
+		.our-grid h3 {
+		margin: 11px 0;
+		font-size: 19px;
+		}
+		.our-grid p {
+		overflow: hidden;
+		height: 87px;
+		}
+		.col-md-4.our-grid {
+		float: left;
+		width: 33.3%;
+		}
+		.banner-bottom.wish {
+		min-height: 494px;
+		}
+		.error-head h2 {
+		font-size: 19px;
+		}
+		.error h1 {
+		font-size: 15em;
+		}
+		.contact-map h2, .contact-form h2, .contact-info h2 {
+		margin: 16px 0;
+		}
+		.map-image iframe {
+		height: 270px;
+		}
+		.map-image {
+		height: 270px;
+		}
+		.contact-info h3 {
+		font-size: 19px;
+		}
+		.contact-form input[type="text"] {
+		padding: 8px 10px;
+		}
+		.contact-form textarea {
+		height: 135px;
+		}
+		.contact-info p:nth-child(3) {
+		overflow: hidden;
+		height: 87px;
+		}
+		.navigation ul li a {
+		  font-size: 15px;
+		}
+		.bottom-header p:nth-child(2) {
+		  font-size: 15px;
+		  }
+		  .wishes-left p {
+		  font-size: 15px;
+		}
+		.adam p, .silvi p {
+		  font-size: 15px;
+		  }
+		  .copy-right p {
+		  font-size: 15px;
+		  }
+		  .about-right p {
+		  font-size: 15px;
+		  }
+		  .love-story p {
+		  font-size: 15px;
+		  }
+		  .about-copy p {
+		  font-size: 15px;
+		  }
+		  .banner-bottom.abt-cnt {
+		  min-height: 562px;
+		}
+		.wed-right p {
+		  font-size: 15px;
+		  }
+		  .our-grid p {
+		  font-size: 15px;
+		}
+		.contact-info p {
+		  font-size: 15px;
+		}
+		.contact-form input[type="text"] {
+		  font-size: 15px;
+		}
+		.contact-info ul li {
+		  font-size: 15px;
+		}
+		.contact-info p a {
+		  font-size: 15px;
+		}
+		.contact-form textarea {
+		  font-size: 15px;
+		}
+		.error-head a {
+		  margin-top: 108px;
+		  }
+		  .error {
+		  min-height: 480px;
+		}
+}
+@media(max-width:640px){
+		.banner {
+		min-height: 337px;
+		}
+		.article-left {
+		width: 67%;
+		}
+		.article-right {
+		width: 33%;
+		}
+		span.menu {
+		display: block;
+		cursor: pointer;
+		width: 100%;
+		position: relative;
+		text-align:center;
+		padding: 10px 0 0 0;
+		font-size: 20px;
+		color: #ffffff;
+		}
+		ul.nav1{
+		display:none;
+		background:#074395;
+		}
+		.navigation ul.nav1 li {
+		display: inline-block;
+		text-align: center;
+		margin: 0;
+		width: 100%;
+		padding: 0px 0;
+		}
+		.navigation ul {
+		position: absolute;
+		padding: 0;
+		margin: 0;
+		top: 72.7%;
+		left: 21.5%;
+		width: 51.6%;
+		z-index: 9999;
+		}
+		.logo-img {
+		width: 19%;
+		padding: 9px 0 0 0;
+		}
+		.logo {
+		min-height: 97px !important;
+		}
+		.navigation {
+		min-height: 41px;
+		background: url("../images/nav.png") no-repeat 16px 0px !important;
+		background-size: 91.3% !important;
+		}
+		.slider-image {
+		padding: 15px 0;
+		width: 86%;
+		}
+		.slid-img {
+		padding: 15px 0;
+		width: 86%;
+		}
+		span.menu img {
+		width: 8%;
+		}
+		.logo-wrap {
+		width: 81%;
+		}
+		.slider {
+		min-height: 180px;
+		}
+		.callbacks_tabs {
+		left: 40%;
+		top: 88%;
+		}
+		.bottom-wrap {
+		width: 82.9%;
+		}
+		.bottom-left {
+		width: 62.3%;
+		}
+		.bottom-header {
+		padding: 10px 0 18px 0;
+		}
+		.bottom-header h1 {
+		font-size: 22px;
+		}
+		.bottom-right h2 {
+		margin: 10px 0 10px 0;
+		font-size: 22px;
+		}
+		.button p {
+		font-size: 14px;
+		}
+		.button {
+		min-height: 27px;
+		left: 34%;
+		}
+		.adam-silvi {
+		margin-top: 25px;
+		}
+		.adam h2, .silvi h2 {
+		margin: 9px 0 2px 0;
+		font-size: 22px;
+		}
+		.adam p, .silvi p {
+		overflow: hidden;
+		height: 20px;
+		font-size: 14px;
+		}
+		.bottom-header p:nth-child(2) {
+		font-size: 14px;
+		}
+		.social-icons {
+		margin-top: 4px;
+		}
+		.wishes-left p {
+		font-size: 14px;
+		}
+		.wishes-grid {
+		padding: 7px 0;
+		}
+		.wishes-left p:nth-child(2) {
+		margin-top: 0px;
+		}
+		.about-copy p{
+		font-size:14px;
+		}
+		.copy-right p {
+		font-size: 14px;
+		text-align: center;
+		}
+		.bottom-left {
+		min-height: 346px;
+		}
+		.banner-bottom {
+		/* min-height: 470px; */
+		}
+		.love-story h2 {
+		font-size: 22px;
+		}
+		.about-adam h2, .about-silvi h2 {
+		font-size: 22px;
+		}
+		.about-right h3 {
+		font-size: 16px;
+		}
+		.about-right p {
+		font-size: 14px;
+		}
+		.love-story p {
+		font-size: 14px;
+		overflow: hidden;
+		height: 42px;
+		}
+		.love-story h3 {
+				font-size: 16px;
+				}
+		.love-story img {
+		height: 183px;
+		}
+		.love-story {
+		width: 46%;
+		}
+		.about-right p {
+		overflow: hidden;
+		height: 38px;
+		}
+		.about-adam {
+		padding-bottom: 30px;
+		}
+		.banner-bottom.abt-cnt {
+		min-height: 490px;
+		}
+		.wedding h2, .our-wedding h2 {
+		font-size: 22px;
+		}
+		.wed-right h3 {
+		font-size: 16px;
+		}
+		.wed-right p {
+		font-size: 14px;
+		margin: 3px 0 0 0;
+		}
+		.wed-left p {
+		font-size: 14px;
+		}
+		.wed-left {
+		width: 17%;
+		}
+		.wedding-gridsa {
+		padding: 16px 0 25px 0;
+		}
+		.our-grid h3 {
+		margin: 8px 0;
+		font-size: 16px;
+		}
+		.our-grid p {
+		font-size: 14px;
+		}
+		.our-grid p {
+		overflow: hidden;
+		height: 80px;
+		}
+		.banner-bottom.wish {
+		min-height: 371px;
+		}
+		.error h1 {
+		font-size: 12em;
+		}	
+		.error-head h2 {
+		font-size: 16px;
+		}	
+		.error-head a {
+		font-size: 14px;
+		padding: 7px 13px;
+		}	
+		.navigation ul li a {
+		font-size: 14px;
+		margin: 8px 12px;
+		}	
+		.contact-map h2, .contact-form h2, .contact-info h2 {
+		font-size: 22px;
+		}
+		.map-image iframe {
+		height: 245px;
+		}
+		.map-image {
+		height: 245px;
+		}
+		.contact-form input[type="text"] {
+		font-size: 14px;
+		margin: 0 0px 14px 0;
+		}
+		.contact-info h3 {
+		font-size: 16px;
+		}
+		.contact-info p {
+		font-size: 14px;
+		}
+		.contact-info p:nth-child(3) {
+		overflow: hidden;
+		height: 76px;
+		}
+		.contact-info ul li {
+		font-size: 14px;
+		}
+		.contact-info p a {
+		font-size: 14px;
+		}
+		.contact-form input[type=submit] {
+		padding: 8px 25px;
+		font-size: 14px;
+		}
+		.contact-form textarea {
+		font-size: 14px;
+		padding: 8px;
+		height: 120px;
+		margin-bottom: 14px;
+		}
+		.error {
+		  min-height: 422px;
+		}
+}
+@media(max-width:480px){
+		.logo {
+		background-size: 100% !important;
+		background: url("../images/blue.png") no-repeat 0px 0px;
+		min-height: 77px !important;
+		}
+		.navigation {
+		min-height: 30px !important;
+		background: url("../images/nav.png") no-repeat 12px 0px !important;
+		background-size: 91.3% !important;
+		}
+		.callbacks_tabs a:after {
+		height: 9px;
+		width: 9px;
+		}
+		span.menu {
+		padding: 5px 0 0 0;
+		font-size: 18px;
+		}
+		.slider {
+		min-height: 125px;
+		}
+		.callbacks_tabs {
+		left: 40%;
+		top: 86%;
+		}
+		.slider-image {
+		padding: 7px 0;
+		}
+		.slid-img {
+		padding: 7px 0;
+		}
+		.banner {
+		min-height: 280px;
+		}
+		.bottom-wrap {
+		width: 81.5%;
+		}
+		.bottom-header {
+		padding: 3px 0 7px 0;
+		}
+		.bottom-header h1 {
+		font-size: 20px;
+		}
+		.bottom-header p:nth-child(2) {
+		margin: 2px auto 0 auto;
+		overflow: hidden;
+		height: 23px;
+		}
+		.adam h2, .silvi h2 {
+		margin: 4px 0 2px 0;
+		font-size: 20px;
+		}
+		.button {
+		width: 40%;
+		left: 30%;
+		}
+		.social-icons ul li a.fb {
+		background: url("../images/20.png") no-repeat 3px -3px;
+		width: 28px;
+		height: 28px;
+		background-size: 229% !important;
+		}
+		.social-icons ul li a.twit {
+		background: url("../images/20.png") no-repeat 3px -39px;
+		width: 28px;
+		height: 28px;
+		background-size: 229% !important;
+		}
+		.social-icons ul li a.linkin {
+		background: url("../images/20.png") no-repeat 3px -74px;
+		width: 28px;
+		height: 28px;
+		background-size: 229% !important;
+		}
+		.social-icons ul li a.fb:hover {
+		background: url("../images/20.png") no-repeat -35px -3px;
+		}
+		.social-icons ul li a.twit:hover {
+		background: url("../images/20.png") no-repeat -35px -39px;
+		}
+		.social-icons ul li a.linkin:hover {
+		background: url("../images/20.png") no-repeat -36px -74px;
+		}
+		.bottom-right h2 {
+		margin: 3px 0 3px 0;
+		font-size: 20px;
+		}
+		.wishes-left p:nth-child(1) {
+		overflow: hidden;
+		height: 23px;
+		}
+		.wishes-left {
+		width: 74%;
+		}
+		.bottom-left {
+		min-height: 245px;
+		}
+		.banner-bottom {
+		/*min-height: 318px; */
+		}
+		.navigation ul {
+		top: 32%;
+		left: 9.5%;
+		width: 50.6%;
+		z-index: 9999;
+		}
+		.copy-right p {
+		margin: 0 0 0 0px;
+		}
+		.navigation ul {
+		top: 28%;
+		left: 9.3%;
+		width: 79.7%;
+		}
+		.about {
+		padding: 12px 0;
+		}
+		.love-story h2 {
+		font-size: 20px;
+		}
+		.navigation ul li a {
+		font-size: 14px;
+		margin: 3px 12px;
+		}
+		.about-adam h2, .about-silvi h2 {
+		font-size: 20px;
+		}
+		.love-story img {
+		height: 135px;
+		}
+		.about-right h3 {
+		overflow: hidden;
+		height: 13px;
+		}
+		.about-right p {
+		overflow: hidden;
+		height: 23px;
+		}
+		.about-adam {
+		padding-bottom: 20px;
+		}
+		.about-silvi {
+		padding-top: 20px;
+		}
+		.love-story p {
+		font-size: 14px;
+		overflow: hidden;
+		height: 13px;
+		}
+		.banner-bottom.abt-cnt {
+		min-height: 373px;
+		}
+		.wed-right h3 {
+		overflow: hidden;
+		height: 15px;
+		}
+		.wed-left {
+		width: 20%;
+		}
+		.wed-right {
+		float: right;
+		width: 70%;
+		}
+		.wed-left p {
+		padding: 2px;
+		}
+		.wedding h2, .our-wedding h2 {
+		font-size: 20px;
+		}
+		.wedding {
+		margin: 12px 0 0 0;
+		}
+		.wed-right p {
+		overflow: hidden;
+		height: 53px;
+		}
+		.our-wedding {
+		margin: 12px 0 22px 0;
+		}
+		.our-grid p {
+		overflow: hidden;
+		height: 58px;
+		}
+		.error h1 {
+		font-size: 10em;
+		}
+		.banner-bottom.wish {
+		min-height: 338px;
+		}
+		.contact-map h2, .contact-form h2, .contact-info h2 {
+		font-size: 20px;
+		margin: 12px 0;
+		}
+		.map-image iframe {
+		height: 200px;
+		}
+		.map-image {
+		height: 200px;
+		}
+		.contact-info h3:nth-child(2) {
+		overflow: hidden;
+		height: 32px;
+		}
+		.contact-info p {
+		margin: 10px 0;
+		}
+		.contact-form textarea {
+		height: 95px;
+		}
+		.error {
+		  min-height: 378px;
+		}
+		.error-head a {
+		  margin-top: 103px;
+		}
+}
+@media(max-width:320px){
+		.article-right img {
+		display: none;
+		}
+		.article-left {
+		width: 100%;
+		}
+		.navigation {
+		min-height: 28px !important;
+		background: url("../images/nav.png") no-repeat 11px 0px !important;
+		background-size: 91.3% !important;
+		}
+		.slider-image {
+		padding: 13px 0;
+		}
+		.slid-img {
+		padding: 13px 0;
+		}
+		.slider {
+		min-height: 133px;
+		}
+		.bottom-wrap {
+		width: 72.9%;
+		}
+		.bottom-left {
+		width: 100%;
+		}
+		.bottom-right {
+		width: 100%;
+		}
+		.bottom-right h2 {
+		margin: 3px 0 8px 0;
+		}
+		.adam-silvi {
+		padding-bottom: 0px;
+		}
+		.social-icons {
+		margin-top: 2px;
+		}
+		.wishes-left p:nth-child(1) {
+		overflow: hidden;
+		height: 41px;
+		}
+		.copy-right {
+		padding: 20px 0;
+		}
+		.button {
+		min-height: 23px;
+		width: 43%;
+		}
+		.navigation ul {
+		top: 30.9%;
+		left: 13.5%;
+		width: 73%;
+		z-index: 9999;
+		}
+		.love-story {
+		width: 100%;
+		}
+		.about-info {
+		width: 100%;
+		}
+		.about-adam {
+		padding: 20px 0;
+		}
+		.about-right p {
+		overflow: hidden;
+		height: 36px;
+		}
+		.love-story img {
+		height: 154px;
+		}
+		.love-story h2 {
+		margin: 0px 0 11px 0;
+		}
+		.love-story p {
+		overflow: hidden;
+		height: 40px;
+		}
+		.about-adam h2, .about-silvi h2 {
+		margin: 0 0 11px 0;
+		}
+		.about-copy {
+		padding: 15px 0;
+		}
+		.wedding-grids, .our-grids {
+		margin-top: 11px;
+		}
+		.col-md-4.wedding-grid {
+		float: left;
+		width: 100%;
+		margin-bottom: 20px;
+		}
+		.wed-right p {
+		overflow: hidden;
+		height: 57px;
+		}
+		.wed-left {
+		width: 15%;
+		}
+		.wed-left p {
+		padding: 8px;
+		}
+		.wed-right {
+		float: right;
+		width: 78%;
+		}
+		.wedding-gridsa {
+		padding: 0;
+		}
+		.col-md-4.our-grid {
+		float: left;
+		width: 100%;
+		}
+		.col-md-4.our-grid {
+		float: left;
+		width: 100%;
+		padding-bottom: 20px;
+		}
+		.col-md-4.our-grid:nth-child(3) {
+		padding-bottom: 0;
+		}
+		.our-grid p {
+		overflow: hidden;
+		height: 56px;
+		}
+		.our-wedding {
+		margin: 12px 0 0px 0;
+		}
+		.copy-right p,.about-copy p {
+		margin: 0 auto;
+		width: 79%;
+		}
+		.error h1 {
+		font-size: 8em;
+		}
+		.error-head a {
+		  margin-top: 68px;
+		}
+		.error {
+		margin-top: 0px;
+		}
+		.banner-bottom.wish {
+		min-height: 268px;
+		}
+		.contact-form {
+		float: left;
+		width: 100%;
+		}
+		.contact-info {
+		float: right;
+		width: 100%;
+		}
+		.contact-form textarea {
+		height: 120px;
+		}
+		span.menu {
+		  padding: 6px 0 0 0;
+		  font-size: 16px;
+		}
+		.error {
+		  min-height: 300px;
+		}
+}
+@media only screen and (max-width: 640px) and (min-width: 320px) {
+.logo h1{
+font-size: 15px !important;
+}
+}
+.logo h1{
+    margin: 0;
+    font-size: 36px;
+    color: #ffffff;
+    font-family: 'Lobster Two', cursive;
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+body {background:none;border:0;font:13px Arial,Helvetica,sans-serif;color:#383838;line-height:20px}
+
+header {    height: 153px;    overflow: hidden;    width: 100%;}
+
+
+h2 span {    color: #931c5c;}
+
+.wisher-name {color: #931c5c;}
+.wedding-names {color:#931c5c; font: 1.5em "Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif"; }
+.first_letter{color:#931c5c;}
+
+.pag_con  {background:url(../sub_5/images/left_bor.jpg) bottom right no-repeat; min-height:900px;}
+
+#headmsg1 {
+    color: #931C5C;
+    font: 2.5em "Comic Sans MS","Trebuchet MS","Helvetica","Arial","Verdana","sans-serif";
+   padding-left: 140px;  
+   padding-top: 24px;
+}
+#headmsg { font-family: "Trebuchet MS", "Monotype Corsiva";
+    font-size: 40px;color: #0b739a;
+    padding-top: 1px;padding-top: 44px; padding-left: 1px;
+    text-shadow: 0 0 0.2em #ad1912, 0 0 0.2em #ad1912, 0 0 0.2em #ad1912; text-align: center;}
+#content {
+    overflow: hidden;
+    padding-bottom: 60px;
+    width: 100%;
+}
+#menu li a:hover, #menu #menu_active a {
+    color: #931c5c;
+}
+.button:hover {background:#931c5c;color:#fff;border:1px solid #931c5c}
+.button{border: 1px solid #931c5c;}
+.block {padding-left: 20px;    padding-left: 0px;    text-align: left; }
+.alb_img  {margin:10px; border:5px double #931c5c;}
+.home_img {text-align: center; margin:10px; border:5px double #931c5c; }
+.about {
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.20);
+    padding: 10px !important;
+}
+.alb_slideshow {padding-left: 177px !important;}

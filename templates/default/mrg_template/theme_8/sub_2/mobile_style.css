@@ -1,0 +1,11 @@
+#about {
+    background: rgba(0,0,0,0.25);
+}
+.even_div{background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.05);}
+.odd_div{background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.10);}
+#about_message {
+    font-family: Comic Sans MS; font-size: small;
+}
+#container{padding-top: 25px;}
+#container {font-weight: bolder;}
+body{color: cornsilk;}

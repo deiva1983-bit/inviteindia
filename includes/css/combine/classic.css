@@ -1,0 +1,48 @@
+html,body,body div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}pre,code,kbd,samp{font-family:monospace, sans-serif}html{overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}a:hover,a:active{outline:none}a,a:active,a:visited{color:#607890}a:hover{color:#036}ul,ol{margin-left:2em}ol{list-style-type:decimal}nav ul,nav li{margin:0;list-style:none;list-style-image:none}small{font-size:85%}b,strong,th{font-weight:bold}td{vertical-align:top}sub,sup{font-size:75%;line-height:0;position:relative}sup{top:-0.5em}sub{bottom:-0.25em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word;padding:15px}.ie6 legend,.ie7 legend{margin-left:-7px}h1,h2,h3,h4,h5,h6{font-weight:bold}::-moz-selection{background:#666CC2;color:#fff;text-shadow:none}::selection{background:#666CC2;color:#fff;text-shadow:none}@font-face{font-family:'proxima-nova';src:url(//d27bu0n70kzs4u.cloudfront.net/assets/proximanova/proximanova-445ebe6c21edd6574229fcd3b946c3bf.eot);src:url(//d27bu0n70kzs4u.cloudfront.net/assets/proximanova/proximanova-445ebe6c21edd6574229fcd3b946c3bf.eot?#iefix) format("embedded-opentype"),url(//d27bu0n70kzs4u.cloudfront.net/assets/proximanova/proximanova-0037eefc47438164d1dedf3e6fe5d020.svg#proximanova) format("svg");font-weight:normal;font-style:normal;font-weight:normal;font-style:italic}.ir{border:0;font:0/0 a;text-shadow:none;color:transparent;background-color:transparent}.hidden{display:none !important;visibility:hidden}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.invisible{visibility:hidden}.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}@media print{*{background:transparent !important;color:black !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important}a,a:visited{color:#444 !important;text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}}
+#control_color_background_about { background-color: #000000; }
+#control_color_background_navi { background-color: #000000; }
+#control_color_background_content { background-color: #000000; }
+#control_color_text_about_name { background-color: #aef5de; }
+#control_color_text_about_date { background-color: #FFFFFF; }
+#control_color_text_about_location { background-color: #f7f5f7; }
+#control_color_text_about_message { background-color: #FFFFFF; }
+#control_color_text_navigation_links { background-color: #545957; }
+#control_color_text_content { background-color: #FFFFFF; }
+#control_color_text_headers { background-color: #f5ef84; }
+#control_color_text_links { background-color: #f3f7df; }
+#about { background: rgba(0,0,0,0.45); }
+#navi { background: rgba(0,0,0,0.0); }
+#content { background: rgba(0,0,0,0.45); }
+#about_name { color: #aef5de; }
+#about_date { color: #FFFFFF; }
+#about_location { color: #f7f5f7; }
+#about_message { color: #FFFFFF; }
+#content { color: #FFFFFF; }
+.disabled {background: none !important;}
+#about_name { font-size: 49px; }
+#about_date { font-size: 36px; }
+#about_location { font-size: 24px; }
+#about_message { font-size: 24px; }
+#content { font-size: 18px; }
+#navigation_links { font-size: 25px; }
+#content h1 { font-size: 32px; }
+#content h2 { font-size: 24px; }
+#content h3 { font-size: 18px; }
+#about_name { font-family: cursive;}
+#about_date { font-family: 'Ostrich Sans'; }
+#about_location { font-family: 'Pacifico'; }
+#about_message { font-family: 'Amatic'; }
+/* #navigation_links { font-family: 'Neuton'; }
+#content { font-family: 'Amatic'; }
+#content h1 { font-family: 'Amatic'; }
+#content h2 { font-family: 'Ostrich Sans'; }
+#content h3 { font-family: 'Ostrich Sans'; } */
+#home_navigation_title { text-transform: capitalize; }
+#about_date { text-transform: capitalize; }
+#content #listing #results {color: #01070D; }
+.col2 {width:288px;padding-top:195px}
+.col2_2img {width: 700px;}
+#content #wedding-party {
+    width: 640px !important;
+    margin: 0px auto;
+}

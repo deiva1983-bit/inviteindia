@@ -1,0 +1,6 @@
+#welcome {margin-top:-20px}
+#welcome-top {background:url(../../../images/wed_account/welcome-top.png) top left no-repeat;width:320px;height:37px;padding-top:80px;padding-left:100px}
+#welcome-wish-top {background:url(../../../images/wed_account/welcome-wish-top.png) top left no-repeat;width:451px;height:37px;padding-top:80px;padding-left:100px; margin-left:141px;}
+#welcome-middle {background:url(../../../images/wed_account/welcome-bg.png) top left repeat-y; width:380px;min-height:200px;height:aut;padding-top:5px;padding-left:39px}
+#welcome-bottom {background:url(../../../images/wed_account/welcome-bottom.png) top left no-repeat;width:420px;height:31px}
+.pagination a{border: 1px solid #D3D3D3;border-radius: 4px 4px 4px 4px;padding: 0.4em 1em;}

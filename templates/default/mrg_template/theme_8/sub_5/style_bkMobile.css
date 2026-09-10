@@ -1,0 +1,33 @@
+#content h1 { color: #f5ef84; } /* #f5ef84 */
+#content h2 { color: #FFFFFF; }
+#content h3 { color: #FFFFFF; }
+.first_letter{color:#FFFFFF; font-weight:bold; font:1.8em Monotype Corsiva, Verdana;}
+a:link, a:visited {color: #f5ef84;} 
+.footer a, .footer a:hover { color: #383838; }
+.sms_tab_text li a {color: #FFFFFF; }
+.adp,.adp table{font-family:Roboto,Arial,sans-serif; font-weight:200; color:#FFFFFF; }
+.gmap a, .gmap a:hover {color: #895459;}
+.gm-style-iw {color: #895459;}
+#about_name {color: #f5ef84; font-family: Colonna MT, cursive; font-size: 40px; }
+#about_message { font-family: French Script MT , Amatic; }
+#about_date {font-family: Gabriola, Amatic; color: #FFFFFF;  }
+#navigation_links {font-family: Algerian;}
+#pageheddings {font-family: Algerian;}
+#eventsubhead {font-family: Algerian;}
+body {background:url(../sub_5/bg.jpg) top center no-repeat #fff;border:0;font:13px Arial,Helvetica,sans-serif;color:#383838;line-height:20px;background-position: center; background-repeat: no-repeat; background-attachment: fixed;}
+
+.adp-text, .warnbox-content, .warnbox-c2, .warnbox-c1 { color: #383838; }
+.alb_img  {margin:10px; border:5px double #F5C847; padding: 0px !important;}
+.home_img {text-align: center; margin:10px; border:5px double #F5C847; }
+.mobilemenus {display: none;}
+@media screen and (max-width: 46.0625em) {
+	#footernav1 {	position: relative !important;	}
+	.mobilemenus { display: block; }
+	.pcmenus { display: none; }
+	.mobilecolumn {background-position: 90px 3em !important;}
+	#container {width: 100% !important;}
+
+	body {
+			font-size: 22px !important; line-height: 1.5em;
+    }
+};

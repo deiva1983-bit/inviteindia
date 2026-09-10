@@ -1,0 +1,49 @@
+#content-bg, #menu ,#banner ,#center-content , #wrapper, #footer, #footer #foot_heart {width: 100%;}
+#logo {margin-top: 33px; margin-left: 0px;}
+#content-bg {margin-left: 0px;}
+#banner{margin-left: 0px; padding-left: 0px;}
+.navbar-brand {padding: 1px;}
+#center-content{margin-left: 0px;}
+#menu{margin-top: 52px; text-align: center;}
+#headmsg{padding-left: 0px; color: darkslateblue;}
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {background-color:#682159; }
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+    font-weight: bold;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #682159;
+}
+.row{margin: unset;}
+.home_content{width: unset;}
+#left-content{float: unset; margin-left: 0px;}
+#footer{margin-left: 0px; height: 110px;}
+#footer #foot_heart {height: 70px;}
+.listwishes{width: 100%; margin-left: unset;}
+.even_div{background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.05);  padding-bottom: 10px; border-bottom: dotted;}
+.odd_div{background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.10); padding-bottom: 10px; border-bottom: dotted; }
+.listwishes{width: 100%; margin-left: 0px;}
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: #cc3281;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #cc3281;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #cc3281;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #cc3281;
+}
+#contact-form input[type="text"] {
+border: 1px solid #050000; color: #050000;
+}
+#contact-form textarea{
+border: 1px solid #050000;
+}
+#contact-form #map_canvas, #contact-form input[type="text"], #contact-form textarea, #contact-form #listing {border: 1px solid grey;}
+#contact-form input[type=submit] {background: #682159;}

@@ -1,0 +1,35 @@
+.bodytext {border:0;font:13px Arial,Helvetica,sans-serif;color:#383838;line-height:20px; background-repeat: no-repeat; background-attachment: fixed; }
+    .blink {
+      animation: blink 1s steps(5, start) infinite;
+      -webkit-animation: blink 1s steps(5, start) infinite;
+    }
+    @keyframes blink {
+      to {
+         color: red; 
+      }
+    }
+    @-webkit-keyframes blink {
+      to {
+         color: blue; 
+      }
+    }
+
+/* @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {   
+	#footernav1 {
+	position: relative !important;
+	}
+} 
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+   #footernav1 {
+   position: relative !important;
+   }
+ 
+} */

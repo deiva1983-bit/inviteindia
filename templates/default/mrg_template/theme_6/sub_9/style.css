@@ -1,0 +1,29 @@
+body {background:url(../sub_9/images/wed_bg.jpg) top center no-repeat #fff;border:0;font:13px Arial,Helvetica,sans-serif;color:#383838;line-height:20px;background-position: center; background-repeat: no-repeat; background-attachment: fixed;}
+.pag_con  {background:url(../sub_9/images/df.png) top center no-repeat; padding-bottom: 20px;}
+.main {margin: 0 auto;    width: 928px; min-height: 550px;}
+header {    height: 239px;    overflow: hidden;    width: 100%;}
+/*.alb_img  {background:url(../sub_9/images/alb_bg.JPG) repeat; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;}
+.home_img {    text-align: center;	background:url(../sub_9/images/alb_bg.JPG) repeat; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;}
+*/
+#content {    margin-left: 40px;    overflow: hidden;       width: 100%;}
+    
+.wisher-name {color: #eae665;}
+.wedding-names {color:#c13274;}
+.first_letter{color:#c13274;}
+#menu li a:hover, #menu #menu_active a {    color: #eae665;}
+#menu li a {color: #eae665; font-size: 25px;}
+#mrgwish {    color: #eae665;	}
+.button:hover {background:#c13274;color:#fff;border:1px solid #c13274}
+#headmsg {    color: #eae665;    font: 2.5em "Comic Sans MS","Trebuchet MS","Helvetica","Arial","Verdana","sans-serif";    padding-left: 316px;    padding-top: 83px;}
+#menu {    overflow: hidden;    padding-left: 140px;    padding-top: 120px;    width: 100%; font-family: fantasy;}
+#headmsg {text-shadow: 2px 2px white, -1px -1px #444;font-size:35px;  font-family: "Trebuchet MS";padding-top:85px; padding-left:228px;}
+.blessing_div {background-color:none; background:url(../sub_8/images/bless_bg.JPG) repeat;}
+.center_footer {
+    background: url("../sub_6/images/32y.gif") no-repeat scroll center bottom transparent;
+      margin-bottom: 5px; padding-bottom: 80px;
+}
+.alb_img  {margin:10px; border:5px double #eae665;}
+.home_img {text-align: center; margin:10px; border:5px double #eae665; }
+.col1 {
+    width: 780px;
+}

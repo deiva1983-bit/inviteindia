@@ -1,0 +1,11 @@
+#content h1 { color: #000000; }
+h2 { color: #000000; }
+a:link, a:visited {color: #000000;}
+.sms_tab_text li {width: 332px;}
+#results { font-size: none !important;}
+.center_footer{background:url(../../../../../images/dividers/divide1.png) bottom center no-repeat; margin-bottom: 5px; padding-bottom: 33px;}
+.latest_sermons .bride .img img,.latest_sermons .groom .img img{border:10px solid #ccc}
+.center-image img{width:100%}.latest_sermons .bride .img img,.latest_sermons .groom .img img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;width:60%;}
+.even_div{padding-bottom: 10px; border-bottom: dotted;}
+.odd_div{padding-bottom: 10px; border-bottom: dotted;} /* inset */
+#td_msg {width: 80% !important; padding: 12px !important;}

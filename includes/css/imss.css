@@ -1,0 +1,56 @@
+.page_drop {border: 2px dashed #f00}
+.element {display: block; position: relative; margin: 0 0 15px 0; padding: 0; overflow: hidden; word-wrap: break-word; border: 1px dotted transparent; _border-width: 0}
+.element_header {background: transparent url(/theme_images/common/el_top.gif) top left no-repeat; min-height: 32px; _height: 32px; padding: 0}
+.element_header h2 {padding: 10px 0 6px 40px; font-family: "Palatino Linotype",Palatino,Georgia; font-size: 1.5em; font-weight: bold; font-style: oblique}
+.element_header h2 span {min-width: 30px; min-height: 24px; _height: 24px; display: inline-block}
+.element_body {padding: 10px; padding-top: 5px}
+.org_area {border:1px dotted #777;padding: 5px}
+.org_area p {margin: 0 0 8px 0}
+.element:hover {border-color: #777; border-style: dotted}
+.element_settings {background-color: #000000; color: #fff; border: 1px solid #666}
+.element_settings_inner {margin: 5px}
+.element_settings a {color: #ccc; text-decoration: underline}
+.element .element_buttons {display: none; _display: block; position: absolute; top: 1px; right: 1px}
+.element:hover .element_buttons{ display: block; z-index: 150}
+.element .element_buttons a {text-decoration: none}
+.deletable {position: relative; border-top: 1px dotted transparent; border-bottom: 1px dotted transparent}
+.deletable:hover {border-top: 1px dotted #777; border-bottom: 1px dotted #777}
+.deletable:hover .topright {display: block; z-index: 150}
+.deletable .topright {position: absolute; z-index: 150; top: 1px; right: 1px; display: none; _display: block}
+.element_header {display: block}
+a, input{ cursor: pointer}
+.approval_required {display: block}
+.organizer_area {display: inline}
+.organizer_area .delete {float: right; cursor: pointer}
+.drag_handle {cursor: move}
+.element_header h2 span{ cursor: text}
+.album_photos li {cursor: move}
+.slider {width: 500px; margin: 4px 0; font-size: 0.6em; padding: 0; color: #fff}
+.ui-slider {position: relative; text-align: left}
+.ui-slider .ui-slider-handle {position: absolute; z-index: 2; width: 1.2em; height: 1.2em; cursor: default; background-color: #999}
+.ui-slider .ui-slider-range {position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0}
+.ui-slider-horizontal {height: .8em; background-color: #333; border: 1px solid #666}
+.ui-slider-horizontal .ui-slider-handle {top: -.3em; margin-left: -.6em}
+.ui-slider-horizontal .ui-slider-range {top: 0; height: 100%}
+.ui-slider-horizontal .ui-slider-range-min {left: 0}
+.ui-slider-horizontal .ui-slider-range-max {right: 0}
+
+#drag_handle {display: none !important;}
+.drag_handle {display: none !important;}
+.photo_float_left .photo_wrapper {
+    float: left;
+}
+.org_add_link {
+    margin: 3px 0px;
+    font-size: 0.8em;
+}
+.add_area {
+    margin: 6px 10px 10px;
+    padding: 10px;
+    border-bottom: 1px dotted #AAA;
+    border-top: 1px dotted #AAA;
+	width: 100px;
+}
+.photo_float_right .photo_wrapper {float: right}
+.photo_float_left .photo_body .photo {float: left; margin: 0 0 0 5px}
+.photo_float_right .photo_body .photo {margin: 0 5px 0 0; float: right}

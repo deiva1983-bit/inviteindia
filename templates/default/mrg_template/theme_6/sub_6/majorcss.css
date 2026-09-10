@@ -1,0 +1,11 @@
+#pageheddings {font-family: 'England Hand Db'; font-size: 60px; font-weight: normal; -webkit-font-smoothing: antialiased; color: #E3224B; padding-left: 37px;}
+#subhead {font-family: 'District Light'; font-size: 40px; font-weight: normal; -webkit-font-smoothing: antialiased; color: #E3224B;}
+.container { font-family: "Josefin Sans"; font-size: 100%; font-weight: bold;}
+#about_message {font-weight: normal; }
+body {
+	font-family: "Josefin Sans";
+    font-size: 17px;
+	font-weight: bold;
+}
+.alb_slideshow {padding-left: 100px !important;}
+.button{border: 1px solid #AE2141;}

@@ -1,0 +1,38 @@
+.envelope .flap {
+   /* background: blue; */
+  background: url("2.jpg") 1% 101% #FAF9F7;
+  }
+.envelope .flap-outside .flap {
+  /* background: blue; */
+  }
+
+  .envelope:after {
+  border-color: transparent transparent #C9001B transparent;
+
+}
+.envelope:before {
+  border-color: transparent transparent transparent #C9001B;
+
+}
+.envelope.open .flap-outside .flap {
+background: #E9978C;
+}
+.envelope {
+  background: #C9001B;
+  }
+  .envelope .flap-outside .flap:after {
+  background: #E9978C;
+  }
+  .envelope .flap-inside .flap {
+  border: 1px solid #fff;
+}
+.envelope .flap {
+  border: 1px solid #fff;
+  }
+  .envelope .flap .lining {
+  background: url("env.jpg") 104% 124% #F1E0D0;
+  }
+
+  .envelope .card{
+  color: #C9001B; font-weight:	bold;
+  }

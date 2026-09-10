@@ -1,0 +1,16 @@
+#theme7_body {background:url(../sub_1/images/bg.gif); background-attachment:fixed; background-repeat:repeat;}
+#banner {background:url(../sub_1/images/headleft.gif); background-repeat:repeat;}
+#menu_active a{
+    background-color: #003399 !important;
+}
+#topnav ul li a {background-color:#ffaa22;}
+#topnav {background-color:none !important; font-family: monospace;}
+
+/*.alb_img  {background:url(../sub_1/images/alb_bg.JPG) repeat; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;}
+.home_img {    text-align: center;	background:url(../sub_1/images/alb_bg.JPG) repeat; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;} */
+#headmsg { font-family: "Trebuchet MS";
+    font-size: 30px;
+    padding-left: 1px;    
+    text-shadow: 0 0 0.2em #ffaa22, 0 0 0.2em #ffaa22, 0 0 0.2em #ffaa22 !important; text-align: center;} 
+.alb_img  {margin:10px; border:5px double #F39BA1;}
+.home_img {text-align: center; margin:10px; border:5px double #F39BA1; }

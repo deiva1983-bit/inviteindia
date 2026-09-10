@@ -1,0 +1,30 @@
+#homepageheddings {font-family: Jenna Sue;font-size: 40px;font-weight:bold;}
+
+.inputval {width: 200px; padding: 2px 0px 2px 3px; border: 1px solid #626262;background: transparent none repeat scroll 0% 0%; }
+.blessing_div {
+    border-radius: 10px;
+    margin-top: 8px;
+    width: 103%;
+    min-height: 200px;
+    background-color: #edf2f6;
+}
+a:link, a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+#wish-form {
+    clear: right;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 10px 5px;
+}
+#wish-form label {
+    float: left;
+    width: 180px;
+}
+#mrgwish {
+    padding: 6px 0px 20px;
+}
+#mrginfo {
+    padding: 6px 10px 20px;
+}

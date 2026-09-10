@@ -1,0 +1,7 @@
+ftp://invitein@inviteindia.com/public_html/includes/css/themes/base/jquery.ui.base.css
+ftp://invitein@inviteindia.com/public_html/includes/css/themes/base/jquery.ui.theme.css
+smsaccount.php (account mgt - friends)
+$smarty->assign('pagetitle', 'Free SMS- Send Free SMS, Send free SMS to Group - Add your friends and send free SMS to your friends');
+$smarty->assign('metadesc', 'Free SMS- Send Free SMS, Send free SMS to Group - Add your friends and send free SMS to your friends');
+$smarty->assign('metakeywords', 'Free SMS, Send Free SMS, Send free SMS to Group, Add friends,Send free SMS to your friends,Send free SMS to your friends Group');
+

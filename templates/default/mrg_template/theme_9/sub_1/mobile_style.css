@@ -1,0 +1,126 @@
+.top-background{width:100% !important; min-width: inherit !important; height: 30% !important;}
+.container{width: 100% !important;}
+#header-wrap, #banner-wrap, #nav-wrap, #main-wrap, #footer-wrap, #total-wrapper{min-width: inherit !important;}
+.center_footer{background:url(../../../../../images/dividers/divide5.png) bottom center no-repeat; margin-bottom: 5px; padding-bottom: 33px;}
+.home_img{width: 100% !important; margin: 0px !important;}
+#listing{width: 100%; left: 0px; height: 50%;}
+.isotom_lant{padding: 0px !important;}
+.even_div{background:gainsboro;}
+.odd_div{background:lavender;}
+.navbar-brand {
+    padding: 2px;
+}
+#gmap_form_results {
+    padding-top: 20px;
+}
+#contact-form input[type="text"]{
+	width: 98% !important;
+	font-size:18px;
+	background: none;
+	margin: 0 0px 18px 0;
+	padding: 12px 10px;
+	outline: none;
+	}
+#contact-form textarea{
+	width: 98%;
+	font-size:18px;
+	background: none;
+	resize: none;
+	margin-bottom:18px;
+	height: 160px;
+	padding: 12px;
+	outline: none;
+	}
+#contact-form #map_canvas{
+	width: 88%;
+	font-size:18px;
+	background: none;
+	resize: none;
+	margin-bottom:18px;
+	height: 272px !important;
+	padding: 12px;
+	outline: none;
+	}
+#contact-form #results{
+	width: 88%;
+	font-size:18px;
+	background: none;
+	resize: none;
+	margin-bottom:18px;
+	height: 100px !important;
+	padding: 1px;
+	outline: none;
+	}
+#contact-info ul{
+	padding:0;
+	margin: 10px 0 0 0;
+	}
+#contact-form #map_canvas, #contact-form input[type="text"], #contact-form textarea, #contact-form #listing {border: 1px solid #e8e8e8;}
+#contact-info ul li{
+	list-style-type:none;
+	display:block;
+	color:#7c7061;
+	font-size:18px;
+	}
+#contact-info p {
+color: #7c7061;
+font-size: 18px;
+}
+#contact-info p a{
+color: #7c7061;
+font-size: 18px;
+}
+#contact-info p a:hover{
+color:#BF2A2E;
+}
+#contact-info p:nth-child(7) {
+margin: 0px 0;
+}
+#contact-info p:nth-child(6) {
+margin: 0px 0;
+}
+#contact-form input[type=submit] {
+	color: #626262;
+	padding: 13px 43px;
+	font-size:18px;
+	outline: none;
+	cursor: pointer;
+	background:none;
+	font-weight: 700;
+	border: 1px solid #e8e8e8;
+	}
+#contact-form input[type=submit]:hover {
+	background:#074395;
+	color: #ffffff;
+	transition: .5s all;
+	-webkit-transition: .5s all;
+	-o-transition: .5s all;
+	-ms-transition: .5s all;
+	-moz-transition: .5s all;	
+	}
+/*-- to-top --*/
+#toTop {
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 12px;
+	right: 1%;
+	overflow: hidden;
+	z-index: 999; 
+	width: 32px;
+	height: 32px;
+	border: none;
+	text-indent: 100%;
+	background: url("../../../../arrow_black.png") no-repeat 0px 0px;
+}
+#toTopHover {
+	width: 32px;
+	height: 32px;
+	display: block;
+	overflow: hidden;
+	float: right;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+/*-- //to-top --*/

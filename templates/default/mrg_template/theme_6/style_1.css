@@ -1,0 +1,4 @@
+.home_content {font-size: 17px !important; }
+.even_div{padding-bottom: 10px; border-bottom: dotted;}
+.odd_div{padding-bottom: 10px; border-bottom: dotted;} /* inset */
+#td_msg {width: 80% !important; padding: 12px !important;}

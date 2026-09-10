@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<title>{$pagetitle}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{$metadesc}">
+<meta name="keywords" content="{$metakeywords}">
+<meta name="robots" content="noindex">
+<link href="images/favicon.png" rel="icon">
+{include file="default/wedscriptsrcs_mobile.tpl"}
+{include file="default/wedscriptadd_newtheme.tpl"}
+<link href="{$glb_img_urls}style.css" media="screen" rel="stylesheet"/>
+<link href="{$glb_img_urls}../common.css" media="screen" rel="stylesheet"/>
+<link href="{$glb_img_urls}../common_mobile.css" media="screen" rel="stylesheet"/>
+<link href="{$glb_img_urls}sub_1/style.css" media="screen" rel="stylesheet"/>
+<link href="{$glb_img_urls}sub_1/mobile_style.css" media="screen" rel="stylesheet"/>
+<link href="{$glb_img_urls}style_{$glb_lang_id}.css" media="screen" rel="stylesheet"/>
+<link href="templates/css/josefin_head.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="templates/css/blackjack_head.css" media="screen" rel="stylesheet" type="text/css" />
+<link rel='stylesheet' type='text/css' href='{$glb_img_urls}sub_1/majorcss.css' title='wsite-theme-css' />
+<link href="fontcss/england-hand-db.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="fontcss/district-light.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="fontcss/bonvenocf.css" media="screen" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="templates/default/mrg_template/mobilemenu/css/default.css" />
+<!-- <link rel="stylesheet" type="text/css" href="templates/default/mrg_template/mobilemenu/css/component.css" />
+<script src="templates/default/mrg_template/mobilemenu/js/modernizr.custom.js"></script>
+<script src="templates/default/mrg_template/mobilemenu/js/jquery.dlmenu.js"></script> -->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="{$glb_img_urls}style.ie7.css" />
+<![endif]-->
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="{$glb_img_urls}style.ie7.css" />
+<![endif]-->
+</head>
+ <body data-sticky-links="false" {if $gmap_status_js eq '1'} onload="initialize()" {/if}>
+  <div id="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container1">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <a class="navbar-brand">
+                    <img src="{$glb_img_urls}/mob_head.png" alt="" style="height: 49px;">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="{$glb_page_url}?status=h">{$glb_wed_card_title_home}</a>
+                    </li>
+                    <li>
+                        <a href="{$glb_page_url}?status=1">{$glb_wed_card_title_events}</a>
+                    </li>
+                    <li>
+                        <a href="{$glb_page_url}?status=2">{$glb_wed_card_title_guestbook}</a>
+                    </li>
+                    <li>
+                        <a href="{$glb_page_url}?status=4">{$glb_wed_card_title_loc}</a>
+                    </li>
+                    {if $glb_total_alb_records neq 0}<li>
+                        <a href="{$glb_page_url}?status=3">{$glb_wed_card_title_album}</a>
+                    </li>{/if}
+                    {if $glb_animate_cover neq '0'}
+                     <li>
+                        <a href="{$glb_page_url}?status=c">Wedding Cover</a>
+                    </li>
+                    {/if}
+                    {$ownpage_linksmobile}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+<div class='mobilemenus' id="about" style='text-align: center;'>
+        <div >
+        <h1 id="about_name"><span id="about_bride_name">{$glb_male_name}</span> <span id="about_names_link">&amp;</span> <span id="about_groom_name">{$glb_female_name}</span></h1>
+        <h2 id="about_date">{$glb_marriage_date_title}</h2>
+        <div id="about_message" style="display:block"><p>{$tpl_home_heading}</p></div>
+        </div>
+</div><br />
+<input type="hidden" name="glb_site_url" id="glb_site_url" value="{$glb_site_url}" />
+<input type="hidden" name="glb_theme_id" id="glb_theme_id" value="{$glb_master_id}" />
+<input type="hidden" name="glb_theme_owner_id" id="glb_theme_owner_id" value="{$glb_theme_owner_id}" />
+<!--
+{literal}
+<script>
+    new BackgroundImage("{$glb_img_urls}sub_1/bg.jpg", "{$glb_img_urls}sub_1/bg.jpg", {horizontal: "center", vertical: "center"}).loadBackground();
+  </script>
+  {/literal} -->
+  {if $classic_bg_image neq '0' && $classic_bg_image neq ''}
+  <div id="backdrop"><div style="opacity: 1; background-image: url(&quot;images/classic_bg/{$classic_bg_image}.jpg&quot;); background-position: center center;" class="background backdrop-thumbnail"></div><div style="background-position: center center; opacity: 1; background-image: url(&quot;images/classic_bg/{$classic_bg_image}.jpg&quot;);" class="background backdrop-full"></div></div>
+  {else}
+  <div id="backdrop"><div style="opacity: 1; background-image: url(&quot;{$glb_img_urls}sub_1/bg.jpg&quot;); background-position: center center;" class="background backdrop-thumbnail"></div><div style="background-position: center center; opacity: 1; background-image: url(&quot;{$glb_img_urls}sub_1/bg.jpg&quot;);" class="background backdrop-full"></div></div>
+{/if}

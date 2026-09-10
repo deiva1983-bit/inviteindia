@@ -1,0 +1,86 @@
+<!-- contact -->
+<div class="contact vendors-search" id="vendors">
+	<div class="container">
+			<div class="w3ls_banner_bottom_grids">
+				{if $user_log_id_vend neq '0'}
+				<p style="text-align: right">
+				<span class="manage-space"><a href='{$glb_path_dir}products.php?do=add' class='button'>Add new products</a></span>
+				<span class="manage-space"><a href='{$glb_path_dir}products.php' class='button'>My Products</a></span>
+				<span class="manage-space"><a href='{$glb_path_dir}login.php?do=out' class='button'>Vendors Signout</a></span>
+				</p>
+				{/if}
+				<nav class="breadcrumbs">
+					<ul>
+					{$tot_breadcramps}
+					<!-- <li class="first-crumb"><a href="#">Home</a></li>
+					<li><a href="#">Personal Work</a></li>
+					<li><a href="#">Experiments</a></li>
+					<li class="last-crumb">Incremental Game</li> -->
+					</ul>
+				</nav>
+				<div class="write_para">Are you getting married? Are you worried about your makeup, dress selections, wedding catering services, budget limits, timings, and so on? Do not worry, you can easily arrange your wedding with reliable wedding vendors and suppliers.</div>
+				<div class="write_para">We have compiled an extensive list of wedding vendors from around the world. Find the best wedding vendors near you! You can check reviews, prices, and easily compare them with other sellers.</div>
+				<h3 class="sub_head">Quick Search:</h3>
+				<form id="vendors_home" name="vendors_home" class="form_cls" method="post" action="{$glb_path_dir}search.php">
+				<div class="col-md-3 agileits_services_grid">
+					<div class="sub_head_min up-margin">State:</div>
+					<div>
+						<select id='states_drop' name='state_id' class="inputval" >{$tpl_sele_status}</select> 
+					</div>
+				</div>
+				<div class="col-md-4 agileits_services_grid">
+					<div class="sub_head_min up-margin">City:</div>
+					<div>
+					<span id='citylists'><select id='city_drop' name='city_id' class="inputval" >
+					{$tpl_sele_city}</select></span>
+					</div>
+					<div style='display: none;' id='arealists'>
+						<td>Area:</td>
+					</div>
+				</div>
+				<div class="col-md-4 agileits_services_grid">
+					<div class="sub_head_min up-margin">Services / Products:</div>
+					<div>
+						<span id='arealists'><select id='cat_id' name='cat_id' class="inputval" >
+							{$tpl_sele_pdt}
+						</select></span> 
+					</div>
+				</div>
+				<div class="col-md-1 text-right">
+				<div class="sub_head_min up-margin">&nbsp;</div>
+					<div><button id="ven_edit" name="ven_edit"  class="button">Search</button></div>
+				</div>
+				</form>
+				<div class="clearfix"> </div>
+			</div>
+
+			<div class="w3ls_banner_bottom_grids"> <h3 class="w3layouts_head"><span>Wedding Vendors</span></h3>
+			<div class="col-md-3 agileits_services_grid">
+						<div class="categories">
+						   <ul>
+						   <h3 class="sub_tit">{$tpl_left_nav_title}</h3>
+						   {$glb_selecity_left}
+						 </ul>
+						</div>
+			</div>
+			<div class="col-md-6">
+				{if $tot_rec_found eq 1}
+					{$pdt_contents_tmpl}
+				{else}
+				Sorry, We don't have any records for this services.
+				{/if}
+			</div>
+
+			<div class="col-md-3 agileits_services_grid">
+						<div class="categories">
+							<ul>
+							<h3 class="sub_tit">Services</h3>
+							{$tpl_right_side_nav}
+							</ul>
+						</div>
+			</div>
+			<div class="clearfix"> </div>
+			</div>
+
+	</div>
+</div>

@@ -1,0 +1,98 @@
+.even_div{background:gainsboro;}
+.odd_div{background:lavender;}
+.gallery_outer{padding: 50px 0 90px;}
+.about_us{padding: 50px 0 130px;}
+.lovestory_bottom_parallax h2{padding: 0px 0 10px;}
+.devider_main {padding: 10px 0 0px; text-align: center;}
+
+#design2 {height: 18%;}
+#listing {width: 82%; left: 29px; height: 40%; border: 1px solid #e8e8e8;}
+@media only screen and (orientation:landscape){#design2 {height: 10% !important;} #listing { width: 85%; left: 56px; height: 69%; }}
+
+#contact-form input[type="text"]{
+	width: 98% !important;
+	font-size:18px;
+	background: none;
+	margin: 0 0px 18px 0;
+	padding: 12px 10px;
+	outline: none;
+	border: 1px solid #e8e8e8;
+	}
+#contact-form textarea{
+	width: 98%;
+	font-size:18px;
+	background: none;
+	resize: none;
+	margin-bottom:18px;
+	height: 160px;
+	padding: 12px;
+	outline: none;
+	border: 1px solid #e8e8e8;
+	}
+#contact-form #map_canvas{
+	width: 88%;
+	font-size:18px;
+	background: none;
+	resize: none;
+	margin-bottom:18px;
+	height: 272px !important;
+	padding: 12px;
+	outline: none;
+	border: 1px solid #e8e8e8;
+	}
+#contact-form #results{
+	width: 100%;
+	font-size:18px;
+	background: none;
+	resize: none;
+	margin-bottom:18px;
+	height: 100% !important;
+	padding: 12px;
+	outline: none;
+	}
+#contact-info ul{
+	padding:0;
+	margin: 10px 0 0 0;
+	}
+#contact-info ul li{
+	list-style-type:none;
+	display:block;
+	color:#7c7061;
+	font-size:18px;
+	}
+#contact-info p {
+color: #7c7061;
+font-size: 18px;
+}
+#contact-info p a{
+color: #7c7061;
+font-size: 18px;
+}
+#contact-info p a:hover{
+color:#BF2A2E;
+}
+#contact-info p:nth-child(7) {
+margin: 0px 0;
+}
+#contact-info p:nth-child(6) {
+margin: 0px 0;
+}
+#contact-form input[type=submit] {
+	color: #ffffff;
+	padding: 13px 43px;
+	font-size:18px;
+	outline: none;
+	cursor: pointer;
+	background:#BB181C;
+	font-weight: 700;
+	border: 1px solid #e8e8e8;
+	}
+#contact-form input[type=submit]:hover {
+	background:#074395;
+	color: #ffffff;
+	transition: .5s all;
+	-webkit-transition: .5s all;
+	-o-transition: .5s all;
+	-ms-transition: .5s all;
+	-moz-transition: .5s all;	
+	}

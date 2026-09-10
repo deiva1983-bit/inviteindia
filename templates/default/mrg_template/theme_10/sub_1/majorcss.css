@@ -1,0 +1,15 @@
+#pageheddings {font-family: 'England Hand Db'; font-size: 60px; font-weight: normal; -webkit-font-smoothing: antialiased; color: #eb0e0e; text-align: center;}
+#subhead {font-family: 'District Light'; font-size: 40px; font-weight: normal; -webkit-font-smoothing: antialiased; color: #eb0e0e;}
+.container { font-family: "Josefin Sans"; font-size: 100%; font-weight: bold;}
+#about_message {font-weight: normal; }
+body {
+	font-family: "Source Sans Pro";
+    font-size: 15px; font-weight: bold;
+}
+
+header {height: 360px;}
+.alb_slideshow {padding-left: 127px !important;}
+.button{border: 1px solid #931c5c;}
+.blessing_div { border: 1px solid #63B1DE;}
+}
+.homepage .row{padding-top: 20px;}

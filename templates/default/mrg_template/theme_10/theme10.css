@@ -1,0 +1,46 @@
+.col1_1, .col2_2, .col3_3, .cols {float:left}
+.col1_1 {width:542px}
+.col2_2 {width:288px;padding-top:195px;}
+.col3_3 {width:246px}
+.alb_img  {margin:10px; border:5px double #F5C847; padding: 0px !important;}
+.home_img {text-align: center; margin:10px; border:5px double #F5C847; }
+.first_letter{font-weight:bold; font:1.8em Monotype Corsiva, Verdana;} 
+.thirukkural{text-align: center;}
+.home_img {text-align: center; }
+.home_content{
+text-align: center;
+}
+.wedding-names {
+font-weight:bold;
+font: 1.5em "Comic Sans MS","Trebuchet MS","Helvetica","Arial","Verdana","sans-serif";
+}
+.wedding-btn {
+font-weight:bold;
+font: 1.5em "Comic Sans MS","Trebuchet MS","Helvetica","Arial","Verdana","sans-serif";
+}
+#pageheddings {
+    font-family: Jenna Sue;
+    font-size: 50px;
+    font-weight: bold;
+}
+#wish-form{padding-bottom: 15px;}
+.blessing_div {
+    border-radius: 10px;
+    margin-top: 8px;
+    width: 100%;
+    min-height: 200px;
+}
+#wishtabs_comm #mrginfo {padding: 10px;}
+#wishtabs_comm #mrgwish {font-weight: bold;}
+.footer {font-family: Arial;}
+
+.center_footer {
+    background: transparent url("../../../../../images/dividers/divide1.png") no-repeat scroll center bottom;
+    margin-bottom: 5px;
+    padding-bottom: 33px;
+}
+.even_div{padding-bottom: 10px; border-bottom: dotted;}
+.odd_div{padding-bottom: 10px; border-bottom: dotted;} /* inset */
+#td_msg {
+    width: 100% !important;
+}

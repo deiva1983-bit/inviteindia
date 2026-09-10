@@ -1,0 +1,1 @@
+!function(){"use strict";$(".isotom_lant").magnificPopup({delegate:"a",type:"image"}),$(window).load(function(){$("#loader").fadeOut(),$("#mask").delay(1e3).fadeOut("slow")})}(jQuery);

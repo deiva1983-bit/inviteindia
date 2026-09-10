@@ -1,0 +1,145 @@
+.isotom_lant{padding: 0px !important;}
+.latest_sermons .bride .img img,.latest_sermons .groom .img img{border:10px solid #ccc}
+.center-image img{width:100%}.latest_sermons .bride .img img,.latest_sermons .groom .img img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;width:60%;}
+#listing{width: 100%; left: 0px; height: 50%;}
+#contact-form #map_canvas, #contact-form input[type="text"], #contact-form textarea, #contact-form #listing {border: 1px solid #fff;}
+#contact-form #results {padding: 0px !important; color: black; margin-bottom: 0px !important}
+.navbar-brand{padding: 2px;}
+#gmap_form_results {
+    padding-top: 20px;
+}
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: #fff;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #fff;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #fff;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+}
+#contact-form input[type="text"]{
+	width: 98% !important;
+	font-size:18px;
+	color: #fff;
+	background: none;
+	margin: 0 0px 18px 0;
+	padding: 12px 10px;
+	outline: none;
+	border: 1px solid #e8e8e8;
+	}
+#contact-form textarea{
+	width: 98%;
+	font-size:18px;
+	background: none;
+	resize: none;
+	margin-bottom:18px;
+	height: 160px;
+	padding: 12px;
+	outline: none;
+	border: 1px solid #e8e8e8;
+	}
+#contact-form #map_canvas{
+	width: 88%;
+	font-size:18px;
+	background: none;
+	resize: none;
+	margin-bottom:18px;
+	height: 272px !important;
+	padding: 12px;
+	outline: none;
+	border: 1px solid #e8e8e8;
+	}
+#contact-form #results{
+	width: 98%;
+	font-size:18px;
+	background: none;
+	resize: none;
+	margin-bottom:18px;
+	height: 100px !important;
+	padding: 12px;
+	outline: none;
+	}
+#contact-info ul{
+	padding:0;
+	margin: 10px 0 0 0;
+	}
+#contact-info ul li{
+	list-style-type:none;
+	display:block;
+	color:#7c7061;
+	font-size:18px;
+	}
+#contact-info p {
+color: #7c7061;
+font-size: 18px;
+}
+#contact-info p a{
+color: #7c7061;
+font-size: 18px;
+}
+#contact-info p a:hover{
+color:#BF2A2E;
+}
+#contact-info p:nth-child(7) {
+margin: 0px 0;
+}
+#contact-info p:nth-child(6) {
+margin: 0px 0;
+}
+#contact-form input[type=submit] {
+	color: #ffffff;
+	padding: 13px 43px;
+	font-size:18px;
+	outline: none;
+	cursor: pointer;
+	/* background:#BB181C; */
+	font-weight: 700;
+	border: 1px solid #e8e8e8;
+	}
+#contact-form input[type=submit]:hover {
+	background:#074395;
+	color: #ffffff;
+	transition: .5s all;
+	-webkit-transition: .5s all;
+	-o-transition: .5s all;
+	-ms-transition: .5s all;
+	-moz-transition: .5s all;	
+	}
+/*-- to-top --*/
+#toTop {
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 12px;
+	right: 1%;
+	overflow: hidden;
+	z-index: 999; 
+	width: 32px;
+	height: 32px;
+	border: none;
+	text-indent: 100%;
+	background: url("../../arrow1.png") no-repeat 0px 0px;
+}
+#toTopHover {
+	width: 32px;
+	height: 32px;
+	display: block;
+	overflow: hidden;
+	float: right;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+/*-- //to-top --*/
+@media only screen and (orientation:landscape){
+#contact-form #map_canvas {
+width: 93% !important;
+}
+}

@@ -1,0 +1,9 @@
+#pageheddings {font-family: 'England Hand Db'; font-size: 60px; font-weight: normal; -webkit-font-smoothing: antialiased; color: #682159;}
+#subhead {font-family: 'District Light'; font-size: 40px; font-weight: normal; -webkit-font-smoothing: antialiased; color: #682159;}
+#about_message {font-weight: normal; }
+body {
+	font-family: "Source Sans Pro";
+}
+
+header {height: 360px;}
+.alb_slideshow {padding-left: 177px !important;}

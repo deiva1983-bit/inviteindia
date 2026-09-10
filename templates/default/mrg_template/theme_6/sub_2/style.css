@@ -1,0 +1,45 @@
+body {background:url(../sub_2/images/header_bg.jpg) top center no-repeat #fff;border:0;font:13px Arial,Helvetica,sans-serif;color:#383838;line-height:20px}
+
+.pag_con  {background:url(../sub_2/images/flower-border-design.png) top right no-repeat; }
+.pag_lcon  {background:url(../sub_2/images/flower-border-design1.png) top left no-repeat; }
+
+.rbottom  {background:url(../sub_2/images/bottom.jpg) bottom center no-repeat;}
+.main {
+    margin: 0 auto;
+    width: 928px;
+}
+
+#menu {
+    margin-left: 79px;
+    overflow: hidden;
+    padding-top: 33px;
+    width: 100%;
+	font-family: fantasy;
+}
+header {    height: 329px;    overflow: hidden;    width: 100%;}
+
+
+#headmsg { font-family: "Trebuchet MS";
+    font-size: 30px;
+    padding-left: 1px;
+    text-shadow: 0 0 0.2em #C41D0D, 0 0 0.2em #C41D0D, 0 0 0.2em #C41D0D; text-align: center; padding-top: 1px; color: #FFFFFF;}
+
+ 
+ 
+#content {
+    margin-left: 37px;
+    overflow: hidden;
+    padding-bottom: 102px;
+    width: 100%;
+}
+.col1 {
+    width: 830px;
+}
+
+.blessing_div{background-color:#ffdaf3;}
+/*
+.alb_img  {background:url(../sub_3/images/alb_bg.jpg) repeat; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;}
+.home_img {    text-align: center;	background:url(../sub_3/images/alb_bg.jpg) repeat; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;}
+*/
+.alb_img  {margin:10px; border:5px double #EF6F90;}
+.home_img {text-align: center; margin:10px; border:5px double #EF6F90; }

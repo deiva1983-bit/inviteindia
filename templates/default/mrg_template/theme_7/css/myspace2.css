@@ -1,0 +1,52 @@
+#topping {
+	background-image: url(/profile2/heading.png);
+	background-repeat: repeat-x;
+	height: 54px;
+}
+
+#leftside {
+	padding-top: 15px;
+	padding-left: 10px;
+	text-align: left;
+}
+
+#centerside  {
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#rightside {
+	padding-top: 3px;
+	padding-right: 7px;
+	text-align: right;
+}
+
+.centering {
+	width: 73px;
+	text-align: center;
+	font-size: 100%;
+	padding-top: 10px;
+}
+
+.lefting {
+	margin-left: 5px;
+}
+
+.bordering {
+	border-top:1px solid #999999;
+	padding-top:0.5em;
+	padding-left:0;
+	padding-right:0;
+}
+
+#profiler {
+	position:absolute;
+	top:60px;
+	right:5px;  
+}
+
+div#header, div#googlebar {
+	background: transparent;
+}

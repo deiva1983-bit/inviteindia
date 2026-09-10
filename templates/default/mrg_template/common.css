@@ -1,0 +1,142 @@
+a:link, a:visited { color:#1b75bb; text-decoration:none; }
+a:hover, a:active { color:#0b559b; }
+.current {-moz-border-radius:4px 4px 4px 4px;border:1px solid #37BEEB;padding:0.4em 1em; }
+
+.disabled {-moz-border-radius:4px 4px 4px 4px;background:url("images/ui-bg_glass_75_e6e6e6_1x400.png") repeat-x scroll 50% 50% #E6E6E6;border:1px solid #D3D3D3;padding:0.4em 1em; }
+.pagination a {    border: 1px solid #D3D3D3;    border-radius: 4px 4px 4px 4px;    padding: 0.4em 1em; }
+.normal a:link, .normal a:visited {    color: #1B75BB;    text-decoration: none; }
+.listcomment{height:280px; overflow:auto; text-align:left; width: 367px;}
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a/*{borderColorError}*/; background: #fef1ec/*{bgColorError}*/ url(images/ui-bg_glass_95_fef1ec_1x400.png)/*{bgImgUrlError}*/ 50%/*{bgErrorXPos}*/ 50%/*{bgErrorYPos}*/ repeat-x/*{bgErrorRepeat}*/; color: #cd0a0a/*{fcError}*/; }
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #cd0a0a/*{fcError}*/; }
+#wish-form .msg_login {width:90px; height:25px; border:1px solid #d9d9d9;  padding:2px 0 2px 3px; margin-bottom:15px;  }
+#wish-form .butt_clear {width:90px; height:25px; border:1px solid #d9d9d9;  padding:2px 0 2px 3px; margin-bottom:15px;  }
+.wisher-name {color:#682159;}
+#map_canvas {
+    border: 1px solid grey;
+    height: 435px !important; 
+    position: absolute;
+    width: 480px;
+}
+#listing {
+    position: inherit;
+}
+.ui-rem-error {border: 1px solid #FFFFFF/*{borderColorError}*/ !important;}
+
+  #dialog-form  { font-family: Segoe UI,Arial,sans-serif;    font-size: 12px; }
+
+.sms_tab_text{float:left;}
+.sms_tab_text ul{margin:0px;padding:0px;}
+.sms_tab_text li{margin:0px;padding:0px;list-style:none;font-family:Arial, Helvetica, sans-serif;font-size:11px;color:#000;border-bottom:1px solid #ececec;}
+.sms_tab_text li a{display:block;font-family:Arial, Helvetica, sans-serif;font-size:11px;color:#000;text-decoration:none;padding:5px;}
+.sms_tab_text li a:hover{display:block;font-family:Arial, Helvetica, sans-serif;font-size:11px;color:#000;text-decoration:none;padding:5px;background-color:#f2f2f2;}
+.sms_tab_text span{font-weight:bold;font-family:Arial, Helvetica, sans-serif;font-size:11px;color:#000;}
+.sms_tab_text span.padd{padding:0 0 0 10px;font-weight:bold;font-family:Arial, Helvetica, sans-serif;font-size:11px;color:#000;}
+#head_nav_cntrl {text-align: center;}
+#desc_nav_cntrl {text-align: center;}
+
+/*
+#head_next {padding-left: 224px;}
+#head_prev {padding-left: 50px;}
+#head_save {padding-left: 214px;}  
+
+#desc_next {padding-left: 224px;}
+#desc_prev {padding-left: 50px;} 
+#desc_save {padding-left: 214px;} */
+
+#footernav1 {bottom: 0 !important; left: 0 !important; position: fixed !important; top: auto !important;z-index: 9999;}
+#footernav1{background: none repeat scroll 0 0 #FFFFFF; bottom: 0; color: #ACACAC; font-size: 11px; height: 39px;   left: 0; padding: 0; position: fixed; width: 100%; z-index: 200000;}
+#footernav1 ul#footernav-links1 { float: left; margin: 0px 16px 0 15px; padding: 0;}
+ul, li {list-style: none outside none;}
+#footernav1 ul#footernav-links1 li {float: left;    height: 13px;    margin-right: 10px; margin-top: 2px;}
+#footernav1 #copyright {    float: right;    margin-right: 7px;	color: #1B75BB;}
+#call_remaninder {    padding-left: 10px;}
+#pageheddings {    font-family: Algerian; }
+.bride .img img, .groom .img img{border:10px solid #ccc}
+.center-image img{width:100%}
+.home .single img, .home .double img, .home .singlesmall img, .home .singlelong img , .home .doublelong img , .home .doublesmall img {border:10px solid #ccc}
+.home .single img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;width:60%;}
+.home .double  img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;width:40%;}
+.home .singlesmall img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;width:60%;}
+.home .singlelong img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;width:90%;}
+.home .singlesmall img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;width:60%;}
+.home .singlelong img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;width:90%;}
+.home .doublelong img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;}
+.home .doublesmall img{border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;width:30%;}
+.classic_button{
+   color: #ffffff;
+    padding: 13px 43px;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    font-weight: 700;
+    border: 1px solid #e8e8e8;
+	box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.select_join {
+  width: 170px;
+  height: 28px;
+  overflow: hidden;
+  background: url('dropdown.png') no-repeat right #FEFEFE;
+  border: #FEFEFE 1px solid;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0px 0px 10px 1px #FEFEFE;
+  box-shadow: inset 0px 0px 10px 1px #FEFEFE;
+}
+.select_join select {
+  background: transparent;
+  width: 170px;
+  font-size:11pt;
+  color:grey;
+  border: 0;
+  border-radius: 0;
+  height: 28px;
+  -webkit-appearance: none;
+}
+.select_join select:focus {
+  outline: none;
+}
+.adp-directions, .adp-summary, .adp-legal{background: antiquewhite;}
+.adp-placemark, .adp-warnbox{margin: unset !important;}
+.adp-directions {width: 100%;}
+.adp-directions {width: 100%;}
+.wedding-names {
+font-weight:bold;
+font:1.5em 'Emilys Candy', "Comic Sans MS","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif", cursive !important;
+}
+.wedding-btn {
+font-weight:bold;
+font:1.0em "Emilys Candy","Trebuchet MS", "Helvetica","Arial","Verdana","sans-serif";
+}
+.button-home, .button-event, .button-guest, .button-loc, .button-album {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+			padding: 5px;
+        }
+
+        .button-home {
+            background: #EA4335;
+			border-color: #EA4335;
+        }
+
+        .button-event {
+            background: #F07B3F;
+			border-color: #F07B3F;
+        }
+
+        .button-guest {
+            background: #41BBAF;
+			border-color: #41BBAF;
+        }
+
+        .button-loc {
+            background: #FBBC05;
+			border-color: #FBBC05;
+        }
+        .button-album {
+            background: rgb(28, 184, 65);
+			border-color: rgb(28, 184, 65);
+        }

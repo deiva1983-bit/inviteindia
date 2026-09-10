@@ -1,0 +1,46 @@
+.h-ome_content {font-size: 17px !important; }
+.even_div{background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.05);  padding-bottom: 10px; border-bottom: dotted;}
+.odd_div{background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.10); padding-bottom: 10px; border-bottom: dotted; }
+.listwishes{width: 100%; margin-left: 0px;}
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: #050000;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #050000;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #050000;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #050000;
+}
+#contact-form input[type="text"] {
+border: 1px solid #050000; color: #050000;
+}
+#contact-form textarea{
+border: 1px solid #050000;
+}
+
+.bgnone{background: none;}
+.extra {
+    min-height: 210px;
+    top: 9%;
+    padding: 8%;
+}
+.center_footer{min-height: 100%;}
+
+.main{width: 100%;}
+.pag_con, .left_img{background: unset;}
+
+.extra{min-height: 10px; top: unset; padding: unset;}
+#content, h1, .navbar-brand {padding: unset;}
+body{font-size: 150% !important;}
+#contact-form #map_canvas, #listing {border: 1px solid #050000;}
+.center_footer{background: none;}
+body {
+    background: url(../sub_2/images/mob_header_bg.JPG) top center no-repeat #fff;
+}
