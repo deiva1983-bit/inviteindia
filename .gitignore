@@ -18,7 +18,6 @@ mycontrol/
 vendor_mgt/
 vendors_bk/
 wed_admin/
-libs/
 *.htaccess
 templates/albums/
 templates/default/birth_template/
