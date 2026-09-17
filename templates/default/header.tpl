@@ -47,6 +47,8 @@
 {if $glb_mainEntity neq ''}
 {$glb_mainEntity}
 {else}
+
+{literal}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,12 +73,15 @@
   ]
 }
 </script>
+{/literal}
+
+
 {/if}
 {if $smarty.session.sess_user_id eq '' }
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7441584415804192"
      crossorigin="anonymous"></script>
-</head>
 {/if}
+</head>
 <body {if $currentpage_js eq 'searchloc_gmap'} onload="xz()" onunload="GUnload()" {/if}>
 <!-- banner -->
 	<div {if $isMobile eq 1} class="banner1" {/if}>
