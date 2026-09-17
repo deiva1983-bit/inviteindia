@@ -20,17 +20,16 @@ $smarty->assign('topnav_select', 'termsofser');
 
 /*----- Variables Declaration Start-----*/
 $smarty->assign('currentpage_js', 'my_page');
-$smarty->assign('pagetitle', 'Invitation site');
+$smarty->assign('pagetitle', 'Terms of Service | InviteIndia');
 /*----- Variables Declaration End-----*/
 $smarty->assign('glb_site_url', $glb_site_url);
 $user_log_id= trim($_SESSION['sess_user_id']);
-$canurl = $ssl_path.'www.inviteindia.com/terms.php';
+$canurl = 'https://www.inviteindia.com/terms.php';
 $smarty->assign('can_url', $canurl);
  	$smarty->assign('currentpage_js', 'interviewhome');
 $content_template = 'default/terms.tpl';
-$smarty->assign('pagetitle', 'Terms of service for wedding website - inviteindia');
-$home_page_meta_desc='inviteindia have created Terms & Conditions statement for creating wedding site based on your website security. This page discloses about payment return policy, content format etc.';
-$home_page_meta_key='Free wedding website, Terms & Conditions, Terms of service, Wedding website security';
+$home_page_meta_desc='Review the Terms of Service for InviteIndia wedding websites and digital invitations, including payment, content, and platform usage policies.';
+$home_page_meta_key='Terms of service, wedding website terms, digital invitation policies, InviteIndia policies, wedding website security';
 $smarty->assign('metadesc', $home_page_meta_desc);
 $smarty->assign('metakeywords', $home_page_meta_key);
 /*----- Include Files Details Start-----*/

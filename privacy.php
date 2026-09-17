@@ -20,17 +20,16 @@ $smarty->assign('topnav_select', 'privacy_policy');
 
 /*----- Variables Declaration Start-----*/
 $smarty->assign('currentpage_js', 'my_page');
-$smarty->assign('pagetitle', 'Invitation site');
+$smarty->assign('pagetitle', 'Privacy Policy | InviteIndia');
 /*----- Variables Declaration End-----*/
 $smarty->assign('glb_site_url', $glb_site_url);
 $user_log_id= trim($_SESSION['sess_user_id']);
-$canurl = $ssl_path.'www.inviteindia.com/privacy.php';
+$canurl = 'https://www.inviteindia.com/privacy.php';
 $smarty->assign('can_url', $canurl);
  	$smarty->assign('currentpage_js', 'interviewhome');
 $content_template = 'default/privacy.tpl';
-$smarty->assign('pagetitle', 'Privacy statement for your wedding website - inviteindia.com');
-$home_page_meta_desc='InviteIndia have created this privacy statement to describe our commitment for your privacy. This page discloses about what type of information we are storing to create your wedding website.';
-$home_page_meta_key='Free wedding website, Privacy & Policy for Wedding websites, TOS, Wedding website security';
+$home_page_meta_desc='Read the InviteIndia privacy policy to understand how your wedding website details, guest information, and digital invitation data are handled and protected.';
+$home_page_meta_key='privacy policy, wedding website privacy, digital invitation security, InviteIndia privacy, guest data protection';
 $smarty->assign('metadesc', $home_page_meta_desc);
 $smarty->assign('metakeywords', $home_page_meta_key);
 /*----- Include Files Details Start-----*/

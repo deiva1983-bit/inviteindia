@@ -29,8 +29,8 @@ $smarty->assign('can_url', $canurl);
 $content_template = 'default/contact_us.tpl';
 
 $contact_page_title = 'Contact InviteIndia | Wedding Website Support';
-$contact_page_meta_desc = 'Need help with your wedding website or invitation? Contact InviteIndia for support, custom design help, and wedding website guidance.';
-$contact_page_keywords = 'contact wedding website support, inviteindia support, wedding website help, digital invitation support';
+$contact_page_meta_desc = 'Need help with your wedding website or invitation? Contact InviteIndia for custom wedding invitation support, website guidance, and expert assistance for your big day.';
+$contact_page_keywords = 'contact wedding website support, inviteindia support, wedding website help, digital invitation support, Indian wedding website assistance';
 
 $smarty->assign('pagetitle', $contact_page_title);
 $smarty->assign('metadesc', $contact_page_meta_desc);

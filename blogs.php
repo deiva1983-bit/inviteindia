@@ -31,8 +31,8 @@ $smarty->assign('can_url', $canurl);
 $content_template = 'default/blogs.tpl';
 
 $blog_page_title = 'Wedding Blogs, Ideas & Planning Tips | InviteIndia';
-$blog_page_meta_desc = 'Explore wedding blogs, planning ideas, and inspiration for Indian weddings. Get tips on invitations, decor, bridal prep, and wedding website ideas.';
-$blog_page_meta_key = 'wedding blogs, wedding planning tips, Indian wedding ideas, wedding inspiration, wedding website ideas';
+$blog_page_meta_desc = 'Explore wedding blogs, planning ideas, and inspiration for Indian weddings. Get expert guidance on invitations, decor, bridal prep, and elegant wedding website ideas.';
+$blog_page_meta_key = 'wedding blogs, wedding planning tips, Indian wedding ideas, wedding inspiration, wedding website ideas, digital invitation ideas';
 
 $smarty->assign('pagetitle', $blog_page_title);
 $smarty->assign('metadesc', $blog_page_meta_desc);

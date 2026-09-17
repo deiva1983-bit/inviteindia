@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>{$pagetitle|default:'Wedding website templates | InviteIndia'}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="{$metadesc|default:'Create beautiful wedding websites and e-invites online with InviteIndia.'}" />
-<meta name="keywords" content="{$metakeywords|default:'wedding website, wedding invitation, online wedding card, Indian wedding website'}" />
-<meta property="og:title" content="{$pagetitle|default:'Wedding website templates | InviteIndia'}" />
-<meta property="og:description" content="{$metadesc|default:'Create beautiful wedding websites and e-invites online with InviteIndia.'}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{$can_url|default:$glb_site_url}" />
-<meta property="og:site_name" content="InviteIndia" />
-<meta property="og:locale" content="en_IN" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{$pagetitle|default:'Wedding website templates | InviteIndia'}" />
-<meta name="twitter:description" content="{$metadesc|default:'Create beautiful wedding websites and e-invites online with InviteIndia.'}" />
-{if $meta_application_name ne ''}
-<meta name="application-name" content="{$meta_application_name}" />
-{/if}
-{if $tpl_noneed_index eq '1'}
-<meta name="robots" content="noindex, nofollow">
-{else}
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-{/if}
-<link href="{$static_domain_path_img}/site/favicon.png" rel="icon">
-{if $can_url neq ''}
-<link rel="canonical" href="{$can_url}" />
-{elseif $glb_site_url neq ''}
-<link rel="canonical" href="{$glb_site_url}" />
-{/if}
-<!-- //custom-theme -->
-<link href="{$static_domain_path_css}/base/bootstrap{$glb_minify_css}.css" rel="stylesheet" type="text/css" media="all" />
-<link href="{$static_domain_path_css}/base/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- js -->
-<script src="includes/scripts/js/base/jquery-2.1.4.min.js"></script>
-<!-- //js -->
-<!-- font-awesome-icons -->
-<link href="{$static_domain_path_css}/base/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome-icons -->
-<link href="//fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<link href="{$static_domain_path_css}/userstyle.css" rel="stylesheet" type="text/css" media="screen" property="" />
-{include file="default/scriptsrcs-web.tpl"}
-{if $glb_mainEntity neq ''}
-{$glb_mainEntity}
-{else}
-
-{literal}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "InviteIndia",
-      "url": "https://www.inviteindia.com/",
-      "logo": "https://www.inviteindia.com/site/favicon.png",
-      "description": "Create beautiful wedding websites and digital invitations for Indian weddings."
-    },
-    {
-      "@type": "WebSite",
-      "name": "InviteIndia",
-      "url": "https://www.inviteindia.com/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.inviteindia.com/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-  ]
-}
-</script>
-{/literal}
-
-
-{/if}
-{if $smarty.session.sess_user_id eq '' }
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7441584415804192"
-     crossorigin="anonymous"></script>
-{/if}
+	<meta charset="utf-8">
+	<title>{$pagetitle|default:'Wedding website templates | InviteIndia'}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="{$metadesc|default:'Create beautiful wedding websites and e-invites online with InviteIndia.'}" />
+	<meta name="keywords" content="{$metakeywords|default:'wedding website, wedding invitation, online wedding card, Indian wedding website'}" />
+	<meta name="theme-color" content="#d43f5e">
+	<meta property="og:title" content="{$pagetitle|default:'Wedding website templates | InviteIndia'}" />
+	<meta property="og:description" content="{$metadesc|default:'Create beautiful wedding websites and e-invites online with InviteIndia.'}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{$can_url|default:$glb_site_url}" />
+	<meta property="og:site_name" content="InviteIndia" />
+	<meta property="og:locale" content="en_IN" />
+	<meta property="og:image" content="{$static_domain_path_img|default:'https://www.inviteindia.com'}/site/favicon.png" />
+	<meta property="og:image:alt" content="InviteIndia wedding website and digital invitation platform" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="{$pagetitle|default:'Wedding website templates | InviteIndia'}" />
+	<meta name="twitter:description" content="{$metadesc|default:'Create beautiful wedding websites and e-invites online with InviteIndia.'}" />
+	<meta name="twitter:image" content="{$static_domain_path_img|default:'https://www.inviteindia.com'}/site/favicon.png" />
+	{if $meta_application_name ne ''}
+	<meta name="application-name" content="{$meta_application_name}" />
+	{/if}
+	{if $tpl_noneed_index eq '1'}
+	<meta name="robots" content="noindex, nofollow">
+	{else}
+	<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+	{/if}
+	<link rel="icon" href="{$static_domain_path_img}/site/favicon.png" type="image/png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	{if $can_url neq ''}
+	<link rel="canonical" href="{$can_url}" />
+	{elseif $glb_site_url neq ''}
+	<link rel="canonical" href="{$glb_site_url}" />
+	{/if}
+	<!-- //custom-theme -->
+	<link href="{$static_domain_path_css}/base/bootstrap{$glb_minify_css}.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="{$static_domain_path_css}/base/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- js -->
+	<script defer src="includes/scripts/js/base/jquery-2.1.4.min.js"></script>
+	<!-- //js -->
+	<!-- font-awesome-icons -->
+	<link href="{$static_domain_path_css}/base/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome-icons -->
+	<link href="//fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<link href="{$static_domain_path_css}/userstyle.css" rel="stylesheet" type="text/css" media="screen" property="" />
+	{include file="default/scriptsrcs-web.tpl"}
+	{if $glb_mainEntity neq ''}
+	{$glb_mainEntity}
+	{else}
+	{literal}
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@graph": [
+	    {
+	      "@type": "Organization",
+	      "name": "InviteIndia",
+	      "url": "https://www.inviteindia.com/",
+	      "logo": "https://www.inviteindia.com/site/favicon.png",
+	      "description": "Create beautiful wedding websites and digital invitations for Indian weddings."
+	    },
+	    {
+	      "@type": "WebSite",
+	      "name": "InviteIndia",
+	      "url": "https://www.inviteindia.com/",
+	      "potentialAction": {
+	        "@type": "SearchAction",
+	        "target": "https://www.inviteindia.com/?q={search_term_string}",
+	        "query-input": "required name=search_term_string"
+	      }
+	    }
+	  ]
+	}
+	</script>
+	{/literal}
+	{/if}
+	{if $smarty.session.sess_user_id eq '' }
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7441584415804192" crossorigin="anonymous"></script>
+	{/if}
 </head>
 <body {if $currentpage_js eq 'searchloc_gmap'} onload="xz()" onunload="GUnload()" {/if}>
-<!-- banner -->
+	<!-- banner -->
 	<div {if $isMobile eq 1} class="banner1" {/if}>
 		<div class="container">
-			<!-- header -->
-			<div class="w3_agile_menu">
+			<header role="banner">
 				<div class="agileits_w3layouts_nav">
 					<div id="toggle_m_nav">
 						<div id="m_nav_menu" class="m_nav">
@@ -125,13 +129,14 @@
 			</div>
 			{if $isMobile eq 1}
 			<div class="header">
-				<a href="/" title="Wedding website"><img src="{$static_domain_path_img}/inlogo.png" alt="Online wedding website"></a>
+				<a href="/" title="Wedding website"><img src="{$static_domain_path_img}/inlogo.png" alt="InviteIndia wedding website and invitation templates" loading="lazy" width="180" height="64"></a>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="sub-banner-bottom-mob"></div>
 			{else}
 			<div class="sub-banner-bottom"></div>
 			{/if}
+			</header>
 			<!-- //header -->
 		</div>
 	</div>

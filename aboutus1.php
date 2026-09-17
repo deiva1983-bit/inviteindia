@@ -28,9 +28,11 @@ $smarty->assign('currentpage_js', 'interviewhome');
 $content_template = 'default/about_us.tpl';
 
 $about_page_title = 'About InviteIndia | Wedding Website & Digital Invitation Platform';
-$about_page_meta_desc = 'Learn about InviteIndia, a trusted platform for Indian wedding websites, digital invitations, and online wedding planning tools.';
-$about_page_keywords = 'about InviteIndia, wedding website platform, digital wedding invitations, Indian wedding website company';
+$about_page_meta_desc = 'Learn about InviteIndia, a trusted platform for creating Indian wedding websites, digital invitations, guest management tools, and elegant wedding planning experiences.';
+$about_page_keywords = 'about InviteIndia, wedding website platform, digital wedding invitations, Indian wedding website company, online wedding invitation creator';
+$canurl = 'https://www.inviteindia.com/aboutus1.php';
 
+$smarty->assign('can_url', $canurl);
 $smarty->assign('pagetitle', $about_page_title);
 $smarty->assign('metadesc', $about_page_meta_desc);
 $smarty->assign('metakeywords', $about_page_keywords);

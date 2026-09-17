@@ -9,9 +9,13 @@ include_once( 'includes/configs/init.php' );
 
 /*----- Variables Declaration Start-----*/
 $smarty->assign('currentpage_js', 'signup');
-$smarty->assign('pagetitle', 'inviteindia: Register your account, Interview question, Interview tips, Free SMS- Send Free SMS, Send free SMS to Group - Add your friends and send free SMS to your friends');
-$smarty->assign('metadesc', 'Register your account, Interview question, Interview tips, Send Free SMS, Send free SMS to Group - Add your friends and send free SMS to your friends');
-$smarty->assign('metakeywords', 'Register your account, Interview question, Interview tips,  Free SMS, Send Free SMS, Send free SMS to Group, Add friends,Send free SMS to your friends,Send free SMS to your friends Group'); 
+$signup_page_title = 'Create Your InviteIndia Account | Wedding Website Builder';
+$signup_page_desc = 'Create an InviteIndia account to build a custom Indian wedding website, design digital invitations, and manage guest RSVPs with ease.';
+$signup_page_keywords = 'create inviteindia account, wedding website builder, digital invitation account, wedding invitation signup, wedding website signup';
+$smarty->assign('pagetitle', $signup_page_title);
+$smarty->assign('metadesc', $signup_page_desc);
+$smarty->assign('metakeywords', $signup_page_keywords);
+$smarty->assign('can_url', 'https://www.inviteindia.com/signup.php');
  $smarty->assign('glb_site_url', $glb_site_url); 			
 
 /*----- Variables Declaration End-----*/
