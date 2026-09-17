@@ -28,7 +28,7 @@ ini_set('upload_max_filesize', '64M');
 //define("DOMAIN_NAME","http://localhost/projects/my/social/");
 //define ('FULL_PATH', '/var/www/html/projects/my/social/');
 define("DOMAIN_NAME","https://www.inviteindia.com");
-define ('FULL_PATH', '/home/mrr88m9rhudj/public_html/inviteindia.com/');
+define('FULL_PATH', rtrim(str_replace('\\', '/', realpath(dirname(__FILE__) . '/../..')), '/') . '/');
 //Include Files Start
 require FULL_PATH."libs/Smarty.class.php";
 include(FULL_PATH."includes/classes/general.class.php");
@@ -42,8 +42,12 @@ include_once(FULL_PATH."includes/functions/pager.php");
 $smarty = new \Smarty\Smarty();
 
 //$smarty->force_compile = true;
-//$smarty->debugging = true;
+//smarty->debugging = true;
 $smarty->caching = false;
+$smarty->setTemplateDir(FULL_PATH . 'templates/');
+$smarty->setCompileDir(FULL_PATH . 'templates_c/');
+$smarty->setCacheDir(FULL_PATH . 'cache/');
+$smarty->setConfigDir(FULL_PATH . 'includes/configs/');
 //$smarty->cache_lifetime = 120;
 
 
@@ -77,13 +81,13 @@ $smarty->caching = false;
 
 
 spl_autoload_register(function ($class_name){
-  $class_name = strtolower($class_name);
-  $file = FULL_PATH.'includes/classes/'.$class_name . '.class.php';
-  if (file_exists($file)) {
-    require $file;
-    return true;
-  }
-  return false;
+ï¿½ $class_name = strtolower($class_name);
+ï¿½ $file = FULL_PATH.'includes/classes/'.$class_name . '.class.php';
+ï¿½ if (file_exists($file)) {
+ï¿½ ï¿½ require $file;
+ï¿½ ï¿½ return true;
+ï¿½ }
+ï¿½ return false;
 });
 */
 spl_autoload_register(function ($class_name){
