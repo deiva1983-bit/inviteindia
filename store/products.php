@@ -41,5 +41,6 @@ $smarty->assign('metakeywords', 'wedding sarees, bridal sarees, designer sarees,
 $smarty->assign('header', $smarty->fetch('../templates/default/header.tpl'));
 $smarty->assign('content', $smarty->fetch('../templates/default/store_products.tpl'));
 $smarty->assign('footer', $smarty->fetch('../templates/default/footer.tpl'));
+$smarty->assign('show_cart_global', 1);
 $smarty->display('../templates/default/index.tpl');
 ?>

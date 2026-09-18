@@ -52,6 +52,9 @@
 	<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<link href="{$static_domain_path_css}/userstyle.css" rel="stylesheet" type="text/css" media="screen" property="" />
+	{if $show_cart_global}
+	<link href="{$static_domain_path_css}/cart.css" rel="stylesheet" type="text/css" media="all" />
+	{/if}
 	{include file="default/scriptsrcs-web.tpl"}
 	{if $glb_mainEntity neq ''}
 	{$glb_mainEntity}
@@ -137,6 +140,8 @@
 			<div class="sub-banner-bottom"></div>
 			{/if}
 			</header>
+
+		
 			<!-- //header -->
 		</div>
 	</div>

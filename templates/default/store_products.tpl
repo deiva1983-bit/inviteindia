@@ -24,10 +24,10 @@
                                         ₹{$product.sale_price}
                                     </div>
                                 {/if}
-                                <form method="post" action="cart.php?action=add" style="margin-top:15px;">
+                                <form method="post" action="cart.php?action=add" class="add-to-cart-form" data-product-id="{$product.product_id}" style="margin-top:15px;">
                                     <input type="hidden" name="product_id" value="{$product.product_id}" />
                                     <input type="hidden" name="qty" value="1" />
-                                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                    <button type="submit" class="btn btn-primary add-cart-button">Add to Cart</button>
                                 </form>
                             </div>
                         </div>
@@ -40,3 +40,9 @@
         </div>
     </div>
 </div>
+
+{include file="default/store_cart_ui.tpl"}
+
+<!-- Bottom CTA -->
+<a id="bottom-cta" href="cart.php" class="bottom-cta">Proceed to View Cart → <span id="cta-count">0</span></a>
+

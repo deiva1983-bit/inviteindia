@@ -66,5 +66,6 @@ $smarty->assign('metadesc', 'Secure checkout for wedding sarees and gift product
 $smarty->assign('header', $smarty->fetch('../templates/default/header.tpl'));
 $smarty->assign('content', $smarty->fetch('../templates/default/store_checkout.tpl'));
 $smarty->assign('footer', $smarty->fetch('../templates/default/footer.tpl'));
+$smarty->assign('show_cart_global', 1);
 $smarty->display('../templates/default/index.tpl');
 ?>
