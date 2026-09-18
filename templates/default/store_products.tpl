@@ -41,8 +41,6 @@
     </div>
 </div>
 
-{include file="default/store_cart_ui.tpl"}
-
 <!-- Bottom CTA -->
 <a id="bottom-cta" href="cart.php" class="bottom-cta">Proceed to View Cart → <span id="cta-count">0</span></a>
 

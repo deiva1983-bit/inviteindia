@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-                    {include file="default/store_cart_ui.tpl"}
+                    
 
             <div style="margin-top:20px;">
                 <h3>Items</h3>
