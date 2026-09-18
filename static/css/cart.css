@@ -1,0 +1,38 @@
+/* Cart UI styles: shopping bag, badge, bottom CTA, and toast */
+#shopping-bag{
+    position:fixed;
+    top:18px;
+    right:18px;
+    background:#fff;
+    border-radius:999px;
+    padding:8px 12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.12);
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    color:#333;
+}
+#shopping-bag .bag-icon{font-size:20px;margin-right:6px}
+.cart-badge{background:#b6192d;color:#fff;border-radius:12px;padding:2px 7px;font-size:13px;font-weight:600}
+.bottom-cta{position:fixed;left:0;right:0;bottom:0;background:#b6192d;color:#fff;text-align:center;padding:12px 16px;font-size:16px;text-decoration:none;z-index:9998;display:block}
+.bottom-cta span{font-weight:700;margin-left:8px}
+.add-cart-button.added{background:#4caf50;border-color:#4caf50}
+
+/* Toast */
+#cart-toast{position:fixed;top:18px;right:80px;z-index:10000;display:flex;flex-direction:column;gap:8px}
+.cart-toast .toast{background:#222;color:#fff;padding:10px 14px;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.12);opacity:0;transform:translateY(-6px);transition:opacity .25s ease,transform .25s ease}
+.cart-toast .toast.show{opacity:1;transform:none}
+.cart-toast .toast.error{background:#b6192d}
+
+/* Mini-cart dropdown */
+.mini-cart{position:fixed;top:56px;right:18px;width:320px;background:#fff;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.14);z-index:10001;display:none}
+.mini-cart.show{display:block}
+.mini-cart-inner{padding:12px}
+.mini-cart-items{max-height:320px;overflow:auto}
+.mini-cart-item{display:flex;gap:10px;padding:8px 6px;border-bottom:1px solid #f0f0f0}
+.mini-cart-item img{width:56px;height:56px;object-fit:cover;border-radius:4px}
+.mini-cart-item .meta{flex:1}
+.mini-cart-item .meta .name{font-size:14px;font-weight:600}
+.mini-cart-item .meta .qty{font-size:13px;color:#666;margin-top:6px}
+.mini-cart-footer{padding-top:8px;text-align:right}
