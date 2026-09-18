@@ -63,9 +63,9 @@ $smarty->assign('cart_items', $cartItems);
 $smarty->assign('subtotal', $subtotal);
 $smarty->assign('pagetitle', 'Checkout | InviteIndia');
 $smarty->assign('metadesc', 'Secure checkout for wedding sarees and gift products.');
+$smarty->assign('show_cart_global', 1);
 $smarty->assign('header', $smarty->fetch('../templates/default/header.tpl'));
 $smarty->assign('content', $smarty->fetch('../templates/default/store_checkout.tpl'));
 $smarty->assign('footer', $smarty->fetch('../templates/default/footer.tpl'));
-$smarty->assign('show_cart_global', 1);
 $smarty->display('../templates/default/index.tpl');
 ?>

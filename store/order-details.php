@@ -30,9 +30,9 @@ $smarty->assign('order', $orderRow[0]);
 $smarty->assign('items', $orderItems);
 $smarty->assign('pagetitle', 'Order Details | InviteIndia');
 $smarty->assign('metadesc', 'Detailed view of your order and items.');
+$smarty->assign('show_cart_global', 1);
 $smarty->assign('header', $smarty->fetch('../templates/default/header.tpl'));
 $smarty->assign('content', $smarty->fetch('../templates/default/store_order_details.tpl'));
 $smarty->assign('footer', $smarty->fetch('../templates/default/footer.tpl'));
-$smarty->assign('show_cart_global', 1);
 $smarty->display('../templates/default/index.tpl');
 ?>
