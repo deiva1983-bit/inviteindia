@@ -42,7 +42,7 @@
 	<link href="{$static_domain_path_css}/base/bootstrap{$glb_minify_css}.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="{$static_domain_path_css}/base/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- js -->
-	<script defer src="includes/scripts/js/base/jquery-2.1.4.min.js"></script>
+	<script src="includes/scripts/js/base/jquery-2.1.4.min.js"></script>
 	<!-- //js -->
 	<!-- font-awesome-icons -->
 	<link href="{$static_domain_path_css}/base/font-awesome.css" rel="stylesheet">
