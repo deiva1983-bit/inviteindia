@@ -1,49 +1,47 @@
 <?php
-include_once('../includes/configs/init.php');
+/* =============================================================================
+   DISABLED - UNAUTHENTICATED PAYMENT CONFIRMATION ENDPOINT
+   -----------------------------------------------------------------------------
+   THE VULNERABILITY (critical, and it was live):
+   This endpoint accepted a plain POST and marked any order as paid. It had no
+   signature check, no shared secret, no gateway IP allowlist, and no callback
+   to the gateway to verify the transaction actually happened. Anyone on the
+   internet could run:
 
-$userslog_obj = new userslog();
+       curl -X POST https://www.inviteindia.com/store/store_payment_callback.php \
+            -d "order_id=123&status=success&gateway=ccavenue&txn_id=anything"
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo 'Method not allowed';
-    exit;
-}
+   ...and order 123 became payment_status='paid', order_status='processing'.
+   Free goods, repeatable, for any order id.
 
-$orderId = isset($_POST['order_id']) ? (int)$_POST['order_id'] : 0;
-$txnId = trim($_POST['txn_id'] ?? '');
-$gateway = in_array(trim($_POST['gateway'] ?? ''), array('ccavenue', 'paypal')) ? trim($_POST['gateway']) : 'ccavenue';
-$amount = (float)($_POST['amount'] ?? 0);
-$status = strtolower(trim($_POST['status'] ?? 'failed'));
+   The amount check that was on line 34 did not help, because it read:
 
-if ($orderId <= 0) {
-    http_response_code(400);
-    echo 'Missing order id';
-    exit;
-}
+       if ($amount > 0 && abs($amount - $expectedAmount) > 0.01) { reject }
 
-$orderSql = "SELECT * FROM orders WHERE order_id = " . $orderId . " LIMIT 1";
-$orderRow = $userslog_obj->selectVal($orderSql);
+   Omitting the amount parameter entirely made $amount = 0, so the first
+   condition was false and the whole check was skipped.
 
-if (!$orderRow || !count($orderRow)) {
-    http_response_code(404);
-    echo 'Order not found';
-    exit;
-}
+   WHY IT IS SAFE TO TURN OFF:
+   A search of the whole codebase found NO caller for this file - not in the
+   store flow, not in checkout.php, not in the CCAvenue or PayPal handlers.
+   CCAvenue posts its result to pay/ccavResponseHandler.php, and PayPal to
+   paypal_res.php. This file was dead code that only an attacker would ever
+   reach, so failing closed removes the hole and changes nothing legitimate.
 
-$expectedAmount = (float)$orderRow[0]['total_amount'];
-if ($amount > 0 && abs($amount - $expectedAmount) > 0.01) {
-    http_response_code(400);
-    echo 'Amount mismatch';
-    exit;
-}
+   IF YOU DO NEED A SERVER-TO-SERVER CALLBACK LATER, it must have all of:
+     1. An HMAC signature over the raw request body, using a secret shared with
+        the caller, compared with hash_equals() - never ==.
+     2. Amount verified against orders.total_amount with NO "skip if zero"
+        branch - a missing amount must be a hard rejection.
+     3. Idempotency: reject if the order is already paid, and store a unique
+        index on payments.transaction_id so a replayed callback cannot create a
+        second payment row.
+     4. Verification against the gateway's own status API before trusting the
+        payload, which is the only thing that actually proves money moved.
+     5. Prepared statements throughout (see note in the audit about addslashes).
+   ========================================================================== */
 
-$paymentStatus = ($status === 'success' || $status === 'paid') ? 'paid' : 'failed';
-$updateSql = "UPDATE orders SET payment_status = '" . addslashes($paymentStatus) . "', order_status = '" . ($paymentStatus === 'paid' ? 'processing' : 'cancelled') . "' WHERE order_id = " . $orderId . " LIMIT 1";
-$userslog_obj->updateVal($updateSql);
-
-$paymentSql = "INSERT INTO payments (order_id, payment_gateway, transaction_id, amount, payment_status, response_data, created_at)
-               VALUES (" . $orderId . ", '" . addslashes($gateway) . "', '" . addslashes($txnId) . "', " . $expectedAmount . ", '" . addslashes($paymentStatus) . "', '" . addslashes(json_encode($_POST, JSON_UNESCAPED_SLASHES)) . "', NOW())";
-$userslog_obj->insertVal($paymentSql);
-
-echo 'OK';
-?>
+http_response_code(410);
+header('Content-Type: text/plain; charset=utf-8');
+echo "Gone. This endpoint has been disabled for security reasons.\n";
+exit;

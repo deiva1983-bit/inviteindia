@@ -1,49 +1,32 @@
 <?php
-include_once('includes/configs/init.php');
+/* =============================================================================
+   DISABLED - UNAUTHENTICATED PAYMENT CONFIRMATION ENDPOINT
+   -----------------------------------------------------------------------------
+   Byte-for-byte the same vulnerability as store/store_payment_callback.php,
+   just reachable at a second URL. Both were live, so BOTH had to be closed:
 
-$userslog_obj = new userslog();
+       curl -X POST https://www.inviteindia.com/store_payment_callback.php \
+            -d "order_id=123&status=success"
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo 'Method not allowed';
-    exit;
-}
+   ...marked order 123 paid. No signature, no secret, no gateway verification.
+   Omitting "amount" skipped the amount check entirely, because the guard was
+   "if ($amount > 0 && ...)".
 
-$orderId = isset($_POST['order_id']) ? (int)$_POST['order_id'] : 0;
-$txnId = trim($_POST['txn_id'] ?? '');
-$gateway = in_array(trim($_POST['gateway'] ?? ''), array('ccavenue', 'paypal')) ? trim($_POST['gateway']) : 'ccavenue';
-$amount = (float)($_POST['amount'] ?? 0);
-$status = strtolower(trim($_POST['status'] ?? 'failed'));
+   No caller for this file exists anywhere in the codebase. CCAvenue posts to
+   pay/ccavResponseHandler.php and PayPal to paypal_res.php, so nothing
+   legitimate breaks by refusing requests here.
 
-if ($orderId <= 0) {
-    http_response_code(400);
-    echo 'Missing order id';
-    exit;
-}
+   See store/store_payment_callback.php for the full explanation and for the
+   requirements any future server-to-server callback must meet.
 
-$orderSql = "SELECT * FROM orders WHERE order_id = " . $orderId . " LIMIT 1";
-$orderRow = $userslog_obj->selectVal($orderSql);
+   Having two copies of the same payment endpoint at two URLs is itself the
+   underlying problem: this codebase has duplicate payment files (checkout.php
+   and store/checkout.php, several ccavResponseHandler_*.php variants, plus
+   *_bk.php backups) and a fix applied to one copy silently leaves the others
+   exploitable. Consolidating those is listed in the audit.
+   ========================================================================== */
 
-if (!$orderRow || !count($orderRow)) {
-    http_response_code(404);
-    echo 'Order not found';
-    exit;
-}
-
-$expectedAmount = (float)$orderRow[0]['total_amount'];
-if ($amount > 0 && abs($amount - $expectedAmount) > 0.01) {
-    http_response_code(400);
-    echo 'Amount mismatch';
-    exit;
-}
-
-$paymentStatus = ($status === 'success' || $status === 'paid') ? 'paid' : 'failed';
-$updateSql = "UPDATE orders SET payment_status = '" . addslashes($paymentStatus) . "', order_status = '" . ($paymentStatus === 'paid' ? 'processing' : 'cancelled') . "' WHERE order_id = " . $orderId . " LIMIT 1";
-$userslog_obj->updateVal($updateSql);
-
-$paymentSql = "INSERT INTO payments (order_id, payment_gateway, transaction_id, amount, payment_status, response_data, created_at)
-               VALUES (" . $orderId . ", '" . addslashes($gateway) . "', '" . addslashes($txnId) . "', " . $expectedAmount . ", '" . addslashes($paymentStatus) . "', '" . addslashes(json_encode($_POST, JSON_UNESCAPED_SLASHES)) . "', NOW())";
-$userslog_obj->insertVal($paymentSql);
-
-echo 'OK';
-?>
+http_response_code(410);
+header('Content-Type: text/plain; charset=utf-8');
+echo "Gone. This endpoint has been disabled for security reasons.\n";
+exit;

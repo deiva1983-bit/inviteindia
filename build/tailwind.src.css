@@ -1,0 +1,217 @@
+/* ==========================================================================
+   InviteIndia - Tailwind source for the homepage
+   --------------------------------------------------------------------------
+   WHY A BUILD STEP INSTEAD OF THE TAILWIND CDN SCRIPT:
+   The Play CDN compiles CSS in the browser at runtime. That adds a
+   render-blocking script, delays first paint, and causes layout shift -
+   all three are Core Web Vitals signals Google uses for ranking. Compiling
+   ahead of time ships one small static .css file instead, which is the
+   single biggest Core Web Vitals win available on this page.
+
+   Build:  cd build && npm install && npm run build
+   Output: ../static/css/home-tailwind.css   (commit this file)
+   ========================================================================== */
+
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   CONTENT SOURCES
+   Tailwind only emits CSS for classes it can actually find. It does not know
+   about Smarty .tpl files by default, and it must also scan index.php because
+   the FAQ accordion, testimonial cards and theme cards are built as HTML
+   strings in PHP. Missing a source here = silently missing styles in prod.
+   -------------------------------------------------------------------------- */
+@source "../templates/default/mainheader.tpl";
+@source "../templates/default/main.tpl";
+@source "../templates/default/footer.tpl";
+@source "../index.php";
+
+/* --------------------------------------------------------------------------
+   DESIGN TOKENS
+   Brand crimson/maroon + gold on warm cream: the colour language Indian
+   wedding stationery already uses, so the page reads as "wedding" instantly.
+   Defined as tokens so the whole page restyles from one place.
+   -------------------------------------------------------------------------- */
+@theme {
+  /* Two font families in ONE Google Fonts request, replacing the four
+     separate requests the old head made (Great Vibes + Poiret One +
+     Montserrat + Open Sans = 4 connections before first paint). */
+  --font-display: "Playfair Display", ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --color-brand-50: #fff1f4;
+  --color-brand-100: #ffe0e7;
+  --color-brand-200: #ffc6d3;
+  --color-brand-300: #ff9db2;
+  --color-brand-400: #f96387;
+  --color-brand-500: #e8325f;
+  --color-brand-600: #d11a4a;
+  --color-brand-700: #b3123c;
+  --color-brand-800: #8f1032;
+  --color-brand-900: #76112e;
+  --color-brand-950: #420416;
+
+  --color-gold-100: #fbf3d9;
+  --color-gold-300: #ecd88f;
+  --color-gold-400: #e0c060;
+  --color-gold-500: #c9a227;
+  --color-gold-600: #a8841c;
+
+  --color-cream-50: #fffaf6;
+  --color-cream-100: #fdf2ea;
+  --color-cream-200: #f7e3d6;
+
+  --color-ink-500: #6b5b66;
+  --color-ink-700: #3d2c38;
+  --color-ink-900: #241820;
+
+  --shadow-card: 0 1px 2px rgb(36 24 32 / 0.04), 0 8px 24px -8px rgb(36 24 32 / 0.12);
+  --shadow-card-hover: 0 2px 4px rgb(36 24 32 / 0.06), 0 16px 40px -12px rgb(36 24 32 / 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   BASE
+   -------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Sticky header is 4rem tall; without this, in-page anchor jumps land
+       underneath it and the target heading is hidden. */
+    scroll-padding-top: 5rem;
+  }
+
+  /* Respect the OS "reduce motion" setting - an accessibility requirement,
+     and Lighthouse checks for it. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-cream-50);
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Visible keyboard focus everywhere. The old page relied on the browser
+     default, which Bootstrap 3's reset had partially removed. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+
+  /* Images default to responsive so a wrong width attribute can never cause
+     horizontal page scroll on a phone (a mobile-usability ranking signal). */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   COMPONENTS
+   Only for patterns repeated across templates AND generated in PHP, so the
+   PHP-built markup cannot drift from the template-built markup.
+   -------------------------------------------------------------------------- */
+@layer components {
+  /* Primary CTA. One class = one look, everywhere on the page. */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           bg-brand-700 px-7 py-3.5 text-base font-semibold text-white
+           shadow-card transition
+           hover:bg-brand-800 hover:shadow-card-hover
+           focus-visible:outline-2 focus-visible:outline-offset-2
+           focus-visible:outline-brand-600
+           active:translate-y-px;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           border-2 border-brand-700 bg-white px-7 py-3
+           text-base font-semibold text-brand-800 transition
+           hover:bg-brand-50 active:translate-y-px;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           px-5 py-2.5 text-sm font-semibold text-ink-700 transition
+           hover:bg-cream-100 hover:text-brand-800;
+  }
+
+  /* Section shell: consistent vertical rhythm and gutters. */
+  .section {
+    @apply mx-auto w-full max-w-6xl px-5 py-16 sm:px-6 lg:py-24;
+  }
+
+  .section-eyebrow {
+    @apply mb-3 text-xs font-bold tracking-[0.18em] text-brand-700 uppercase;
+  }
+
+  .section-title {
+    @apply font-display text-3xl leading-tight font-bold text-ink-900
+           text-balance sm:text-4xl lg:text-[2.75rem];
+  }
+
+  .section-lede {
+    @apply mt-4 max-w-2xl text-lg leading-relaxed text-ink-500 text-pretty;
+  }
+
+  /* Feature / theme / testimonial card */
+  .card {
+    @apply flex h-full flex-col rounded-2xl border border-cream-200
+           bg-white p-6 shadow-card transition duration-200
+           hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-card-hover;
+  }
+
+  .card-icon {
+    @apply mb-4 inline-flex size-12 shrink-0 items-center justify-center
+           rounded-xl bg-brand-50 text-brand-700;
+  }
+
+  .card-title {
+    @apply font-display text-xl font-bold text-ink-900;
+  }
+
+  .card-text {
+    @apply mt-2 text-[0.975rem] leading-relaxed text-ink-500;
+  }
+
+  /* FAQ accordion, built with <details>/<summary> so the answers are in the
+     initial HTML and readable by Googlebot with zero JavaScript. This is what
+     makes the FAQPage schema legitimate - the visible text always matches. */
+  .faq-item {
+    @apply border-b border-cream-200 last:border-b-0;
+  }
+
+  .faq-q {
+    @apply flex w-full cursor-pointer list-none items-center justify-between
+           gap-4 py-5 text-left font-semibold text-ink-900 transition
+           hover:text-brand-800;
+  }
+
+  /* Hide the native disclosure triangle in every engine. */
+  .faq-q::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-a {
+    @apply pb-5 pr-8 leading-relaxed text-ink-500;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   UTILITIES
+   -------------------------------------------------------------------------- */
+@utility faq-chevron {
+  @apply size-5 shrink-0 text-brand-600 transition-transform duration-200;
+}
+
+/* Rotate the chevron when its parent <details> is open. */
+@layer components {
+  details[open] > .faq-q .faq-chevron {
+    transform: rotate(180deg);
+  }
+}

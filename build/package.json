@@ -1,0 +1,14 @@
+{
+  "name": "inviteindia-css-build",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tailwind CSS build for the InviteIndia homepage. Outputs a single pre-compiled stylesheet to static/css/home-tailwind.css so production serves plain CSS with no CDN and no runtime JS.",
+  "scripts": {
+    "build": "tailwindcss -i ./tailwind.src.css -o ../static/css/home-tailwind.css --minify",
+    "watch": "tailwindcss -i ./tailwind.src.css -o ../static/css/home-tailwind.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
