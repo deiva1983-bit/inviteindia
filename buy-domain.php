@@ -110,11 +110,7 @@ $smarty->assign('glb_domain_inr_com', $own_domain_inr_com);
 $smarty->assign('glb_domain_us_com', $own_domain_us_com);
 $canurl = $ssl_path.'www.inviteindia.com/buy-domain.php';
 $smarty->assign('can_url', $canurl);
-// NEW: Global header configuration with authentication detection
-$show_auth = !empty($user_log_id) ? 1 : 0;
-$smarty->assign('show_auth', $show_auth);
-
-$smarty->assign('header', $smarty->fetch('default/header-global.tpl') );
+$smarty->assign('header', $smarty->fetch('default/header.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/

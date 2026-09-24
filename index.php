@@ -494,10 +494,6 @@ $content_template      = 'default/main.tpl';
 $head_content_template = 'default/mainheader.tpl';
 
 /*----- Include Files Details Start-----*/
-// NEW: Global header configuration with authentication detection
-$show_auth = !empty($user_log_id_home) ? 1 : 0;
-$smarty->assign('show_auth', $show_auth);
-
 $smarty->assign('header', $smarty->fetch($head_content_template) );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
