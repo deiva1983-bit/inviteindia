@@ -76,7 +76,11 @@ $smarty->assign('glb_price_usd_3', $price_usd_3);
 $smarty->assign('maxcard_per_acc', $max_card_per_acc);
 
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/header.tpl') );
+// NEW: Global header configuration with authentication detection
+$show_auth = !empty($user_log_id) ? 1 : 0;
+$smarty->assign('show_auth', $show_auth);
+
+$smarty->assign('header', $smarty->fetch('default/header-global.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
