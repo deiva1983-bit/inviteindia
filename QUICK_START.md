@@ -2,20 +2,23 @@
 
 ## 🚀 30-Second Integration
 
-### Global Header on Any Page
+### Global Header on Any Page (Smarty Template)
+
+**Already implemented on:**
+- ✅ buy-domain.php
+- ✅ packages.php
+
+**To add to another page:**
 
 ```php
 <?php
-include_once('includes/global-header.php');
+// In your page controller, add before the header fetch:
+$show_auth = !empty($user_log_id) ? 1 : 0;
+$smarty->assign('show_auth', $show_auth);
+$smarty->assign('topnav_select', 'themes'); // or appropriate nav item
 
-$pageConfig = [
-    'page_title' => 'Page Title | InviteIndia',
-    'page_desc' => 'Meta description',
-    'current_nav' => 'themes',
-    'show_auth' => isset($_SESSION['sess_user_id']) ? 1 : 0
-];
-
-renderGlobalHeader(null, $pageConfig);
+// Then fetch the new header template:
+$smarty->assign('header', $smarty->fetch('default/header-global.tpl'));
 ?>
 ```
 
@@ -125,13 +128,25 @@ builder.setPreviewMode('mobile');  // or 'desktop'
 
 ---
 
-## 📱 Required Endpoints
+## ⚙️ Configuration Checklist
+
+Before testing, verify these are in place:
+
+- [ ] Bootstrap is loaded in your static assets
+- [ ] jQuery is loaded properly
+- [ ] `$glb_site_url` is set correctly in `init.php`
+- [ ] `$static_domain_path_css` points to `/static/css/`
+- [ ] `$static_domain_path_js` points to `/static/js/`
+- [ ] `$static_domain_path_img` points to `/static/images/`
+
+## 📱 Required AJAX Endpoints
 
 ### Login
 **Endpoint:** `POST /ajax_login.php`
 ```
 Parameters: user_name, password, rand
 Response: "1" (success) or error message
+Required: Sets $_SESSION['sess_user_id'] on success
 ```
 
 ### Signup
@@ -139,6 +154,7 @@ Response: "1" (success) or error message
 ```
 Parameters: name, email, username, password
 Response: "1" (success) or error message
+Required: Creates user and sets $_SESSION['sess_user_id'] on success
 ```
 
 ---
@@ -175,13 +191,17 @@ Response: "1" (success) or error message
 
 ## 📦 Files
 
-| File | Purpose |
-|------|---------|
-| `includes/global-header.php` | Reusable header component |
-| `static/js/wedding-invitation-builder.js` | Interactive builder engine |
-| `wedding-customizer-example.php` | Full working example |
-| `IMPLEMENTATION_GUIDE.md` | Complete documentation |
-| `QUICK_START.md` | This file |
+| File | Purpose | Status |
+|------|---------|--------|
+| `templates/default/header-global.tpl` | Global header template (Smarty) | ✅ In use |
+| `templates/default/header-wrapper.tpl` | Gradual migration wrapper | 📖 Reference |
+| `static/js/wedding-invitation-builder.js` | Interactive builder engine | 📖 Ready to use |
+| `wedding-customizer-example.php` | Full builder example | 📖 Reference |
+| `buy-domain.php` | Updated to use global header | ✅ In use |
+| `packages.php` | Updated to use global header | ✅ In use |
+| `index.php` | Homepage (show_auth added) | ⚠️ Uses mainheader.tpl |
+| `IMPLEMENTATION_GUIDE.md` | Complete documentation | 📖 Reference |
+| `QUICK_START.md` | This file | 📖 Reference |
 
 ---
 
@@ -195,14 +215,32 @@ Response: "1" (success) or error message
 
 ---
 
-## 🎯 Next Steps
+## 🎯 What's Already Done
 
-1. Copy `includes/global-header.php` to your includes folder
-2. Copy `static/js/wedding-invitation-builder.js` to your static/js folder
-3. Update one page to use the global header
-4. Test login/signup modals
-5. Create a page with the wedding builder
-6. Update remaining pages gradually
+✅ `templates/default/header-global.tpl` created (Smarty version)
+✅ `static/js/wedding-invitation-builder.js` created
+✅ `buy-domain.php` updated to use global header
+✅ `packages.php` updated to use global header
+✅ Example pages created for reference
+
+## 🚀 Next Steps
+
+1. **Test on localhost:**
+   - Visit http://localhost/buy-domain.php (should show new header)
+   - Visit http://localhost/packages.php (should show new header)
+   - Clear browser cache if you see old styles
+
+2. **Update remaining pages:**
+   - Use the pattern from buy-domain.php & packages.php
+   - Follow `MIGRATION_CHECKLIST.md` for step-by-step guide
+
+3. **Create wedding builder page:**
+   - Copy pattern from `wedding-customizer-example.php`
+   - Add the builder to your site
+
+4. **Verify AJAX endpoints:**
+   - Ensure `/ajax_login.php` exists and returns "1" on success
+   - Ensure `/ajax_signup.php` exists and returns "1" on success
 
 ---
 
