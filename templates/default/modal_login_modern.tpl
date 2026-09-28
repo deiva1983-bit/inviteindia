@@ -147,14 +147,12 @@
 		forgotpassForm.classList.add('hidden');
 	});
 
-	// Form submissions - delegate to existing scripts or AJAX handlers
 	document.getElementById('form_signin').addEventListener('submit', function(e) {
 		e.preventDefault();
 		const username = document.getElementById('signin_username').value;
 		const password = document.getElementById('signin_password').value;
 		const alertBox = document.getElementById('alert_signin');
 
-		// Call existing login handler or AJAX endpoint
 		fetch('ajax_login.php', {
 			method: 'POST',
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -177,7 +175,6 @@
 		});
 	});
 
-	// Signup form - reuse existing registration handler
 	document.getElementById('form_signup').addEventListener('submit', function(e) {
 		e.preventDefault();
 		const username = document.getElementById('signup_username').value;
@@ -185,7 +182,6 @@
 		const password = document.getElementById('signup_password').value;
 		const alertBox = document.getElementById('alert_signup');
 
-		// Call existing signup handler or AJAX endpoint
 		fetch('ajax_signup.php', {
 			method: 'POST',
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
