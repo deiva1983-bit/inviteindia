@@ -34,7 +34,6 @@ $doit=$_REQUEST['do'];
 $canurl = $ssl_path.'www.inviteindia.com/faq.php';
 $smarty->assign('can_url', $canurl);
 $smarty->assign('topnav_select', 'faq');
-$smarty->assign('tpl_modern_css', 1);
 $selectfaq = 'select faq_questions,faq_answer from faqs where faq_status = 1';
 $selectfaq_lists = $userslog_obj->selectVal($selectfaq);
 $msgdetails=""; $mainEntity = ""; $mainEnt = "";
@@ -81,12 +80,13 @@ $smarty->assign('glb_mainEntity', $mainEntity);
 $content_template = 'default/faq.tpl';
 $content_template = $common_obj->load_mobile_tpl_files($isMobile, $content_template);
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
+$smarty->assign('header', $smarty->fetch('default/header.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

@@ -61,11 +61,12 @@ $smarty->assign('cart_items', $cartItems);
 $smarty->assign('subtotal', $subtotal);
 $smarty->assign('pagetitle', 'Shopping Cart | InviteIndia');
 $smarty->assign('metadesc', 'View and manage your shopping cart for wedding sarees and gifts.');
-$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl'));
+$smarty->assign('header', $smarty->fetch('default/header.tpl'));
 $smarty->assign('content', $smarty->fetch('default/store_cart.tpl'));
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl'));
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

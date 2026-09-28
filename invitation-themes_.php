@@ -13,7 +13,6 @@ $smarty->assign('glb_invite_type', $invite_type);
 // Request comes for change the theme
 $bind_url="&do=$current_action";
 $smarty->assign('topnav_select', 'wedd');
-$smarty->assign('tpl_modern_css', 1);
 // http://localhost/social/select_theme.php?wed_id=44&do=sel0myli For Edit
 // http://localhost/social/select_theme.php?do=cre0myli For Create
 $home_page_title = "Wedding website | Birthday website - inviteindia";
@@ -53,14 +52,12 @@ if($current_action=="select") {
     $edit_theme_link='';
 } elseif($current_action=="demo"){
 $smarty->assign('topnav_select', 'themes');
-$smarty->assign('tpl_modern_css', 1);
 $submit_page="dboper.php?req=thmcrt-$invite_type$bind_url";
 $bind_url=$bind_url;
 $edit_theme_link='';
 } else {
 $bind_url="&do=demo";
 $smarty->assign('topnav_select', 'themes');
-$smarty->assign('tpl_modern_css', 1);
 $submit_page="dboper.php?req=thmcrt-$invite_type$bind_url";
 $bind_url=$bind_url;
 $edit_theme_link='';
@@ -272,12 +269,13 @@ $smarty->assign('metadesc', $theme_page_desc);
 $smarty->assign('metakeywords', $theme_page_keywords);
 $smarty->assign('user_log_id', $user_log_id );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
+$smarty->assign('header', $smarty->fetch('default/header.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

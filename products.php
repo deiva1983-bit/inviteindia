@@ -38,11 +38,12 @@ $smarty->assign('products', $products);
 $smarty->assign('pagetitle', ($selectedCategoryId > 0 ? $categoryRow[0]['category_name'] : 'Shop Products') . ' | InviteIndia');
 $smarty->assign('metadesc', 'Shop wedding sarees, bridal collections, gifting ideas, and accessories from InviteIndia.');
 $smarty->assign('metakeywords', 'wedding sarees, bridal sarees, designer sarees, wedding gifts, accessories');
-$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl'));
+$smarty->assign('header', $smarty->fetch('default/header.tpl'));
 $smarty->assign('content', $smarty->fetch('default/store_products.tpl'));
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl'));
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

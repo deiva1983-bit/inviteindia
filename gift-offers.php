@@ -97,7 +97,6 @@ $smarty->assign('do_val', 'wedd_music');
 $from_src= trim($_REQUEST['from']);
 $smarty->assign('glb_site_url', $glb_site_url);
 $smarty->assign('topnav_select', 'wgift');
-$smarty->assign('tpl_modern_css', 1);
 $smarty->assign('pagetitle', $dotd_page_title.$common_page_title_end);
 $smarty->assign('metadesc', $dotd_page_meta_desc);
 $smarty->assign('metakeywords', $dotd_keywords); 
@@ -108,12 +107,13 @@ $smarty->assign('can_url', $canurl);
 //Content for left nav 
 $smarty->assign('left_nav_for_wed', $smarty->fetch('default/gift_account/left_nav_for_gift.tpl') );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
+$smarty->assign('header', $smarty->fetch('default/header.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

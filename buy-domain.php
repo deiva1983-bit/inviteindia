@@ -17,7 +17,6 @@ setcookie("last_req_url", $last_url, $expire);
 $userslog_obj = new userslog();
 /*----- Object creation end-----*/
 $smarty->assign('topnav_select', 'owndomain');
-$smarty->assign('tpl_modern_css', 1);
 
 /*----- Variables Declaration Start-----*/
 $smarty->assign('currentpage_js', 'owndomain');
@@ -111,12 +110,13 @@ $smarty->assign('glb_domain_inr_com', $own_domain_inr_com);
 $smarty->assign('glb_domain_us_com', $own_domain_us_com);
 $canurl = $ssl_path.'www.inviteindia.com/buy-domain.php';
 $smarty->assign('can_url', $canurl);
-$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
+$smarty->assign('header', $smarty->fetch('default/header.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

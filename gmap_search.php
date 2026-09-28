@@ -12,7 +12,6 @@ $current_action= trim($_REQUEST['do']);
 $from_src= trim($_REQUEST['from']);
 $smarty->assign('do_val', $current_action);
 $smarty->assign('topnav_select', 'wedd');
-$smarty->assign('tpl_modern_css', 1);
 $user_log_id= trim($_SESSION['sess_user_id']);
 $chkqry= "SELECT mrg_page_url FROM mrg_url_status where mrg_url_sts_auto_id  = '".$current_wedid."' and mrg_main_user_id = '".$user_log_id."' ";
 	$selectwed_acces= $userslog_obj->selectVal($chkqry);
@@ -64,12 +63,13 @@ $smarty->assign('user_log_id', $user_log_id );
 //Content for left nav 
 $smarty->assign('left_nav_for_wed', $smarty->fetch('default/mrg_account/left_nav_for_wedding.tpl') );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
+$smarty->assign('header', $smarty->fetch('default/header.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

@@ -35,7 +35,6 @@ $show_auth = !empty($user_log_id) ? 1 : 0;
 $smarty->assign('use_new_header', $use_new_header);
 $smarty->assign('show_auth', $show_auth);
 $smarty->assign('topnav_select', 'themes');
-$smarty->assign('tpl_modern_css', 1);
 
 // Page meta/SEO
 $smarty->assign('pagetitle', $page_title);
@@ -55,7 +54,7 @@ $smarty->assign('currentpage_js', 'themes');
 if ($use_new_header) {
     $smarty->assign('header', $smarty->fetch('default/header-global.tpl'));
 } else {
-    $smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl'));
+    $smarty->assign('header', $smarty->fetch('default/header.tpl'));
 }
 
 // Fetch content template
@@ -68,6 +67,7 @@ $smarty->assign('footer', $smarty->fetch('default/footer.tpl'));
 // Display the final page using your layout template
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 
