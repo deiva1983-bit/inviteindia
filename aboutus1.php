@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //-------------------------------------------------------------------------------------------------------------------
 // File name   : serviceproc.php
 // Description : file to handle index page informations
@@ -17,6 +17,7 @@ require_once("includes/functions/ajaxfileuploader.inc.php");
 $userslog_obj = new userslog();
 /*----- Object creation end-----*/
 $smarty->assign('topnav_select', 'aboutus');
+$smarty->assign('tpl_modern_css', 1);
 
 /*----- Variables Declaration Start-----*/
 $smarty->assign('currentpage_js', 'my_page');
@@ -40,9 +41,10 @@ $smarty->assign('maxcard_per_acc', $max_card_per_acc);
 $smarty->assign('free_indays', $free_indays);
 
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/header.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+

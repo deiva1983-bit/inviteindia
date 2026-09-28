@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include_once('includes/configs/init.php');
 
 $userslog_obj = new userslog();
@@ -63,8 +63,9 @@ $smarty->assign('cart_items', $cartItems);
 $smarty->assign('subtotal', $subtotal);
 $smarty->assign('pagetitle', 'Checkout | InviteIndia');
 $smarty->assign('metadesc', 'Secure checkout for wedding sarees and gift products.');
-$smarty->assign('header', $smarty->fetch('default/header.tpl'));
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl'));
 $smarty->assign('content', $smarty->fetch('default/store_checkout.tpl'));
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl'));
 $smarty->display('default/index.tpl');
 ?>
+

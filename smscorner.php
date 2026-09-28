@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 /*----- Include Files -----*/
 include_once( 'includes/configs/init.php' ); 
  //include_once( 'includes/configs/sessioninc.php' );
@@ -15,6 +15,7 @@ $current_action= trim($_REQUEST['do']);
 $smarty->assign('glb_site_url', $glb_site_url); 					
 $user_log_id= trim($_SESSION['sess_user_id']);
  $smarty->assign('topnav_select', 'sms');
+$smarty->assign('tpl_modern_css', 1);
 if (isset($_SESSION['sendmob']))	
 	{
 	$chkqry= "SELECT smsfrd_mobile_num FROM `tbl_sms_friends` where smsfrd_usrlog_id ='".$user_log_id."' and smsfrd_mobile_num='".$_SESSION['sendmob']."' and smsfrd_status='1' ";
@@ -72,9 +73,10 @@ $content_template = 'default/smshome.tpl';
 }
 $smarty->assign('user_log_id', $user_log_id );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/header.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+

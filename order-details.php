@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include_once('includes/configs/init.php');
 
 if (!isset($_SESSION['sess_user_id']) || trim($_SESSION['sess_user_id']) == '') {
@@ -30,8 +30,9 @@ $smarty->assign('order', $orderRow[0]);
 $smarty->assign('items', $orderItems);
 $smarty->assign('pagetitle', 'Order Details | InviteIndia');
 $smarty->assign('metadesc', 'Detailed view of your order and items.');
-$smarty->assign('header', $smarty->fetch('default/header.tpl'));
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl'));
 $smarty->assign('content', $smarty->fetch('default/store_order_details.tpl'));
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl'));
 $smarty->display('default/index.tpl');
 ?>
+

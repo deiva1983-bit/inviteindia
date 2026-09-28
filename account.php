@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include_once('includes/configs/init.php');
 
 if (!isset($_SESSION['sess_user_id']) || trim($_SESSION['sess_user_id']) == '') {
@@ -19,8 +19,9 @@ $smarty->assign('orders', $orders);
 $smarty->assign('addresses', $addresses);
 $smarty->assign('pagetitle', 'My Account | InviteIndia');
 $smarty->assign('metadesc', 'Manage your account, addresses, and order history.');
-$smarty->assign('header', $smarty->fetch('default/header.tpl'));
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl'));
 $smarty->assign('content', $smarty->fetch('default/account.tpl'));
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl'));
 $smarty->display('default/index.tpl');
 ?>
+

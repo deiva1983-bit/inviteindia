@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 /*----- Include Files -----*/
 include_once( 'includes/configs/init.php' ); 
 include_once( 'includes/configs/sessioninc.php' );
@@ -7,7 +7,8 @@ include('includes/functions/simpleimage.php');
 $userslog_obj = new userslog();
 $common_obj = new common();
 $validator_obj = new Validator();
-$smarty->assign('topnav_select', 'wedd');
+$smarty->assign('topnav_select', 'wedd');
+$smarty->assign('tpl_modern_css', 1);
 $smarty->assign('glb_site_url', $glb_site_url);
 $home_page_title = "Free wedding website | Create Online wedding invitation";
 $home_page_meta_desc = "online wedding invitation website. Create your wedding invitation with colourful themes with more features and share with your friends";
@@ -292,7 +293,7 @@ $content_template = 'default/mrg_account/create_own_page.tpl';
 $smarty->assign('glb_albumstatus', $albumstatus); 
 $smarty->assign('user_log_id', $user_log_id );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/header.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
@@ -459,3 +460,4 @@ function perform_imgupload($wedid, $listid, $files, $user_log_id, $parahid){
 		return $order_list_id;
 }
 ?>
+

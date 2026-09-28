@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 $theme_sub_sts = $chk_page_access[0]['mrg_theme_sub_sts'];
 $mrg_theme_id = $chk_page_access[0]['mrg_theme_id'];
 $mrg_theme_catid = $chk_page_access[0]['mrg_theme_catid'];

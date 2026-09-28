@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //-------------------------------------------------------------------------------------------------------------------
 // File name   : serviceproc.php
 // Description : file to handle index page informations
@@ -18,6 +18,7 @@ $userslog_obj = new userslog();
 $common_obj = new common();
 /*----- Object creation end-----*/
 $smarty->assign('topnav_select', 'termsofser');
+$smarty->assign('tpl_modern_css', 1);
 
 /*----- Variables Declaration Start-----*/
 $smarty->assign('currentpage_js', 'my_page');
@@ -121,9 +122,10 @@ $smarty->assign('pagenation', $pagination);
 
 $content_template = $common_obj->load_mobile_tpl_files($isMobile, $content_template);
 
-$smarty->assign('header', $smarty->fetch('default/header.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+

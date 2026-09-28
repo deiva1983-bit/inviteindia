@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 /*----- Include Files -----*/
 include_once( 'includes/configs/init.php' ); 
  //include_once( 'includes/configs/sessioninc.php' );
@@ -53,9 +53,10 @@ $smarty->assign('image_gallary', $url);
  
 $smarty->assign('user_log_id', $user_log_id );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/header.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+

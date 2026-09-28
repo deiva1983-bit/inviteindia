@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 include_once( 'includes/configs/init.php' ); 
  //include_once( 'includes/configs/sessioninc.php' );
 /*----- Object creation start-----*/

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include_once('includes/configs/init.php');
 
 if (!isset($_SESSION['sess_user_id']) || trim($_SESSION['sess_user_id']) == '') {
@@ -59,8 +59,9 @@ $addresses = $userslog_obj->selectVal($addressSql);
 $smarty->assign('addresses', $addresses);
 $smarty->assign('pagetitle', 'Address Book | InviteIndia');
 $smarty->assign('metadesc', 'Manage your saved delivery addresses securely.');
-$smarty->assign('header', $smarty->fetch('default/header.tpl'));
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl'));
 $smarty->assign('content', $smarty->fetch('default/store_address_book.tpl'));
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl'));
 $smarty->display('default/index.tpl');
 ?>
+

@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 include_once( 'includes/configs/init.php' ); 
  //include_once( 'includes/configs/sessioninc.php' );
 /*----- Object creation start-----*/
@@ -50,4 +50,5 @@ $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->display('default/index.tpl'); 
 
 ?>
+
 

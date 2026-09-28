@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 //-------------------------------------------------------------------------------------------------------------------
 
@@ -35,6 +35,7 @@ $userslog_obj = new userslog();
 /*----- Object creation end-----*/
 
 $smarty->assign('topnav_select', '');
+$smarty->assign('tpl_modern_css', 1);
 
 
 
@@ -66,7 +67,7 @@ $smarty->assign('metakeywords', $sample_page_keywords);
 
 /*----- Include Files Details Start-----*/
 
-$smarty->assign('header', $smarty->fetch('default/header.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
 
 $smarty->assign('content', $smarty->fetch($content_template) );
 
@@ -77,4 +78,5 @@ $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 $smarty->display('default/index.tpl');
 
 ?>
+
 

@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 /*----- Include Files -----*/
 include_once( 'includes/configs/init.php' ); 
 include_once( 'includes/configs/sessioninc.php' );
@@ -35,6 +35,7 @@ $smarty->assign('gnav_reception_class', $gnav_reception_class);
 
 $_SESSION['wed_invitation_access'] = 1;
 $smarty->assign('topnav_select', 'wedd');
+$smarty->assign('tpl_modern_css', 1);
 $chkqry= "SELECT mrg_page_url, mrg_status, mrg_url_sts_auto_id FROM mrg_url_status where mrg_status !='3' and mrg_main_user_id = '".$user_log_id."' order by mrg_url_created_date"; 
 	$selectwed_access= $userslog_obj->selectVal($chkqry);
 $totcountval= count($selectwed_access);
@@ -58,9 +59,10 @@ $smarty->assign('metadesc', $home_page_meta_desc);
 $smarty->assign('metakeywords', $home_page_meta_key); 
 $smarty->assign('user_log_id', $user_log_id );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/header.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+

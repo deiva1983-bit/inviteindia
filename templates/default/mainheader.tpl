@@ -158,7 +158,7 @@
 			{* Real links, not modals. Login is secondary and visually quiet;
 			   signup is the loud one, because new visitors outnumber returning
 			   account holders on a homepage by a wide margin. *}
-			<a href="signin.php" class="btn-ghost">Log in</a>
+			<button type="button" onclick="openLoginModal()" class="btn-ghost">Log in</button>
 			<a href="signup.php" class="btn-primary !px-5 !py-2.5 !text-sm">Create Free Website</a>
 			{else}
 			<a href="wedding-website-settings" class="btn-primary !px-5 !py-2.5 !text-sm">My Wedding Website</a>
@@ -202,7 +202,7 @@
 			<a href="wedding-gift-for-couples" class="block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100 hover:text-brand-800">Wedding Gifts</a>
 			<div class="mt-3 border-t border-cream-200 pt-3">
 				{if $smarty.session.sess_user_id eq ''}
-				<a href="signin.php" class="block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100">Log in</a>
+				<button type="button" onclick="openLoginModal()" class="w-full text-left block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100 bg-transparent border-none cursor-pointer">Log in</button>
 				{else}
 				<a href="myprofile.php?do=mprofile" class="block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100">My Profile</a>
 				<a href="logout.php" class="block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100">Log out</a>
@@ -242,3 +242,11 @@
 })();
 </script>
 {/literal}
+
+{* ========================================================================
+   LOGIN MODAL - Tailwind/Vanilla JS implementation
+   ======================================================================== *}
+{include file="default/modal_login_modern.tpl"}
+
+</body>
+</html>

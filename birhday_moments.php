@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 if($theme_type == '2') {
 include_once 'classic_moments.php';
 exit;

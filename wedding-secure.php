@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 /*----- Include Files -----*/
 include_once( 'includes/configs/init.php' ); 
 include_once( 'includes/configs/sessioninc.php' );
@@ -7,6 +7,7 @@ include('includes/functions/simpleimage.php');
 $userslog_obj = new userslog();
 $common_obj = new common();
 $smarty->assign('topnav_select', 'wedd');
+$smarty->assign('tpl_modern_css', 1);
 $smarty->assign('glb_site_url', $glb_site_url);
 $home_page_title = "Free wedding website | Create Online wedding invitation";
 $home_page_meta_desc = "online wedding invitation website. Create your wedding invitation with colourful themes with more features and share with your friends";
@@ -312,9 +313,10 @@ $smarty->assign('glb_albumstatus', $albumstatus);
 $smarty->assign('user_log_id', $user_log_id );
 $smarty->assign('left_nav_for_wed', $smarty->fetch('default/mrg_account/left_nav_for_wedding.tpl') );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/header.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
