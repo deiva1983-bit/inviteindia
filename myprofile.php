@@ -122,12 +122,13 @@ $smarty->assign('pagetitle', 'inviteindia.com : Join inviteindia.com and send fr
 		 
 }
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

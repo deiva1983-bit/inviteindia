@@ -122,12 +122,13 @@ $smarty->assign('pagenation', $pagination);
 
 $content_template = $common_obj->load_mobile_tpl_files($isMobile, $content_template);
 
-$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

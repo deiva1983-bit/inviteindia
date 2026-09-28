@@ -272,12 +272,13 @@ $smarty->assign('metadesc', $theme_page_desc);
 $smarty->assign('metakeywords', $theme_page_keywords);
 $smarty->assign('user_log_id', $user_log_id );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

@@ -55,7 +55,7 @@ $smarty->assign('currentpage_js', 'themes');
 if ($use_new_header) {
     $smarty->assign('header', $smarty->fetch('default/header-global.tpl'));
 } else {
-    $smarty->assign('header', $smarty->fetch('default/mainheader.tpl'));
+    $smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl'));
 }
 
 // Fetch content template
@@ -68,6 +68,7 @@ $smarty->assign('footer', $smarty->fetch('default/footer.tpl'));
 // Display the final page using your layout template
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

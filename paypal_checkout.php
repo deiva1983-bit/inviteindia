@@ -42,11 +42,12 @@ $smarty->assign('order', $orderRow[0]);
 $smarty->assign('amount', $amount > 0 ? $amount : $orderRow[0]['total_amount']);
 $smarty->assign('pagetitle', 'PayPal Checkout | InviteIndia');
 $smarty->assign('metadesc', 'Secure PayPal payment step for your order.');
-$smarty->assign('header', $smarty->fetch('default/mainheader.tpl'));
+$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl'));
 $smarty->assign('content', $smarty->fetch('default/store_paypal_checkout.tpl'));
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl'));
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

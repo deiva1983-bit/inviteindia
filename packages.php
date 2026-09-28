@@ -77,12 +77,13 @@ $smarty->assign('glb_price_usd_3', $price_usd_3);
 $smarty->assign('maxcard_per_acc', $max_card_per_acc);
 
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

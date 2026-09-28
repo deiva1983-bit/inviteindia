@@ -46,12 +46,13 @@ $smarty->assign('user_log_id', $user_log_id );
 $content_template = 'default/birth_account/birth_success.tpl';
 $smarty->assign('left_nav_for_wed', $smarty->fetch('default/birth_account/left_nav_for_wedding.tpl') );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

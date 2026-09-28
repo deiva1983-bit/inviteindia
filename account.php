@@ -19,11 +19,12 @@ $smarty->assign('orders', $orders);
 $smarty->assign('addresses', $addresses);
 $smarty->assign('pagetitle', 'My Account | InviteIndia');
 $smarty->assign('metadesc', 'Manage your account, addresses, and order history.');
-$smarty->assign('header', $smarty->fetch('default/mainheader.tpl'));
+$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl'));
 $smarty->assign('content', $smarty->fetch('default/account.tpl'));
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl'));
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

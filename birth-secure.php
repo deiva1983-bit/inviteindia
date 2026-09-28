@@ -249,12 +249,13 @@ $smarty->assign('glb_albumstatus', $albumstatus);
 $smarty->assign('user_log_id', $user_log_id );
 $smarty->assign('left_nav_for_wed', $smarty->fetch('default/birth_account/left_nav_for_birth.tpl') );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') ); echo $content_template;
+$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') ); echo $content_template;
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
 
 
 

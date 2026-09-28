@@ -293,7 +293,7 @@ $content_template = 'default/mrg_account/create_own_page.tpl';
 $smarty->assign('glb_albumstatus', $albumstatus); 
 $smarty->assign('user_log_id', $user_log_id );
 /*----- Include Files Details Start-----*/
-$smarty->assign('header', $smarty->fetch('default/mainheader.tpl') );
+$smarty->assign('header', $smarty->fetch('default/mainheader-compat.tpl') );
 $smarty->assign('content', $smarty->fetch($content_template) );
 $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
@@ -460,6 +460,7 @@ function perform_imgupload($wedid, $listid, $files, $user_log_id, $parahid){
 		return $order_list_id;
 }
 ?>
+
 
 
 

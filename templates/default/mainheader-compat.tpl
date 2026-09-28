@@ -1,13 +1,9 @@
 {* ============================================================================
-   HOMEPAGE HEAD + NAVIGATION                    templates/default/mainheader.tpl
+   MODERN HEADER WITH BOOTSTRAP COMPATIBILITY          templates/default/mainheader-compat.tpl
    ----------------------------------------------------------------------------
-   Rendered by index.php. Contains <head> and the site <header>/nav only.
-
-   WHY THE HERO MOVED OUT OF THIS FILE:
-   index.tpl composes the page as {$header}<main>{$content}</main>{$footer}.
-   The old build put the <h1> in this file, which placed the page's single most
-   important heading OUTSIDE <main>. The hero now lives in main.tpl so the <h1>
-   sits inside <main> where Google expects the primary content to be.
+   Used by non-homepage pages. Same modern Tailwind header as mainheader.tpl,
+   but includes bootstrap-grid-compat.css for backward compatibility with
+   content templates that use Bootstrap grid classes (.container, .col-md-*, etc.)
    ========================================================================== *}
 <!DOCTYPE html>
 {* lang="en-IN" not "en": tells Google this targets Indian English, which
@@ -89,19 +85,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 	{* ---- STYLES --------------------------------------------------------------
-	   ONE pre-compiled stylesheet. Deliberately does NOT load bootstrap.css,
-	   style.css, userstyle.css, flexslider.css or font-awesome.css the way the
-	   old head did - that was ~300KB of CSS and a 70KB icon font to render one
-	   page. All icons on this page are now inline SVG: no extra request, no
-	   invisible-icon flash while the font loads.
-	   Rebuild with:  cd build && npm run build *}
+	   Tailwind stylesheet for modern header/nav, plus minimal Bootstrap grid
+	   compatibility CSS for backward compatibility with existing content
+	   templates. This avoids loading 300KB+ of conflicting Bootstrap CSS.
+	   Rebuild Tailwind with:  cd build && npm run build *}
 	<link rel="stylesheet" href="{$static_domain_path_css}/home-tailwind.css">
+	<link rel="stylesheet" href="{$static_domain_path_css}/bootstrap-grid-compat.css">
 
-	{* ---- STRUCTURED DATA ----------------------------------------------------
-	   Single @graph containing Organization + WebSite + SoftwareApplication +
-	   Service + FAQPage, cross-linked by @id. Built in index.php.
-	   One @graph rather than five separate <script> blocks so Google resolves
-	   them as one connected entity set instead of five unrelated islands. *}
+	{* ---- STRUCTURED DATA ---------------------------------------------------- *}
 	{$glb_home_jsonld}
 
 	{* AdSense is loaded for logged-out visitors only, and async so it never
@@ -119,20 +110,6 @@
 
 {* ============================================================================
    NAVIGATION
-   ----------------------------------------------------------------------------
-   CRO: every nav item is now a real crawlable <a href> to a real page, and the
-   primary CTA is always visible - on mobile too.
-
-   WHAT CHANGED AND WHY IT MATTERS:
-   - The old nav gave logged-out visitors  <a href="#" data-toggle="modal">
-     for "Invitations". That is the entry point to your actual product, and it
-     was (a) invisible to Googlebot, which cannot open a modal, so no PageRank
-     ever flowed to the product, and (b) a login wall shown to people who do not
-     yet have an account - asking for a password before showing any value.
-   - signup.php already exists with its own optimised title and description but
-     NOTHING on the homepage linked to it. It is now the primary CTA.
-   - Nav is <nav> inside <header role="banner"> with an aria-current marker, so
-     assistive tech and crawlers can both read the site structure.
    ========================================================================== *}
 <header class="sticky top-0 z-50 border-b border-cream-200 bg-cream-50/95 backdrop-blur supports-[backdrop-filter]:bg-cream-50/80" role="banner">
 	<div class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-5 sm:px-6">
@@ -155,9 +132,6 @@
 		{* ---- Desktop actions ---- *}
 		<div class="hidden shrink-0 items-center gap-2 lg:flex">
 			{if $smarty.session.sess_user_id eq ''}
-			{* Real links, not modals. Login is secondary and visually quiet;
-			   signup is the loud one, because new visitors outnumber returning
-			   account holders on a homepage by a wide margin. *}
 			<button type="button" onclick="openLoginModal()" class="btn-ghost">Log in</button>
 			<a href="signup.php" class="btn-primary !px-5 !py-2.5 !text-sm">Create Free Website</a>
 			{else}
@@ -171,10 +145,7 @@
 			{/if}
 		</div>
 
-		{* ---- Mobile: CTA stays visible next to the menu button ----
-		   CRO: the old mobile header had only a hamburger and a "Login" link, so
-		   the main action was hidden behind a tap. Keeping a compact CTA in the
-		   bar means the primary action is reachable at every scroll position. *}
+		{* ---- Mobile: CTA stays visible next to the menu button ---- *}
 		<div class="flex shrink-0 items-center gap-2 lg:hidden">
 			{if $smarty.session.sess_user_id eq ''}
 			<a href="signup.php" class="btn-primary !px-4 !py-2 !text-sm">Create Free</a>
@@ -188,10 +159,7 @@
 		</div>
 	</div>
 
-	{* ---- Mobile panel ----
-	   Rendered in the HTML and hidden with a class, NOT injected by JavaScript.
-	   Googlebot indexes these links either way, and there is no flash of
-	   unstyled menu on slow connections. *}
+	{* ---- Mobile panel ---- *}
 	<nav id="mobileNav" class="hidden border-t border-cream-200 bg-cream-50 lg:hidden" aria-label="Mobile navigation">
 		<div class="mx-auto max-w-6xl space-y-1 px-5 py-4 sm:px-6">
 			<a href="invitation-templates.php" class="block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100 hover:text-brand-800">Themes</a>
@@ -212,11 +180,7 @@
 	</nav>
 </header>
 
-{* Mobile nav toggle: ~20 lines of vanilla JS, inline and placed immediately
-   after the markup it controls, so it needs no jQuery and no load event.
-   REPLACES: jQuery 2.1.4 + main.js + bootstrap.js, which the old header pulled
-   in synchronously just to open a menu. The literal block below stops Smarty
-   parsing the JavaScript braces as template tags. *}
+{* Mobile nav toggle: ~20 lines of vanilla JS *}
 {literal}
 <script>
 (function () {
@@ -228,14 +192,12 @@
 
 	btn.addEventListener('click', function () {
 		var isOpen = panel.classList.toggle('hidden') === false;
-		// aria-expanded must track real state for screen readers.
 		btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 		btn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
 		iconOpen.classList.toggle('hidden', isOpen);
 		iconClose.classList.toggle('hidden', !isOpen);
 	});
 
-	// Close on Escape - standard expected behaviour for a disclosure menu.
 	document.addEventListener('keydown', function (e) {
 		if (e.key === 'Escape' && !panel.classList.contains('hidden')) btn.click();
 	});
