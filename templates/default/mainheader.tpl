@@ -89,16 +89,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 	{* ---- STYLES --------------------------------------------------------------
-	   Tailwind stylesheet for modern header/nav, plus Bootstrap and custom CSS
-	   for backward compatibility with existing content templates that use
-	   Bootstrap classes (.container, .col-md-*, etc.) and custom styling.
+	   Tailwind stylesheet for modern design, plus minimal Bootstrap grid
+	   compatibility CSS for backward compatibility with existing content
+	   templates. This avoids loading 300KB+ of conflicting Bootstrap CSS.
 	   Rebuild Tailwind with:  cd build && npm run build *}
 	<link rel="stylesheet" href="{$static_domain_path_css}/home-tailwind.css">
-	<link rel="stylesheet" href="{$static_domain_path_css}/base/bootstrap{$glb_minify_css}.css">
-	<link rel="stylesheet" href="{$static_domain_path_css}/base/style.css">
-	<link rel="stylesheet" href="{$static_domain_path_css}/base/font-awesome.css">
-	<link rel="stylesheet" href="{$static_domain_path_css}/userstyle.css">
-	<link rel="stylesheet" href="{$static_domain_path_css}/cart.css">
+	<link rel="stylesheet" href="{$static_domain_path_css}/bootstrap-grid-compat.css">
 
 	{* ---- STRUCTURED DATA ----------------------------------------------------
 	   Single @graph containing Organization + WebSite + SoftwareApplication +
@@ -106,10 +102,6 @@
 	   One @graph rather than five separate <script> blocks so Google resolves
 	   them as one connected entity set instead of five unrelated islands. *}
 	{$glb_home_jsonld}
-
-	{* jQuery and related scripts for backward compatibility with existing pages *}
-	<script src="includes/scripts/js/base/jquery-2.1.4.min.js"></script>
-	{include file="default/scriptsrcs-web.tpl"}
 
 	{* AdSense is loaded for logged-out visitors only, and async so it never
 	   blocks rendering. Note: ad density directly above the fold competes with

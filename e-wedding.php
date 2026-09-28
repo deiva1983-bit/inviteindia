@@ -74,3 +74,7 @@ $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 $smarty->display('default/index.tpl');
 ?>
 
+
+
+
+

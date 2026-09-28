@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //-------------------------------------------------------------------------------------------------------------------
 // File name   : index.php
 // Description : Homepage controller - meta data, structured data, and content blocks
@@ -36,7 +36,7 @@ $ranvalue = rand(1,2);
 $smarty->assign('glb_ranvalue', $ranvalue);
 
 // Dates used in the footer and the hero trust line, so nothing is ever stale.
-// REPLACES the hardcoded "© 2018" that was in footer.tpl.
+// REPLACES the hardcoded "Â© 2018" that was in footer.tpl.
 $smarty->assign('glb_current_year', date('Y'));
 $smarty->assign('glb_founded_year', '2014');   // <- set to your real launch year
 
@@ -49,7 +49,6 @@ $smarty->assign('glb_founded_year', '2014');   // <- set to your real launch yea
    completely unaffected by this rewrite. Migrate other pages by assigning
    the same flag once they use the compiled stylesheet.
    ===================================================================== */
-$smarty->assign('tpl_modern_css', 1);
 
 /* =====================================================================
    CANONICAL + META
@@ -520,3 +519,5 @@ $smarty->display('default/index.tpl');
       tag stopped collecting data in July 2023.
    ===================================================================== */
 ?>
+
+

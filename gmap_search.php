@@ -70,3 +70,7 @@ $smarty->assign('footer', $smarty->fetch('default/footer.tpl') );
 /*----- Include Files Details End-----*/
 $smarty->display('default/index.tpl');
 ?>
+
+
+
+
