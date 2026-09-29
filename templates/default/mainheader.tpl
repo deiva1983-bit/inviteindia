@@ -89,13 +89,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 	{* ---- STYLES --------------------------------------------------------------
-	   ONE pre-compiled stylesheet. Deliberately does NOT load bootstrap.css,
-	   style.css, userstyle.css, flexslider.css or font-awesome.css the way the
-	   old head did - that was ~300KB of CSS and a 70KB icon font to render one
-	   page. All icons on this page are now inline SVG: no extra request, no
-	   invisible-icon flash while the font loads.
+	   Tailwind stylesheet for modern design, plus Bootstrap CSS for modal
+	   functionality. Bootstrap is loaded AFTER Tailwind so modal styles work.
 	   Rebuild with:  cd build && npm run build *}
 	<link rel="stylesheet" href="{$static_domain_path_css}/home-tailwind.css">
+	<link rel="stylesheet" href="{$static_domain_path_css}/base/bootstrap{$glb_minify_css}.css">
 
 	{* ---- STRUCTURED DATA ----------------------------------------------------
 	   Single @graph containing Organization + WebSite + SoftwareApplication +
@@ -106,6 +104,7 @@
 
 	{* jQuery for Bootstrap modal support *}
 	<script src="includes/scripts/js/base/jquery-2.1.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	{* AdSense is loaded for logged-out visitors only, and async so it never
 	   blocks rendering. Note: ad density directly above the fold competes with
