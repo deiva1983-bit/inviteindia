@@ -490,7 +490,12 @@ $smarty->assign('home_page_notes', $home_page_notes ?? '');
    this is verified in production they can be deleted.
    ===================================================================== */
 $content_template      = 'default/main.tpl';
-$head_content_template = 'default/header.tpl';
+$head_content_template = 'default/mainheader.tpl';
+
+/* =====================================================================
+   OPT IN TO THE NEW TAILWIND LAYOUT
+   ===================================================================== */
+$smarty->assign('tpl_modern_css', 1);
 
 /*----- Include Files Details Start-----*/
 $smarty->assign('header', $smarty->fetch($head_content_template) );

@@ -104,6 +104,9 @@
 	   them as one connected entity set instead of five unrelated islands. *}
 	{$glb_home_jsonld}
 
+	{* jQuery for Bootstrap modal support *}
+	<script src="includes/scripts/js/base/jquery-2.1.4.min.js"></script>
+
 	{* AdSense is loaded for logged-out visitors only, and async so it never
 	   blocks rendering. Note: ad density directly above the fold competes with
 	   your own CTA - worth testing whether it earns more than it costs you. *}
@@ -240,6 +243,24 @@
 })();
 </script>
 {/literal}
+
+{* ========================================================================
+   LOGIN MODAL - Bootstrap modal for signin/signup popup
+   ======================================================================== *}
+<div class="modal video-modal fade" id="loginWindow" tabindex="-1" role="dialog" aria-labelledby="loginWindow">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				Login
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<section>
+				<div class="modal-body">{include file="../default/gnav_login.tpl"}
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>
