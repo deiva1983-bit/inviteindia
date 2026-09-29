@@ -10,6 +10,14 @@ $cartSql = "SELECT c.*, p.product_name, p.price
             WHERE c.session_id = '" . $sessionId . "'";
 $cartItems = $userslog_obj->selectVal($cartSql);
 
+// Load user addresses if logged in
+$addresses = array();
+if (isset($_SESSION['sess_user_id']) && !empty($_SESSION['sess_user_id'])) {
+    $userId = (int)$_SESSION['sess_user_id'];
+    $addressSql = "SELECT * FROM customer_addresses WHERE user_id = " . $userId . " ORDER BY is_default DESC";
+    $addresses = $userslog_obj->selectVal($addressSql);
+}
+
 if (!$cartItems || !count($cartItems)) {
     header('Location: products.php');
     exit;
@@ -32,19 +40,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $paymentMethod = in_array($_POST['payment_method'] ?? '', array('ccavenue', 'paypal')) ? $_POST['payment_method'] : 'ccavenue';
 
     $orderNo = 'INV-' . date('YmdHis') . '-' . rand(1000, 9999);
+    $userId = isset($_SESSION['sess_user_id']) && !empty($_SESSION['sess_user_id']) ? (int)$_SESSION['sess_user_id'] : 'NULL';
 
     $orderSql = "INSERT INTO orders
-        (order_no, customer_name, customer_email, customer_phone, shipping_address, city, state, country, postal_code, subtotal, shipping_charge, total_amount, payment_method, payment_status, order_status)
+        (user_id, order_no, customer_name, customer_email, customer_phone, shipping_address, city, state, country, postal_code, subtotal, shipping_charge, total_amount, payment_method, payment_status, order_status)
         VALUES
-        ('" . addslashes($orderNo) . "', '" . addslashes($customerName) . "', '" . addslashes($customerEmail) . "', '" . addslashes($customerPhone) . "', '" . addslashes($shippingAddress) . "', '" . addslashes($city) . "', '" . addslashes($state) . "', '" . addslashes($country) . "', '" . addslashes($postalCode) . "', " . $subtotal . ", 0, " . $subtotal . ", '" . $paymentMethod . "', 'pending', 'new')";
+        (" . $userId . ", '" . addslashes($orderNo) . "', '" . addslashes($customerName) . "', '" . addslashes($customerEmail) . "', '" . addslashes($customerPhone) . "', '" . addslashes($shippingAddress) . "', '" . addslashes($city) . "', '" . addslashes($state) . "', '" . addslashes($country) . "', '" . addslashes($postalCode) . "', " . $subtotal . ", 0, " . $subtotal . ", '" . $paymentMethod . "', 'pending', 'new')";
 
     $orderId = $userslog_obj->insertVal($orderSql);
+
+    // Get the order details
+    $order = $userslog_obj->db_connect->querySelect("SELECT * FROM orders WHERE order_id = " . (int)$orderId);
+    if (!empty($order)) {
+        $order = $order[0];
+    }
 
     foreach ($cartItems as $item) {
         $lineTotal = (float)$item['price'] * (int)$item['quantity'];
         $itemSql = "INSERT INTO order_items (order_id, product_id, product_name, quantity, unit_price, total_price)
                     VALUES (" . $orderId . ", " . $item['product_id'] . ", '" . addslashes($item['product_name']) . "', " . (int)$item['quantity'] . ", " . (float)$item['price'] . ", " . $lineTotal . ")";
         $userslog_obj->insertVal($itemSql);
+    }
+
+    // Save new address if requested
+    if (!empty($_POST['save_address']) && isset($_SESSION['sess_user_id']) && !empty($_SESSION['sess_user_id'])) {
+        $userId = (int)$_SESSION['sess_user_id'];
+        $userslog_obj->addAddress(
+            $userId,
+            $customerName,
+            $customerPhone,
+            $shippingAddress,
+            '',
+            $city,
+            $state,
+            $postalCode,
+            $country,
+            0
+        );
+    }
+
+    // Send order confirmation email
+    require_once('send_order_confirmation.php');
+    $orderItems = $userslog_obj->db_connect->querySelect("SELECT * FROM order_items WHERE order_id = " . (int)$orderId);
+    $userslog_obj->db_connect->closedb();
+    if (!empty($order) && !empty($orderItems)) {
+        sendOrderConfirmationEmail($order, $orderItems);
     }
 
     if ($paymentMethod == 'ccavenue') {
@@ -60,6 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $smarty->assign('cart_items', $cartItems);
 $smarty->assign('subtotal', $subtotal);
+$smarty->assign('addresses', $addresses);
 $smarty->assign('pagetitle', 'Checkout | InviteIndia');
 $smarty->assign('metadesc', 'Secure checkout for wedding sarees and gift products.');
 $smarty->assign('show_cart_global', 1);

@@ -103,16 +103,76 @@ class userslog extends ClassGeneral {
 	}
 	
 
-	function myTruncate($string, $limit, $break=".", $pad="...") { // return with no change if string is shorter than $limit 
-	
-	if(strlen($string) <= $limit) return $string; // is $break present between $limit and the end of the string?
-	 if(false !== ($breakpoint = strpos($string, $break, $limit))) 
-		{ if($breakpoint < strlen($string) - 1) { $string = substr($string, 0, $breakpoint) . $pad; } } 
+	function myTruncate($string, $limit, $break=".", $pad="...") {
+		if(strlen($string) <= $limit) return $string;
+		if(false !== ($breakpoint = strpos($string, $break, $limit)))
+			{ if($breakpoint < strlen($string) - 1) { $string = substr($string, 0, $breakpoint) . $pad; } }
+		return $string;
+	}
 
-	return $string; }
+	// Get all addresses for a user
+	function getUserAddresses($userId) {
+		$sql = "SELECT * FROM customer_addresses WHERE user_id = " . (int)$userId . " ORDER BY is_default DESC, created_at DESC";
+		return $this->selectVal($sql);
+	}
 
+	// Get single address
+	function getAddress($addressId) {
+		$sql = "SELECT * FROM customer_addresses WHERE address_id = " . (int)$addressId;
+		$result = $this->db_connect->querySelect($sql);
+		$this->db_connect->closedb();
+		return !empty($result) ? $result[0] : null;
+	}
 
+	// Add new address
+	function addAddress($userId, $fullName, $phone, $addressLine1, $addressLine2, $city, $state, $postalCode, $country = 'India', $isDefault = 0) {
+		$sql = "INSERT INTO customer_addresses (user_id, full_name, phone, address_line1, address_line2, city, state, postal_code, country, is_default)
+				VALUES (" . (int)$userId . ", '" . addslashes($fullName) . "', '" . addslashes($phone) . "', '" . addslashes($addressLine1) . "', '" . addslashes($addressLine2) . "', '" . addslashes($city) . "', '" . addslashes($state) . "', '" . addslashes($postalCode) . "', '" . addslashes($country) . "', " . (int)$isDefault . ")";
+		return $this->insertVal($sql);
+	}
 
+	// Update address
+	function updateAddress($addressId, $userId, $fullName, $phone, $addressLine1, $addressLine2, $city, $state, $postalCode, $country = 'India', $isDefault = 0) {
+		$sql = "UPDATE customer_addresses SET
+				full_name = '" . addslashes($fullName) . "',
+				phone = '" . addslashes($phone) . "',
+				address_line1 = '" . addslashes($addressLine1) . "',
+				address_line2 = '" . addslashes($addressLine2) . "',
+				city = '" . addslashes($city) . "',
+				state = '" . addslashes($state) . "',
+				postal_code = '" . addslashes($postalCode) . "',
+				country = '" . addslashes($country) . "',
+				is_default = " . (int)$isDefault . "
+				WHERE address_id = " . (int)$addressId . " AND user_id = " . (int)$userId;
+		return $this->updateVal($sql);
+	}
+
+	// Delete address
+	function deleteAddress($addressId, $userId) {
+		$sql = "DELETE FROM customer_addresses WHERE address_id = " . (int)$addressId . " AND user_id = " . (int)$userId;
+		return $this->DeleteRec($sql);
+	}
+
+	// Get user's recent orders
+	function getUserOrders($userId, $limit = 10) {
+		$sql = "SELECT * FROM orders WHERE user_id = " . (int)$userId . " ORDER BY created_at DESC LIMIT " . (int)$limit;
+		return $this->selectVal($sql);
+	}
+
+	// Get order details with items
+	function getOrderDetails($orderId, $userId) {
+		$orderSql = "SELECT * FROM orders WHERE order_id = " . (int)$orderId . " AND user_id = " . (int)$userId;
+		$order = $this->db_connect->getOneFromSQL($orderSql);
+
+		if (!$order) return null;
+
+		$itemsSql = "SELECT * FROM order_items WHERE order_id = " . (int)$orderId;
+		$items = $this->db_connect->getArrayFromSQL($itemsSql);
+		$this->db_connect->closedb();
+
+		$order['items'] = $items;
+		return $order;
+	}
 
 
 
