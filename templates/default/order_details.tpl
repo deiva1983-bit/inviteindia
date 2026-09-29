@@ -18,7 +18,7 @@
                 <p style="color: #666; font-size: 14px; margin: 0 0 5px 0;">Payment Status</p>
                 <p style="font-size: 18px; font-weight: bold; margin: 0;">
                     <span style="background: {if $order.payment_status == 'paid'}#28a745{elseif $order.payment_status == 'pending'}#ffc107{else}#dc3545{/if}; color: white; padding: 5px 10px; border-radius: 4px; display: inline-block;">
-                        {ucfirst($order.payment_status)}
+                        {capitalize($order.payment_status)}
                     </span>
                 </p>
             </div>
@@ -26,7 +26,7 @@
                 <p style="color: #666; font-size: 14px; margin: 0 0 5px 0;">Order Status</p>
                 <p style="font-size: 18px; font-weight: bold; margin: 0;">
                     <span style="background: #17a2b8; color: white; padding: 5px 10px; border-radius: 4px; display: inline-block;">
-                        {ucfirst($order.order_status)}
+                        {capitalize($order.order_status)}
                     </span>
                 </p>
             </div>
@@ -50,7 +50,7 @@
         <div style="background: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px;">
             <h3 style="color: #d81b60; margin-top: 0; margin-bottom: 15px;">Payment Details</h3>
             <p style="margin: 8px 0;">
-                <strong>Payment Method:</strong> {ucfirst($order.payment_method)}<br />
+                <strong>Payment Method:</strong> {capitalize($order.payment_method)}<br />
                 <strong>Email:</strong> {$order.customer_email}
             </p>
         </div>

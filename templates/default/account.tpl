@@ -48,7 +48,7 @@
                                             <strong>Total:</strong> ₹{number_format($order.total_amount, 2)}<br />
                                             <strong>Status:</strong>
                                             <span style="background: {if $order.payment_status == 'paid'}#28a745{elseif $order.payment_status == 'pending'}#ffc107{else}#dc3545{/if}; color: white; padding: 2px 8px; border-radius: 3px; font-size: 12px;">
-                                                {ucfirst($order.payment_status)}
+                                                {$order.payment_status|capitalize}
                                             </span>
                                         </p>
                                     </div>
