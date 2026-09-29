@@ -119,6 +119,7 @@
 function showAddAddressForm() {
     document.getElementById('addressForm').reset();
     document.getElementById('addressModal').style.display = 'flex';
+    document.getElementById('addressForm').dataset.addressId = '';
 }
 
 function closeAddressModal() {
@@ -127,17 +128,107 @@ function closeAddressModal() {
 
 function submitAddress(event) {
     event.preventDefault();
-    alert('Address functionality will be implemented in the next update.');
+
+    const fullName = document.getElementById('fullName').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const addressLine1 = document.getElementById('addressLine1').value.trim();
+    const addressLine2 = document.getElementById('addressLine2').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const state = document.getElementById('state').value.trim();
+    const postalCode = document.getElementById('postalCode').value.trim();
+    const country = document.getElementById('country').value.trim();
+    const isDefault = document.getElementById('isDefault').checked ? 1 : 0;
+
+    const formData = new FormData();
+    formData.append('action', 'add');
+    formData.append('full_name', fullName);
+    formData.append('phone', phone);
+    formData.append('address_line1', addressLine1);
+    formData.append('address_line2', addressLine2);
+    formData.append('city', city);
+    formData.append('state', state);
+    formData.append('postal_code', postalCode);
+    formData.append('country', country);
+    formData.append('is_default', isDefault);
+
+    fetch('address_handler.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Address saved successfully!');
+            closeAddressModal();
+            location.reload();
+        } else {
+            alert('Error: ' + (data.error || 'Failed to save address'));
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while saving the address');
+    });
+
     return false;
 }
 
 function editAddress(addressId) {
-    alert('Edit address functionality: ' + addressId);
+    fetch('address_handler.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'action=get&address_id=' + addressId
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            const addr = data.data;
+            document.getElementById('fullName').value = addr.full_name;
+            document.getElementById('phone').value = addr.phone;
+            document.getElementById('addressLine1').value = addr.address_line1;
+            document.getElementById('addressLine2').value = addr.address_line2;
+            document.getElementById('city').value = addr.city;
+            document.getElementById('state').value = addr.state;
+            document.getElementById('postalCode').value = addr.postal_code;
+            document.getElementById('country').value = addr.country;
+            document.getElementById('isDefault').checked = addr.is_default == 1;
+
+            document.getElementById('addressForm').dataset.addressId = addressId;
+            document.querySelector('#addressModal h3').textContent = 'Edit Address';
+            document.getElementById('addressModal').style.display = 'flex';
+        } else {
+            alert('Error: ' + (data.error || 'Failed to load address'));
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred');
+    });
 }
 
 function deleteAddress(addressId) {
     if (confirm('Are you sure you want to delete this address?')) {
-        alert('Delete address functionality: ' + addressId);
+        const formData = new FormData();
+        formData.append('action', 'delete');
+        formData.append('address_id', addressId);
+
+        fetch('address_handler.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Address deleted successfully!');
+                location.reload();
+            } else {
+                alert('Error: ' + (data.error || 'Failed to delete address'));
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred');
+        });
     }
 }
 
