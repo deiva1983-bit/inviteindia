@@ -333,7 +333,7 @@
 	{* ============================================================================
 	   3.5. LEAD CAPTURE - EMAIL FORM
 	   ============================================================================ *}
-	<section class="bg-gradient-to-r from-brand-600 to-brand-700 py-16 md:py-20">
+	<section class="bg-gradient-to-r from-red-600 to-red-700 py-16 md:py-20">
 		<div class="section max-w-2xl">
 			<h2 class="text-white text-3xl md:text-4xl font-display font-bold text-center mb-3">
 				Ready to create your wedding website?
