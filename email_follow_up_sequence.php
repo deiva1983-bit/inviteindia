@@ -75,7 +75,7 @@ class EmailFollowUp {
                     </div>
 
                     <p style=\"text-align: center; margin-top: 30px;\">
-                        <a href=\"https://www.inviteindia.com/signup.php\" class=\"cta\">Start Building Your Website Now</a>
+                        <a href=\"https://www.inviteindia.com/signin.php\" class=\"cta\">Start Building Your Website Now</a>
                     </p>
 
                     <p>All of these features are built into InviteIndia. Most couples finish their site in about 10 minutes.</p>
@@ -144,7 +144,7 @@ class EmailFollowUp {
                         Ready to see what you can create?
                     </p>
                     <p style=\"text-align: center;\">
-                        <a href=\"https://www.inviteindia.com/signup.php\" class=\"cta\">Create Your Site Free - No Card Needed</a>
+                        <a href=\"https://www.inviteindia.com/signin.php\" class=\"cta\">Create Your Site Free - No Card Needed</a>
                     </p>
 
                     <p>You'll have your wedding site live in minutes. You can always edit it later - guests always see the latest version.</p>

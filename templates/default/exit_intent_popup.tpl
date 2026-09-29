@@ -99,14 +99,14 @@ if (exitForm) {
         .then(data => {
             if (data.success) {
                 // Redirect to signup
-                window.location.href = 'signup.php';
+                window.location.href = 'signin.php';
             } else {
                 alert(data.error || 'Error saving lead');
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            window.location.href = 'signup.php';
+            window.location.href = 'signin.php';
         });
     });
 }

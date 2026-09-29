@@ -129,7 +129,7 @@
      was (a) invisible to Googlebot, which cannot open a modal, so no PageRank
      ever flowed to the product, and (b) a login wall shown to people who do not
      yet have an account - asking for a password before showing any value.
-   - signup.php already exists with its own optimised title and description but
+   - signin.php already exists with its own optimised title and description but
      NOTHING on the homepage linked to it. It is now the primary CTA.
    - Nav is <nav> inside <header role="banner"> with an aria-current marker, so
      assistive tech and crawlers can both read the site structure.
@@ -155,9 +155,9 @@
 		{* ---- Desktop actions ---- *}
 		<div class="hidden shrink-0 items-center gap-2 lg:flex">
 			{if $smarty.session.sess_user_id eq ''}
-			{* Login opens popup modal; signup is the loud CTA. *}
-			<button type="button" onclick="openLoginModal()" class="btn-ghost">Log in</button>
-			<a href="signup.php" class="btn-primary !px-5 !py-2.5 !text-sm">Create Free Website</a>
+			{* Login redirects to signin page; main CTA is prominent. *}
+			<a href="signin.php" class="btn-ghost">Log in</a>
+			<a href="signin.php" class="btn-primary !px-5 !py-2.5 !text-sm">Create Free Website</a>
 			{else}
 			<a href="wedding-website-settings" class="btn-primary !px-5 !py-2.5 !text-sm">My Wedding Website</a>
 			<a href="myprofile.php?do=mprofile" class="btn-ghost" title="My profile" aria-label="My profile">
@@ -175,7 +175,7 @@
 		   bar means the primary action is reachable at every scroll position. *}
 		<div class="flex shrink-0 items-center gap-2 lg:hidden">
 			{if $smarty.session.sess_user_id eq ''}
-			<a href="signup.php" class="btn-primary !px-4 !py-2 !text-sm">Create Free</a>
+			<a href="signin.php" class="btn-primary !px-4 !py-2 !text-sm">Create Free</a>
 			{else}
 			<a href="wedding-website-settings" class="btn-primary !px-4 !py-2 !text-sm">My Website</a>
 			{/if}

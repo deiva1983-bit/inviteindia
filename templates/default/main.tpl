@@ -632,7 +632,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				messageDiv.scrollIntoView({ behavior: 'smooth' });
 				// Redirect to signup after 2 seconds
 				setTimeout(() => {
-					window.location.href = 'signup.php';
+					window.location.href = 'signin.php';
 				}, 2000);
 			} else {
 				messageDiv.className = 'mt-4 p-4 rounded-lg bg-red-100 border border-red-300 text-red-700';

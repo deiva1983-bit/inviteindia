@@ -82,7 +82,7 @@ if ($leadId) {
                     <li>✅ Add venue maps, photos, and background music</li>
                     <li>✅ Get your own custom domain (rahulwedspriya.com)</li>
                 </ul>
-                <p><a href=\"https://www.inviteindia.com/signup.php\" class=\"btn\">Create Your Wedding Website Free</a></p>
+                <p><a href=\"https://www.inviteindia.com/signin.php\" class=\"btn\">Create Your Wedding Website Free</a></p>
                 <p>No credit card needed. Start in under 10 minutes.</p>
                 <p>Have questions? Reply to this email anytime - our team is here to help!</p>
                 <p>Best wishes for your upcoming wedding,<br><strong>The InviteIndia Team</strong></p>
