@@ -345,7 +345,7 @@
 			<form id="leadCaptureForm" class="space-y-4">
 				<div class="grid md:grid-cols-2 gap-4">
 					<div>
-						<label for="couple_name" class="block text-white font-medium mb-2">Your Name(s) *</label>
+						<label for="couple_name" class="block text-white/95 font-semibold mb-2 text-sm">Your Name(s) *</label>
 						<input type="text" id="couple_name" name="couple_name" placeholder="e.g., Rahul & Priya" required
 							class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" />
 					</div>
