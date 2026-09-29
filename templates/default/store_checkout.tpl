@@ -106,9 +106,11 @@
     </div>
 </div>
 
+{literal}
 <script>
 // Address data for saved addresses
 const addressData = {
+{/literal}
     {foreach from=$addresses item=address}
         {$address.address_id}: {
             full_name: '{$address.full_name|escape:'javascript'}',
@@ -121,6 +123,7 @@ const addressData = {
             country: '{$address.country|escape:'javascript'}'
         },
     {/foreach}
+{literal}
 };
 
 function fillAddressFromSaved(addressId) {
@@ -143,6 +146,7 @@ function showNewAddressForm() {
 }
 
 // Pre-fill with default address on load
+{/literal}
 {if $addresses && $addresses|@count > 0}
     {assign var="defaultAddr" value=false}
     {foreach from=$addresses item=address}
@@ -151,9 +155,11 @@ function showNewAddressForm() {
         {/if}
     {/foreach}
     {if $defaultAddr}
-        fillAddressFromSaved({$defaultAddr.address_id});
+        {literal}fillAddressFromSaved({/literal}{$defaultAddr.address_id}{literal});{/literal}
     {/if}
 {else}
-    document.getElementById('saveAddressContainer').style.display = 'block';
+    {literal}document.getElementById('saveAddressContainer').style.display = 'block';{/literal}
 {/if}
+{literal}
 </script>
+{/literal}

@@ -115,6 +115,7 @@
     </div>
 </div>
 
+{literal}
 <script>
 function showAddAddressForm() {
     document.getElementById('addressForm').reset();
@@ -238,3 +239,4 @@ document.getElementById('addressModal').onclick = function(event) {
     }
 }
 </script>
+{/literal}
