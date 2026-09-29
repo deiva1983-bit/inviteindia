@@ -38,8 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         VALUES
         ('" . addslashes($orderNo) . "', '" . addslashes($customerName) . "', '" . addslashes($customerEmail) . "', '" . addslashes($customerPhone) . "', '" . addslashes($shippingAddress) . "', '" . addslashes($city) . "', '" . addslashes($state) . "', '" . addslashes($country) . "', '" . addslashes($postalCode) . "', " . $subtotal . ", 0, " . $subtotal . ", '" . $paymentMethod . "', 'pending', 'new')";
 
-    $inserted = $userslog_obj->insertVal($orderSql);
-    $orderId = $userslog_obj->db_connect->lastInsertId();
+    $orderId = $userslog_obj->insertVal($orderSql);
 
     foreach ($cartItems as $item) {
         $lineTotal = (float)$item['price'] * (int)$item['quantity'];
