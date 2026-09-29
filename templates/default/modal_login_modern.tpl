@@ -1,13 +1,9 @@
 {* Modern login modal for Tailwind-based pages (mainheader)
    Uses vanilla JavaScript - no jQuery dependency *}
 
-<div id="loginModal" class="hidden fixed inset-0 z-50 overflow-y-auto" aria-labelledby="loginModalTitle" role="dialog" aria-modal="true">
-	<div class="flex min-h-screen items-center justify-center px-4 py-8">
-		<!-- Backdrop -->
-		<div class="fixed inset-0 bg-black/50 transition-opacity" id="loginModalBackdrop"></div>
-
+<div id="loginModal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center" aria-labelledby="loginModalTitle" role="dialog" aria-modal="true">
 		<!-- Modal panel -->
-		<div class="relative w-full max-w-md space-y-6 rounded-2xl bg-white p-8 shadow-2xl">
+		<div class="relative w-full max-w-md space-y-6 rounded-2xl bg-white p-8 shadow-2xl mx-4">
 			<!-- Close button -->
 			<button type="button" id="loginModalClose" class="absolute right-6 top-6 text-ink-400 transition hover:text-ink-600" aria-label="Close login modal">
 				<svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
@@ -73,14 +69,12 @@
 				<div id="alert_forgotpass" class="hidden rounded-lg bg-red-50 p-3 text-sm text-red-700 border border-red-200"></div>
 			</div>
 		</div>
-	</div>
 </div>
 
 {literal}
 <script>
 (function() {
 	const modal = document.getElementById('loginModal');
-	const backdrop = document.getElementById('loginModalBackdrop');
 	const closeBtn = document.getElementById('loginModalClose');
 	const signinTab = document.getElementById('signinTab');
 	const signupTab = document.getElementById('signupTab');
@@ -104,9 +98,11 @@
 		document.body.style.overflow = '';
 	}
 
-	// Close button and backdrop
+	// Close button and backdrop click
 	closeBtn.addEventListener('click', closeModal);
-	backdrop.addEventListener('click', closeModal);
+	modal.addEventListener('click', function(e) {
+		if (e.target === modal) closeModal();
+	});
 
 	// Close on Escape
 	document.addEventListener('keydown', function(e) {
