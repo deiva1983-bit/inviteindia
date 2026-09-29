@@ -89,11 +89,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 	{* ---- STYLES --------------------------------------------------------------
-	   Tailwind stylesheet for modern design, plus Bootstrap CSS for modal
-	   functionality. Bootstrap is loaded AFTER Tailwind so modal styles work.
+	   ONE pre-compiled stylesheet. Deliberately does NOT load bootstrap.css,
+	   style.css, userstyle.css, flexslider.css or font-awesome.css the way the
+	   old head did - that was ~300KB of CSS and a 70KB icon font to render one
+	   page. All icons on this page are now inline SVG: no extra request, no
+	   invisible-icon flash while the font loads.
 	   Rebuild with:  cd build && npm run build *}
 	<link rel="stylesheet" href="{$static_domain_path_css}/home-tailwind.css">
-	<link rel="stylesheet" href="{$static_domain_path_css}/base/bootstrap{$glb_minify_css}.css">
 
 	{* ---- STRUCTURED DATA ----------------------------------------------------
 	   Single @graph containing Organization + WebSite + SoftwareApplication +
@@ -101,10 +103,6 @@
 	   One @graph rather than five separate <script> blocks so Google resolves
 	   them as one connected entity set instead of five unrelated islands. *}
 	{$glb_home_jsonld}
-
-	{* jQuery for Bootstrap modal support *}
-	<script src="includes/scripts/js/base/jquery-2.1.4.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	{* AdSense is loaded for logged-out visitors only, and async so it never
 	   blocks rendering. Note: ad density directly above the fold competes with
@@ -158,7 +156,7 @@
 		<div class="hidden shrink-0 items-center gap-2 lg:flex">
 			{if $smarty.session.sess_user_id eq ''}
 			{* Login opens popup modal; signup is the loud CTA. *}
-			<a href="#" class="btn-ghost" data-toggle="modal" data-target="#loginWindow">Log in</a>
+			<button type="button" onclick="openLoginModal()" class="btn-ghost">Log in</button>
 			<a href="signup.php" class="btn-primary !px-5 !py-2.5 !text-sm">Create Free Website</a>
 			{else}
 			<a href="wedding-website-settings" class="btn-primary !px-5 !py-2.5 !text-sm">My Wedding Website</a>
@@ -202,7 +200,7 @@
 			<a href="wedding-gift-for-couples" class="block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100 hover:text-brand-800">Wedding Gifts</a>
 			<div class="mt-3 border-t border-cream-200 pt-3">
 				{if $smarty.session.sess_user_id eq ''}
-				<a href="#" class="block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100" data-toggle="modal" data-target="#loginWindow">Log in</a>
+				<button type="button" onclick="openLoginModal()" class="w-full text-left block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100 bg-transparent border-none cursor-pointer">Log in</button>
 				{else}
 				<a href="myprofile.php?do=mprofile" class="block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100">My Profile</a>
 				<a href="logout.php" class="block rounded-lg px-3 py-2.5 font-semibold text-ink-700 hover:bg-cream-100">Log out</a>
@@ -244,22 +242,9 @@
 {/literal}
 
 {* ========================================================================
-   LOGIN MODAL - Bootstrap modal for signin/signup popup
+   LOGIN MODAL - Tailwind/Vanilla JS implementation
    ======================================================================== *}
-<div class="modal video-modal fade" id="loginWindow" tabindex="-1" role="dialog" aria-labelledby="loginWindow">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				Login
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			</div>
-			<section>
-				<div class="modal-body">{include file="../default/gnav_login.tpl"}
-				</div>
-			</section>
-		</div>
-	</div>
-</div>
+{include file="default/modal_login_modern.tpl"}
 
 </body>
 </html>
