@@ -330,6 +330,61 @@
 	</div>
 </section>
 
+	{* ============================================================================
+	   3.5. LEAD CAPTURE - EMAIL FORM
+	   ============================================================================ *}
+	<section class="bg-gradient-to-r from-brand-600 to-brand-700 py-16 md:py-20">
+		<div class="section max-w-2xl">
+			<h2 class="text-white text-3xl md:text-4xl font-display font-bold text-center mb-3">
+				Ready to create your wedding website?
+			</h2>
+			<p class="text-white/90 text-center text-lg mb-8 text-pretty">
+				Join thousands of Indian couples who've created beautiful wedding websites on InviteIndia. Get yours in 10 minutes - no design skills needed.
+			</p>
+
+			<form id="leadCaptureForm" class="space-y-4">
+				<div class="grid md:grid-cols-2 gap-4">
+					<div>
+						<label for="couple_name" class="block text-white font-medium mb-2">Your Name(s) *</label>
+						<input type="text" id="couple_name" name="couple_name" placeholder="e.g., Rahul & Priya" required
+							class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" />
+					</div>
+					<div>
+						<label for="email" class="block text-white font-medium mb-2">Email Address *</label>
+						<input type="email" id="email" name="email" placeholder="your@email.com" required
+							class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" />
+					</div>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-4">
+					<div>
+						<label for="phone" class="block text-white font-medium mb-2">Phone Number (Optional)</label>
+						<input type="tel" id="phone" name="phone" placeholder="Your phone number"
+							class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" />
+					</div>
+					<div>
+						<label for="wedding_date" class="block text-white font-medium mb-2">Wedding Date (Optional)</label>
+						<input type="date" id="wedding_date" name="wedding_date"
+							class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" />
+					</div>
+				</div>
+
+				<button type="submit" class="w-full btn-primary bg-white text-brand-700 hover:bg-cream-50">
+					Get My Wedding Website Free
+					<svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+					</svg>
+				</button>
+
+				<p class="text-white/70 text-sm text-center">
+					✓ No credit card needed  |  ✓ Takes 2 minutes  |  ✓ 100% free
+				</p>
+			</form>
+
+			<div id="formMessage" class="mt-4 p-4 rounded-lg hidden"></div>
+		</div>
+	</section>
+
 {* ============================================================================
    4. THEMES SHOWCASE
    ----------------------------------------------------------------------------
@@ -539,3 +594,58 @@
 	</div>
 </section>
 {/if}
+
+{literal}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	const form = document.getElementById('leadCaptureForm');
+	const messageDiv = document.getElementById('formMessage');
+
+	if (!form) return;
+
+	form.addEventListener('submit', function(e) {
+		e.preventDefault();
+
+		const coupleName = document.getElementById('couple_name').value.trim();
+		const email = document.getElementById('email').value.trim();
+		const phone = document.getElementById('phone').value.trim();
+		const weddingDate = document.getElementById('wedding_date').value.trim();
+
+		const formData = new FormData();
+		formData.append('couple_name', coupleName);
+		formData.append('email', email);
+		formData.append('phone', phone);
+		formData.append('wedding_date', weddingDate);
+
+		fetch('save_lead.php', {
+			method: 'POST',
+			body: formData
+		})
+		.then(response => response.json())
+		.then(data => {
+			messageDiv.classList.remove('hidden');
+			if (data.success) {
+				messageDiv.className = 'mt-4 p-4 rounded-lg bg-green-100 border border-green-300 text-green-700';
+				messageDiv.textContent = '✓ ' + data.message;
+				form.reset();
+				// Scroll to message
+				messageDiv.scrollIntoView({ behavior: 'smooth' });
+				// Redirect to signup after 2 seconds
+				setTimeout(() => {
+					window.location.href = 'signup.php';
+				}, 2000);
+			} else {
+				messageDiv.className = 'mt-4 p-4 rounded-lg bg-red-100 border border-red-300 text-red-700';
+				messageDiv.textContent = '✗ ' + (data.error || 'An error occurred');
+			}
+		})
+		.catch(error => {
+			console.error('Error:', error);
+			messageDiv.className = 'mt-4 p-4 rounded-lg bg-red-100 border border-red-300 text-red-700';
+			messageDiv.textContent = '✗ An error occurred. Please try again.';
+			messageDiv.classList.remove('hidden');
+		});
+	});
+});
+</script>
+{/literal}
