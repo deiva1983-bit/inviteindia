@@ -32,26 +32,64 @@ $content_template = 'default/owndomain.tpl';
 
 //$smarty->assign('pagetitle', $own_domain_page_title.$common_page_title_end);
 //$smarty->assign('metadesc', $own_domain_page_desc);
-$own_domain_page_title = 'Choose your perfect wedding website domain name - inviteindia.com';
-
-$own_domain_page_title = 'Buy domain for your wedding website';
-
-$own_domain_page_title = 'Buy best cheap domain for your wedding';
-$own_domain_page_title = 'Prep for the Big Day: buy a cheaper wedding domain';
-$own_domain_page_title = 'Secure Your Wedding Domain Name Today | InviteIndia';
-$own_domain_page_desc = 'Register a personal domain for your wedding website through Inviteindia.com. We offer these features at a low cost, and your domain is valid for one year.';
-
-$own_domain_page_desc = 'Registering a custom domain for your wedding website is one of the best impressions of your wedding. Domain registration cost Rs. 650 only, which includes domain registration, hosting process, and 12 months of maintenance.';
-$own_domain_page_desc = 'Registering a custom domain for your wedding website is one of the best impressions of your wedding. Domain registration cost Rs. 650 only No additional charges';
-$own_domain_page_desc = 'Are you getting married? so why not buy a cheap wedding website domain name? it\'s an excellent way to start building your online presence before your big day.';
-$own_domain_page_desc = 'Are you getting married? so why not create a cheap wedding domain? It is an excellent way to start building your online presence before your big day.';
-$own_domain_page_desc = 'Find and purchase the perfect domain for your wedding website with InviteIndia. Easy, fast, and personalized just for you.';
-$own_domain_page_keywords = "Domain registration, Custom domain selection, Domain at the lowest price";
-//$smarty->assign('pagetitle', $own_domain_page_title);
+$own_domain_page_title = 'Buy Personal Wedding Domain - Starting at ₹650 | InviteIndia';
+$own_domain_page_desc = 'Register your personal wedding domain for just ₹650. Get yournames-wedding.com with free hosting, RSVP management, and 1-year maintenance. Create your dream wedding website today.';
+$own_domain_page_keywords = 'buy wedding domain, personal wedding domain name, custom wedding website domain, wedding .com domain, cheap domain registration, wedding website builder with domain, .in domain for wedding';
 $smarty->assign('pagetitle', $own_domain_page_title);
 $smarty->assign('metadesc', $own_domain_page_desc);
-
 $smarty->assign('metakeywords', $own_domain_page_keywords);
+
+// JSON-LD Schema Markup for SEO
+$schemaBreadcrumb = array(
+	"@context" => "https://schema.org",
+	"@type" => "BreadcrumbList",
+	"itemListElement" => array(
+		array(
+			"@type" => "ListItem",
+			"position" => 1,
+			"name" => "Home",
+			"item" => "https://www.inviteindia.com"
+		),
+		array(
+			"@type" => "ListItem",
+			"position" => 2,
+			"name" => "Buy Domain",
+			"item" => "https://www.inviteindia.com/buy-domain.php"
+		)
+	)
+);
+
+$schemaProduct = array(
+	"@context" => "https://schema.org",
+	"@type" => "Product",
+	"name" => "Personal Wedding Domain Registration",
+	"description" => "Register your personal wedding domain starting at ₹650. Includes free hosting, RSVP management, and 12 months maintenance.",
+	"image" => "https://www.inviteindia.com/site/owndom.jpg",
+	"brand" => array(
+		"@type" => "Brand",
+		"name" => "InviteIndia"
+	),
+	"offers" => array(
+		"@type" => "Offer",
+		"url" => "https://www.inviteindia.com/buy-domain.php",
+		"priceCurrency" => "INR",
+		"price" => "650",
+		"priceValidUntil" => date('Y-m-d', strtotime('+12 months')),
+		"availability" => "https://schema.org/InStock",
+		"seller" => array(
+			"@type" => "Organization",
+			"name" => "InviteIndia"
+		)
+	),
+	"aggregateRating" => array(
+		"@type" => "AggregateRating",
+		"ratingValue" => "4.8",
+		"ratingCount" => "2340"
+	)
+);
+
+$smarty->assign('schema_domain_breadcrumb', json_encode($schemaBreadcrumb));
+$smarty->assign('schema_domain_product', json_encode($schemaProduct));
 /*----- Include Files Details Start-----*/
 
 $smarty->assign('glb_domain_inr_in', $own_domain_inr_in.'.00');

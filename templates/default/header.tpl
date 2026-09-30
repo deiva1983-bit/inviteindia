@@ -94,6 +94,16 @@
 	{$schema_faq}
 	</script>
 	{/if}
+	{if $schema_domain_breadcrumb neq ''}
+	<script type="application/ld+json">
+	{$schema_domain_breadcrumb}
+	</script>
+	{/if}
+	{if $schema_domain_product neq ''}
+	<script type="application/ld+json">
+	{$schema_domain_product}
+	</script>
+	{/if}
 	{if $smarty.session.sess_user_id eq '' }
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7441584415804192" crossorigin="anonymous"></script>
 	{/if}
