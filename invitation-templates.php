@@ -15,9 +15,9 @@ $bind_url="&do=$current_action";
 $smarty->assign('topnav_select', 'wedd');
 // http://localhost/social/select_theme.php?wed_id=44&do=sel0myli For Edit
 // http://localhost/social/select_theme.php?do=cre0myli For Create
-$home_page_title = 'Wedding Invitation Templates & Themes | InviteIndia';
-$home_page_meta_desc = 'Browse elegant wedding invitation templates and themes for Indian weddings. Choose modern, traditional, and customizable designs for every celebration.';
-$home_page_meta_key = 'wedding invitation templates, Indian wedding invitation templates, wedding invitation themes, custom wedding invite designs, wedding card templates';
+$home_page_title = 'Free Wedding Invitation Templates with RSVP | InviteIndia';
+$home_page_meta_desc = 'Browse 100+ beautiful wedding invitation templates. Customize with your photos, music & background. Free online RSVP, guest management, and digital invitation platform.';
+$home_page_meta_key = 'wedding invitation templates, online wedding invitations, digital wedding cards, RSVP templates, wedding website builder, Indian wedding invitations';
 $smarty->assign('pagetitle', $home_page_title);
 $smarty->assign('metadesc', $home_page_meta_desc);
 $smarty->assign('metakeywords', $home_page_meta_key);
@@ -254,30 +254,81 @@ $smarty->assign('glb_submit_page', $submit_page);
 $smarty->assign('glb_albumstatus', $albumstatus);
 $smarty->assign('currentpage_js', 'theme_select');
 
+// JSON-LD Schema Markup for SEO
+$schemaMarkup = array(
+	"@context" => "https://schema.org",
+	"@type" => "BreadcrumbList",
+	"itemListElement" => array(
+		array(
+			"@type" => "ListItem",
+			"position" => 1,
+			"name" => "Home",
+			"item" => "https://www.inviteindia.com"
+		),
+		array(
+			"@type" => "ListItem",
+			"position" => 2,
+			"name" => "Wedding Invitation Templates",
+			"item" => "https://www.inviteindia.com/invitation-templates.php"
+		)
+	)
+);
+
+$faqSchema = array(
+	"@context" => "https://schema.org",
+	"@type" => "FAQPage",
+	"mainEntity" => array(
+		array(
+			"@type" => "Question",
+			"name" => "Can I customize the wedding invitation templates?",
+			"acceptedAnswer" => array(
+				"@type" => "Answer",
+				"text" => "Yes! All our wedding invitation templates are fully customizable. Add your photos, change colors, add background music, and personalize every element to match your wedding theme."
+			)
+		),
+		array(
+			"@type" => "Question",
+			"name" => "Do the templates include RSVP functionality?",
+			"acceptedAnswer" => array(
+				"@type" => "Answer",
+				"text" => "Yes, every template includes built-in RSVP collection, guest management, and live attendance tracking. Manage all guest responses in one dashboard."
+			)
+		),
+		array(
+			"@type" => "Question",
+			"name" => "Are these templates mobile-friendly?",
+			"acceptedAnswer" => array(
+				"@type" => "Answer",
+				"text" => "Absolutely! All our templates are 100% responsive and work perfectly on desktop, tablet, and mobile devices. Your guests can view your invitation on any device."
+			)
+		),
+		array(
+			"@type" => "Question",
+			"name" => "Can I use my own background images?",
+			"acceptedAnswer" => array(
+				"@type" => "Answer",
+				"text" => "Yes, many of our premium templates support custom background images. Upload your engagement photos or wedding venue images to personalize your invitation."
+			)
+		),
+		array(
+			"@type" => "Question",
+			"name" => "How do I share my wedding invitation?",
+			"acceptedAnswer" => array(
+				"@type" => "Answer",
+				"text" => "Share your wedding invitation via WhatsApp, email, or get your own custom domain (like yournames-wedding.com). You can share on social media or send directly to guests."
+			)
+		)
+	)
+);
+
+$smarty->assign('schema_breadcrumb', json_encode($schemaMarkup));
+$smarty->assign('schema_faq', json_encode($faqSchema));
+
 //$smarty->assign('pagetitle', $home_page_title);
 //$smarty->assign('metadesc', $home_page_meta_desc);
 //$smarty->assign('metakeywords', $home_page_meta_key);
 
 
-$theme_page_desc = 'Wedding website templates for all mobile devices and systems. It is completely customizable for your dream wedding design.';
-$theme_page_desc = 'Responsive website templates for your wedding day. You can easily customize and create your wedding website with your own background images.';
-$theme_page_desc = 'We\'ve compiled a collection of responsive wedding website templates. offering animation, classic, colourful, elegant, modern, and romantic website templates.';
-$theme_page_desc = 'Create beautiful online wedding invitations to announce your special day. We offer Beach, Rustic, Garden, Vintage, Whimsical, and Romantic wedding themes.';
-$theme_page_desc = 'Explore a wide range of beautiful wedding Website templates at InviteIndia. Choose from a variety of styles and make your wedding day truly special.';
-$theme_page_desc = 'Explore our exclusive collection of unique and trending digital cards, perfect for weddings, save-the-dates, and special events. Stylish designs at affordable prices to make your moments unforgettable.';
-$theme_page_title = 'Free wedding website templates';
-$theme_page_title = 'Wedding Planner - Responsive website templates';
-$theme_page_title = 'Responsive wedding website templates';
-$theme_page_title = 'Wedding invitation templates with rsvp- inviteindia.com';
-$theme_page_title = 'Discover Our Collection of Wedding Website Templates';
-$theme_page_title = 'Unique & Trending Digital Card Collection for Weddings & Special Events';
-$meta_application_name = 'Wedding Digital Card Collection';
-//$smarty->assign('pagetitle', $theme_page_title.$common_page_title_end);
-$smarty->assign('pagetitle', $theme_page_title);
-$smarty->assign('metadesc', $theme_page_desc);
-$smarty->assign('meta_application_name', $meta_application_name);
-$smarty->assign('metakeywords', $theme_page_keywords);
-$smarty->assign('metakeywords', $theme_page_keywords);
 $smarty->assign('user_log_id', $user_log_id );
 /*----- Include Files Details Start-----*/
 $smarty->assign('header', $smarty->fetch('default/header.tpl') );
