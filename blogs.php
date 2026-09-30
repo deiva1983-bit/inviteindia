@@ -20,23 +20,21 @@ $common_obj = new common();
 $smarty->assign('topnav_select', 'termsofser');
 
 /*----- Variables Declaration Start-----*/
-$smarty->assign('currentpage_js', 'my_page');
-$smarty->assign('pagetitle', 'Invitation site');
+$smarty->assign('currentpage_js', 'interviewhome');
+$content_template = 'default/blogs.tpl';
+
+$blog_page_title = 'Wedding Blog & Planning Tips | Indian Wedding Ideas & Inspiration';
+$blog_page_meta_desc = 'Read InviteIndia wedding blogs for ideas, planning tips, and inspiration. Learn about invitations, decor, bridal prep, venues, and creating your wedding website.';
+$blog_page_meta_key = 'wedding blogs, wedding planning tips, Indian wedding ideas, wedding inspiration, wedding website ideas, wedding invitation ideas, wedding decor tips';
+
+$smarty->assign('pagetitle', $blog_page_title);
+$smarty->assign('metadesc', $blog_page_meta_desc);
+$smarty->assign('metakeywords', $blog_page_meta_key);
 /*----- Variables Declaration End-----*/
 $smarty->assign('glb_site_url', $glb_site_url);
 $user_log_id= trim($_SESSION['sess_user_id']);
 $canurl = 'https://www.inviteindia.com/blogs.php';
 $smarty->assign('can_url', $canurl);
- 	$smarty->assign('currentpage_js', 'interviewhome');
-$content_template = 'default/blogs.tpl';
-
-$blog_page_title = 'Wedding Blogs, Ideas & Planning Tips | InviteIndia';
-$blog_page_meta_desc = 'Explore wedding blogs, planning ideas, and inspiration for Indian weddings. Get expert guidance on invitations, decor, bridal prep, and elegant wedding website ideas.';
-$blog_page_meta_key = 'wedding blogs, wedding planning tips, Indian wedding ideas, wedding inspiration, wedding website ideas, digital invitation ideas';
-
-$smarty->assign('pagetitle', $blog_page_title);
-$smarty->assign('metadesc', $blog_page_meta_desc);
-$smarty->assign('metakeywords', $blog_page_meta_key);
 
 /* Fetch records from DB - Start */
 $fetchqry_page = "select * from home_page_blogs where blog_status = 1 ORDER BY `blog_date` DESC";
@@ -118,6 +116,69 @@ $pagination= $common_obj->Pagination($total_records,$limit,$targetpage,$page,$st
 
 $smarty->assign('pagenation', $pagination);
 
+// JSON-LD Schema Markup for Blog Listing Page
+$schemaBlogsBreadcrumb = array(
+	"@context" => "https://schema.org",
+	"@type" => "BreadcrumbList",
+	"itemListElement" => array(
+		array(
+			"@type" => "ListItem",
+			"position" => 1,
+			"name" => "Home",
+			"item" => "https://www.inviteindia.com"
+		),
+		array(
+			"@type" => "ListItem",
+			"position" => 2,
+			"name" => "Wedding Blogs",
+			"item" => "https://www.inviteindia.com/blogs.php"
+		)
+	)
+);
+
+$schemaBlogCollectionItems = array();
+if (!empty($selectblogs_lists)) {
+	foreach ($selectblogs_lists as $blog) {
+		$blog_name = stripslashes($blog['blog_name'] ?? '');
+		$blog_desc = stripslashes($blog['blog_short_desc'] ?? '');
+		$blog_image = stripslashes($blog['blog_image'] ?? '');
+		$blog_url = stripslashes($blog['blog_url'] ?? '');
+		$blog_raw = $blog['blog_date'] ?? '';
+		$blog_iso = $blog_raw ? date('Y-m-d', strtotime($blog_raw)) : date('Y-m-d');
+
+		if ($blog_name !== '' && $blog_url !== '') {
+			$schemaBlogCollectionItems[] = array(
+				"@type" => "BlogPosting",
+				"headline" => $blog_name,
+				"description" => $blog_desc,
+				"image" => $blog_image,
+				"url" => $blog_url,
+				"datePublished" => $blog_iso,
+				"author" => array(
+					"@type" => "Organization",
+					"name" => "InviteIndia"
+				),
+				"publisher" => array(
+					"@type" => "Organization",
+					"name" => "InviteIndia",
+					"logo" => "https://www.inviteindia.com/site/favicon.png"
+				)
+			);
+		}
+	}
+}
+
+$schemaBlogsCollection = array(
+	"@context" => "https://schema.org",
+	"@type" => "CollectionPage",
+	"name" => "Wedding Blogs & Planning Tips",
+	"description" => "InviteIndia wedding blog collection with ideas, planning tips, and inspiration for Indian weddings",
+	"url" => "https://www.inviteindia.com/blogs.php",
+	"mainEntity" => $schemaBlogCollectionItems
+);
+
+$smarty->assign('schema_blogs_breadcrumb', json_encode($schemaBlogsBreadcrumb));
+$smarty->assign('schema_blogs_collection', json_encode($schemaBlogsCollection));
 
 $content_template = $common_obj->load_mobile_tpl_files($isMobile, $content_template);
 

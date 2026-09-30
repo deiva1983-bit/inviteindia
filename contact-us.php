@@ -20,19 +20,64 @@ $smarty->assign('topnav_select', 'contact');
 
 /*----- Variables Declaration Start-----*/
 $smarty->assign('currentpage_js', 'contactus');
-$smarty->assign('pagetitle', 'Invitation site');
+$content_template = 'default/contact_us.tpl';
+
+$contact_page_title = 'Contact InviteIndia - 24/7 Wedding Website Support';
+$contact_page_desc = 'Get in touch with InviteIndia support team. We offer 24/7 assistance for wedding website creation, digital invitations, and guest management via email, WhatsApp, or phone.';
+$contact_page_keywords = 'contact InviteIndia, wedding website support, wedding invitation help, customer support, InviteIndia helpline, wedding website customer service';
+
+$smarty->assign('pagetitle', $contact_page_title);
+$smarty->assign('metadesc', $contact_page_desc);
+$smarty->assign('metakeywords', $contact_page_keywords);
 /*----- Variables Declaration End-----*/
 $smarty->assign('glb_site_url', $glb_site_url);
 $user_log_id= trim($_SESSION['sess_user_id']);
-$smarty->assign('glb_site_url', $glb_site_url);
-$canurl = $ssl_path.'www.inviteindia.com/online-wedding-website-contactus';
+
+$canurl = 'https://www.inviteindia.com/contact-us.php';
 $smarty->assign('can_url', $canurl);
-$content_template = 'default/contact_us.tpl';
-$smarty->assign('pagetitle', 'unlimited support for wedding website creation - contact us any time.');
-$home_page_meta_desc='Inviteindia is always ready to help our customers for creating wedding websites. You can reach us via email, WhatsApp or Phone.';
-$home_page_meta_key='Wedding website, Contact us, Tips for wedding website';
-$smarty->assign('metadesc', $home_page_meta_desc);
-$smarty->assign('metakeywords', $home_page_meta_key);
+
+// JSON-LD Schema Markup for Contact Page
+$schemaContact = array(
+	"@context" => "https://schema.org",
+	"@type" => "ContactPage",
+	"name" => "InviteIndia Contact Support",
+	"description" => "Contact InviteIndia support team for wedding website help",
+	"url" => "https://www.inviteindia.com/contact-us.php",
+	"organizationContact" => array(
+		"@type" => "Organization",
+		"name" => "InviteIndia",
+		"url" => "https://www.inviteindia.com",
+		"contactPoint" => array(
+			"@type" => "ContactPoint",
+			"contactType" => "Customer Support",
+			"availability" => "http://schema.org/24/7",
+			"areaServed" => "IN",
+			"email" => "support@inviteindia.com"
+		)
+	)
+);
+
+$schemaBreadcrumbContact = array(
+	"@context" => "https://schema.org",
+	"@type" => "BreadcrumbList",
+	"itemListElement" => array(
+		array(
+			"@type" => "ListItem",
+			"position" => 1,
+			"name" => "Home",
+			"item" => "https://www.inviteindia.com"
+		),
+		array(
+			"@type" => "ListItem",
+			"position" => 2,
+			"name" => "Contact Us",
+			"item" => "https://www.inviteindia.com/contact-us.php"
+		)
+	)
+);
+
+$smarty->assign('schema_contact', json_encode($schemaContact));
+$smarty->assign('schema_contact_breadcrumb', json_encode($schemaBreadcrumbContact));
 
 /*----- Include Files Details Start-----*/
 $smarty->assign('header', $smarty->fetch('default/header.tpl') );

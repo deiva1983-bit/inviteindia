@@ -104,6 +104,46 @@
 	{$schema_domain_product}
 	</script>
 	{/if}
+	{if $schema_contact neq ''}
+	<script type="application/ld+json">
+	{$schema_contact}
+	</script>
+	{/if}
+	{if $schema_contact_breadcrumb neq ''}
+	<script type="application/ld+json">
+	{$schema_contact_breadcrumb}
+	</script>
+	{/if}
+	{if $schema_signin neq ''}
+	<script type="application/ld+json">
+	{$schema_signin}
+	</script>
+	{/if}
+	{if $schema_register neq ''}
+	<script type="application/ld+json">
+	{$schema_register}
+	</script>
+	{/if}
+	{if $schema_packages_breadcrumb neq ''}
+	<script type="application/ld+json">
+	{$schema_packages_breadcrumb}
+	</script>
+	{/if}
+	{if $schema_packages_product neq ''}
+	<script type="application/ld+json">
+	{$schema_packages_product}
+	</script>
+	{/if}
+	{if $schema_blogs_breadcrumb neq ''}
+	<script type="application/ld+json">
+	{$schema_blogs_breadcrumb}
+	</script>
+	{/if}
+	{if $schema_blogs_collection neq ''}
+	<script type="application/ld+json">
+	{$schema_blogs_collection}
+	</script>
+	{/if}
 	{if $smarty.session.sess_user_id eq '' }
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7441584415804192" crossorigin="anonymous"></script>
 	{/if}

@@ -21,22 +21,44 @@ $common_obj = new common();
 
 /*----- Variables Declaration Start-----*/
 $smarty->assign('currentpage_js', 'home_page');
-$home_page_title = "Free wedding website registrations | Create your wedding website";
-$home_page_meta_desc = "Create your wedding website and share with your friends";
-$home_page_meta_key = "Register wedding website, create online wedding website, share wedding website";
-$login_page_title = 'Registration at Indian wedding website';
-$login_page_desc = 'Create an account or log in to InviteIndia. Create your wedding website and share it with friends, family, and other people you know';
-$smarty->assign('pagetitle', $login_page_title.$common_page_title_end);
-$smarty->assign('metadesc', $login_page_desc);
-$smarty->assign('metakeywords', $login_page_keywords);
+
+$signin_page_title = 'Sign In to InviteIndia - Create Your Wedding Website';
+$signin_page_desc = 'Log in to your InviteIndia account to create a wedding website, share digital invitations, manage RSVPs, and coordinate your big day with family and friends.';
+$signin_page_keywords = 'sign in InviteIndia, wedding website login, InviteIndia account login, digital invitation account, wedding website sign in, create wedding website';
+
+$smarty->assign('pagetitle', $signin_page_title);
+$smarty->assign('metadesc', $signin_page_desc);
+$smarty->assign('metakeywords', $signin_page_keywords);
 /*----- Variables Declaration End-----*/
 //echo $_SESSION['notvalid'];
 $doit=$_REQUEST['do'];
 //if($doit != "")
 $requrl = $_COOKIE['last_req_url'];
 setcookie("last_req_url", "", time()-3600);
-$canurl = $ssl_path.'www.inviteindia.com/login.php';
+$canurl = 'https://www.inviteindia.com/signin.php';
 $smarty->assign('can_url', $canurl);
+
+// JSON-LD Schema Markup for Sign In Page
+$schemaSignIn = array(
+	"@context" => "https://schema.org",
+	"@type" => "BreadcrumbList",
+	"itemListElement" => array(
+		array(
+			"@type" => "ListItem",
+			"position" => 1,
+			"name" => "Home",
+			"item" => "https://www.inviteindia.com"
+		),
+		array(
+			"@type" => "ListItem",
+			"position" => 2,
+			"name" => "Sign In",
+			"item" => "https://www.inviteindia.com/signin.php"
+		)
+	)
+);
+
+$smarty->assign('schema_signin', json_encode($schemaSignIn));
 if($requrl != "")
 	$smarty->assign('error_msg', "Please, login here..." );
  if($_SESSION['notvalid'] != "")

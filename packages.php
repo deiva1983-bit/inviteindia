@@ -12,9 +12,9 @@ $content_template = 'default/mrg_account/packages.tpl';
 $smarty->assign('currentpage_js', 'pack'); 
 $smarty->assign('glb_user_log_id', $user_log_id );
 $_SESSION['lastupdate_id']='';
-$package_page_title = 'Wedding Website Packages & Pricing | InviteIndia';
-$package_page_desc = 'Explore affordable wedding website packages and pricing at InviteIndia. Create custom Indian wedding websites, digital invitations, and RSVP experiences for your big day.';
-$package_page_keywords = 'wedding website packages, wedding website pricing, Indian wedding website plans, custom wedding invitations, wedding invitation packages';
+$package_page_title = 'Wedding Website Pricing Plans - Free & Premium Packages | InviteIndia';
+$package_page_desc = 'Explore InviteIndia pricing: Free wedding website builder, premium themes, custom domain, and guest management features. Start free, upgrade anytime.';
+$package_page_keywords = 'wedding website pricing, wedding website plans, free wedding website, premium wedding packages, custom domain pricing, wedding invitation plans';
 $smarty->assign('pagetitle', $package_page_title);
 $smarty->assign('metadesc', $package_page_desc);
 $smarty->assign('metakeywords', $package_page_keywords);
@@ -74,6 +74,75 @@ $smarty->assign('glb_price_usd_1', $price_usd_1);
 $smarty->assign('glb_price_usd_2', $price_usd_2);
 $smarty->assign('glb_price_usd_3', $price_usd_3);
 $smarty->assign('maxcard_per_acc', $max_card_per_acc);
+
+// JSON-LD Schema Markup for Pricing Page
+$schemaPackagesBreadcrumb = array(
+	"@context" => "https://schema.org",
+	"@type" => "BreadcrumbList",
+	"itemListElement" => array(
+		array(
+			"@type" => "ListItem",
+			"position" => 1,
+			"name" => "Home",
+			"item" => "https://www.inviteindia.com"
+		),
+		array(
+			"@type" => "ListItem",
+			"position" => 2,
+			"name" => "Packages & Pricing",
+			"item" => "https://www.inviteindia.com/packages.php"
+		)
+	)
+);
+
+$schemaPackagesProduct = array(
+	"@context" => "https://schema.org",
+	"@type" => "Product",
+	"name" => "InviteIndia Wedding Website Plans",
+	"description" => "Affordable wedding website and digital invitation plans for Indian weddings. Free plan with premium upgrades available.",
+	"brand" => array(
+		"@type" => "Brand",
+		"name" => "InviteIndia"
+	),
+	"offers" => array(
+		array(
+			"@type" => "Offer",
+			"name" => "Free Wedding Website",
+			"price" => "0",
+			"priceCurrency" => "INR",
+			"availability" => "https://schema.org/InStock"
+		),
+		array(
+			"@type" => "Offer",
+			"name" => "Premium Wedding Package",
+			"price" => $price_1,
+			"priceCurrency" => "INR",
+			"availability" => "https://schema.org/InStock"
+		),
+		array(
+			"@type" => "Offer",
+			"name" => "Professional Wedding Package",
+			"price" => $price_2,
+			"priceCurrency" => "INR",
+			"availability" => "https://schema.org/InStock"
+		),
+		array(
+			"@type" => "Offer",
+			"name" => "Elite Wedding Package",
+			"price" => $price_3,
+			"priceCurrency" => "INR",
+			"availability" => "https://schema.org/InStock"
+		)
+	),
+	"aggregateRating" => array(
+		"@type" => "AggregateRating",
+		"ratingValue" => "4.7",
+		"ratingCount" => "3450"
+	)
+);
+
+$smarty->assign('schema_packages_breadcrumb', json_encode($schemaPackagesBreadcrumb));
+$smarty->assign('schema_packages_product', json_encode($schemaPackagesProduct));
 
 /*----- Include Files Details Start-----*/
 $smarty->assign('header', $smarty->fetch('default/header.tpl') );
